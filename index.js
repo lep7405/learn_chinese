@@ -174,17 +174,19 @@ function renderWords(selectedWords) {
         item.innerHTML = `
             <span class="hanzi">${word.hanzi}</span>
             <div class="pinyin"></div>
+            <div class="meaning"></div>
         `;
 
-        const revealPinyin = () => {
+        const revealWordDetails = () => {
             item.querySelector(".pinyin").textContent = word.pinyin;
+            item.querySelector(".meaning").textContent = word.meaning;
         };
 
-        item.addEventListener("click", revealPinyin);
+        item.addEventListener("click", revealWordDetails);
         item.addEventListener("keydown", (event) => {
             if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
-                revealPinyin();
+                revealWordDetails();
             }
         });
 
@@ -376,14 +378,14 @@ function activateTab(tabName) {
 function showRandomWords() {
     const selectedWords = shuffle(words).slice(0, 5);
     title.textContent = "Hôm nay học 5 từ";
-    description.textContent = "Bấm nút để lấy ngẫu nhiên 5 từ tiếng Hán. Bấm vào từng từ để hiện pinyin.";
+    description.textContent = "Bấm nút để lấy ngẫu nhiên 5 từ tiếng Hán. Bấm vào từng từ để hiện pinyin và nghĩa.";
     hint.textContent = "Mỗi lần bấm nút sẽ chọn lại 5 từ khác nhau.";
     renderWords(selectedWords);
 }
 
 function showAllWords() {
     title.textContent = `Tất cả ${words.length} từ`;
-    description.textContent = "Danh sách đầy đủ các từ tiếng Hán hiện có. Bấm vào từng từ để hiện pinyin.";
+    description.textContent = "Danh sách đầy đủ các từ tiếng Hán hiện có. Bấm vào từng từ để hiện pinyin và nghĩa.";
     hint.textContent = "Bạn có thể quay lại chế độ ngẫu nhiên bất cứ lúc nào.";
     renderWords(words);
 }
