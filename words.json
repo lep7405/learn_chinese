@@ -90,5 +90,96 @@
       { "hanzi": "菜", "pinyin": "cài", "meaning": "rau, món ăn" },
       { "hanzi": "产品", "pinyin": "chǎn pǐn", "meaning": "sản phẩm" }
     ]
+  },
+  {
+    "date": "2026-03-29",
+    "label": "29/03/2026",
+    "words": [
+      { "hanzi": "假如", "pinyin": "jiǎrú", "meaning": "nếu như, giả sử" },
+      { "hanzi": "战争", "pinyin": "zhànzhēng", "meaning": "chiến tranh" },
+      { "hanzi": "爆发", "pinyin": "bàofā", "meaning": "bùng nổ" },
+
+      { "hanzi": "存在", "pinyin": "cúnzài", "meaning": "tồn tại, để (tiền)" },
+      { "hanzi": "银行", "pinyin": "yínháng", "meaning": "ngân hàng" },
+      { "hanzi": "里", "pinyin": "lǐ", "meaning": "trong" },
+      { "hanzi": "钱", "pinyin": "qián", "meaning": "tiền" },
+
+      { "hanzi": "应该", "pinyin": "yīnggāi", "meaning": "nên" },
+      { "hanzi": "怎么办", "pinyin": "zěnme bàn", "meaning": "làm thế nào" },
+
+      { "hanzi": "这还用问", "pinyin": "zhè hái yòng wèn", "meaning": "còn phải hỏi à" },
+      { "hanzi": "取出来", "pinyin": "qǔ chūlái", "meaning": "lấy ra" },
+      { "hanzi": "逃命", "pinyin": "táomìng", "meaning": "chạy trốn giữ mạng" },
+
+      { "hanzi": "一旦", "pinyin": "yídàn", "meaning": "một khi" },
+      { "hanzi": "冲突", "pinyin": "chōngtū", "meaning": "xung đột" },
+      { "hanzi": "发生", "pinyin": "fāshēng", "meaning": "xảy ra" },
+
+      { "hanzi": "最先", "pinyin": "zuìxiān", "meaning": "đầu tiên" },
+      { "hanzi": "受到", "pinyin": "shòudào", "meaning": "chịu, bị" },
+      { "hanzi": "冲击", "pinyin": "chōngjī", "meaning": "tác động, cú sốc" },
+      { "hanzi": "金融系统", "pinyin": "jīnróng xìtǒng", "meaning": "hệ thống tài chính" },
+
+      { "hanzi": "可能", "pinyin": "kěnéng", "meaning": "có thể" },
+      { "hanzi": "取不出来", "pinyin": "qǔ bù chūlái", "meaning": "không rút ra được" },
+      { "hanzi": "用不了", "pinyin": "yòng bù liǎo", "meaning": "không dùng được" },
+
+      { "hanzi": "总不能", "pinyin": "zǒng bù néng", "meaning": "không thể nào lại" },
+      { "hanzi": "眼睁睁", "pinyin": "yǎnzhēngzhēng", "meaning": "trơ mắt nhìn" },
+      { "hanzi": "没了", "pinyin": "méi le", "meaning": "mất rồi" },
+
+      { "hanzi": "但凡", "pinyin": "dànfán", "meaning": "chỉ cần, hễ" },
+      { "hanzi": "感觉到", "pinyin": "gǎnjué dào", "meaning": "cảm nhận được" },
+      { "hanzi": "危险", "pinyin": "wēixiǎn", "meaning": "nguy hiểm" },
+      { "hanzi": "苗头", "pinyin": "miáotou", "meaning": "dấu hiệu" },
+
+      { "hanzi": "提前", "pinyin": "tíqián", "meaning": "trước" },
+      { "hanzi": "做好", "pinyin": "zuò hǎo", "meaning": "chuẩn bị tốt" },
+      { "hanzi": "这几步", "pinyin": "zhè jǐ bù", "meaning": "mấy bước này" },
+      { "hanzi": "保钱保命", "pinyin": "bǎo qián bǎo mìng", "meaning": "giữ tiền giữ mạng" },
+
+      { "hanzi": "首先", "pinyin": "shǒuxiān", "meaning": "trước hết" },
+      { "hanzi": "应急现金", "pinyin": "yìngjí xiànjīn", "meaning": "tiền mặt khẩn cấp" },
+      { "hanzi": "换黄金", "pinyin": "huàn huángjīn", "meaning": "đổi sang vàng" },
+      { "hanzi": "够", "pinyin": "gòu", "meaning": "đủ" },
+      { "hanzi": "家里", "pinyin": "jiālǐ", "meaning": "gia đình" },
+      { "hanzi": "基本生活费", "pinyin": "jīběn shēnghuófèi", "meaning": "chi phí sinh hoạt cơ bản" },
+      { "hanzi": "就行", "pinyin": "jiù xíng", "meaning": "là được" },
+      { "hanzi": "找", "pinyin": "zhǎo", "meaning": "tìm" },
+      { "hanzi": "安全", "pinyin": "ānquán", "meaning": "an toàn" },
+      { "hanzi": "地方", "pinyin": "dìfang", "meaning": "nơi" },
+      { "hanzi": "藏好", "pinyin": "cáng hǎo", "meaning": "giấu kỹ" },
+
+      { "hanzi": "从", "pinyin": "cóng", "meaning": "từ" },
+      { "hanzi": "闲钱", "pinyin": "xiánqián", "meaning": "tiền nhàn rỗi" },
+      { "hanzi": "抽", "pinyin": "chōu", "meaning": "rút ra" },
+      { "hanzi": "10-15%", "pinyin": "shí dào shíwǔ bǎifēnzhī", "meaning": "10-15%" },
+      { "hanzi": "配", "pinyin": "pèi", "meaning": "phân bổ" },
+      { "hanzi": "黄金", "pinyin": "huángjīn", "meaning": "vàng" },
+      { "hanzi": "之类的", "pinyin": "zhī lèi de", "meaning": "các loại như" },
+      { "hanzi": "硬通货", "pinyin": "yìng tōnghuò", "meaning": "tài sản cứng" },
+      { "hanzi": "体积", "pinyin": "tǐjī", "meaning": "kích thước" },
+      { "hanzi": "小", "pinyin": "xiǎo", "meaning": "nhỏ" },
+      { "hanzi": "好带", "pinyin": "hǎo dài", "meaning": "dễ mang" },
+      { "hanzi": "既能", "pinyin": "jì néng", "meaning": "vừa có thể" },
+      { "hanzi": "避险", "pinyin": "bìxiǎn", "meaning": "tránh rủi ro" },
+      { "hanzi": "还能", "pinyin": "hái néng", "meaning": "lại còn có thể" },
+      { "hanzi": "换物资", "pinyin": "huàn wùzī", "meaning": "đổi vật tư" },
+
+      { "hanzi": "剩下", "pinyin": "shèngxià", "meaning": "còn lại" },
+      { "hanzi": "别", "pinyin": "bié", "meaning": "đừng" },
+      { "hanzi": "扎堆", "pinyin": "zhā duī", "meaning": "tụ lại một chỗ" },
+      { "hanzi": "存", "pinyin": "cún", "meaning": "gửi" },
+      { "hanzi": "一块", "pinyin": "yí kuài", "meaning": "một chỗ" },
+      { "hanzi": "分散", "pinyin": "fēnsàn", "meaning": "phân tán" },
+      { "hanzi": "存到", "pinyin": "cún dào", "meaning": "gửi vào" },
+      { "hanzi": "2-3家", "pinyin": "liǎng dào sān jiā", "meaning": "2-3 (ngân hàng)" },
+      { "hanzi": "不同", "pinyin": "bùtóng", "meaning": "khác nhau" },
+      { "hanzi": "每家", "pinyin": "měi jiā", "meaning": "mỗi (ngân hàng)" },
+      { "hanzi": "金额", "pinyin": "jīn'é", "meaning": "số tiền" },
+      { "hanzi": "都别", "pinyin": "dōu bié", "meaning": "đều đừng" },
+      { "hanzi": "超过", "pinyin": "chāoguò", "meaning": "vượt quá" },
+      { "hanzi": "50万", "pinyin": "wǔshí wàn", "meaning": "500.000" }
+    ]
   }
 ]
