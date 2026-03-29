@@ -376,7 +376,7 @@ function activateTab(tabName) {
 }
 
 function showRandomWords() {
-    const selectedWords = shuffle(words).slice(0, 5);
+    const selectedWords = shuffle(words).slice(0, 10);
     title.textContent = "Hôm nay học 5 từ";
     description.textContent = "Bấm nút để lấy ngẫu nhiên 5 từ tiếng Hán. Bấm vào từng từ để hiện pinyin và nghĩa.";
     hint.textContent = "Mỗi lần bấm nút sẽ chọn lại 5 từ khác nhau.";
@@ -391,7 +391,7 @@ function showAllWords() {
 }
 
 function showRandomMeanings() {
-    const selectedWords = shuffle(words).slice(0, 5);
+    const selectedWords = shuffle(words).slice(0, 10);
     meaningTitle.textContent = "Luyện 5 nghĩa tiếng Việt";
     meaningDescription.textContent = "Mặc định chỉ hiện tiếng Việt. Bấm vào từng thẻ để hiện tiếng Trung và pinyin.";
     meaningHint.textContent = "Mỗi lần bấm nút sẽ chọn lại 5 nghĩa khác nhau.";
