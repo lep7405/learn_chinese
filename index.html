@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học từ vựng tiếng Trung</title>
+    <style>
+        :root {
+            --bg: linear-gradient(135deg, #f7efe4 0%, #f4d8c1 100%);
+            --card: rgba(255, 250, 245, 0.92);
+            --text: #2b1d18;
+            --accent: #b85c38;
+            --accent-dark: #8f4325;
+            --border: rgba(86, 43, 28, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Georgia, "Times New Roman", serif;
+            background: var(--bg);
+            color: var(--text);
+            display: grid;
+            place-items: center;
+            padding: 24px;
+        }
+
+        .app {
+            width: min(720px, 100%);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 24px 60px rgba(91, 48, 31, 0.18);
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        p {
+            margin: 0 0 20px;
+            line-height: 1.5;
+        }
+
+        button {
+            border: 0;
+            border-radius: 999px;
+            padding: 12px 18px;
+            font: inherit;
+            color: #fffaf5;
+            background: var(--accent);
+            cursor: pointer;
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            background: var(--accent-dark);
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn.active {
+            background: var(--accent-dark);
+        }
+
+        .panel[hidden] {
+            display: none;
+        }
+
+        .word-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0;
+            display: grid;
+            gap: 14px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .word-item {
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 16px 18px;
+            background: #fffdfb;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .word-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(91, 48, 31, 0.12);
+        }
+
+        .meaning-primary {
+            display: block;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .hanzi {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+
+        .pinyin {
+            color: var(--accent-dark);
+            min-height: 1.5em;
+        }
+
+        .meaning {
+            min-height: 1.5em;
+            margin-top: 4px;
+            opacity: 0.85;
+        }
+
+        .hint {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        .listen-section + .listen-section {
+            margin-top: 24px;
+        }
+
+        .section-title {
+            margin: 0 0 12px;
+            font-size: 1.25rem;
+        }
+
+        .listen-card {
+            display: grid;
+            gap: 10px;
+        }
+
+        .listen-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .listen-meta {
+            display: grid;
+            gap: 4px;
+        }
+
+        .listen-btn {
+            padding: 10px 16px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <main class="app">
+        <div class="tabs">
+            <button id="words-tab" class="tab-btn active" type="button">Từ</button>
+            <button id="meaning-tab" class="tab-btn" type="button">Việt -> Trung</button>
+            <button id="sentences-tab" class="tab-btn" type="button">Câu</button>
+            <button id="listen-tab" class="tab-btn" type="button">Nghe</button>
+        </div>
+
+        <section id="words-panel" class="panel">
+            <h1 id="page-title">Hôm nay học 5 từ</h1>
+            <p id="page-description">Bấm nút để lấy ngẫu nhiên 5 từ tiếng Hán. Bấm vào từng từ để hiện pinyin.</p>
+            <div class="actions">
+                <button id="random-btn" type="button">Lấy 5 từ ngẫu nhiên</button>
+                <button id="all-btn" type="button">Hiển thị tất cả từ</button>
+            </div>
+            <ul id="word-list" class="word-list"></ul>
+            <div id="page-hint" class="hint">Mỗi lần bấm nút sẽ chọn lại 5 từ khác nhau.</div>
+        </section>
+
+        <section id="meaning-panel" class="panel" hidden>
+            <h1 id="meaning-title">Luyện từ theo nghĩa tiếng Việt</h1>
+            <p id="meaning-description">Mặc định chỉ hiện tiếng Việt. Bấm vào từng thẻ để hiện tiếng Trung và pinyin.</p>
+            <div class="actions">
+                <button id="meaning-random-btn" type="button">Lấy 5 nghĩa ngẫu nhiên</button>
+                <button id="meaning-all-btn" type="button">Hiển thị tất cả nghĩa</button>
+            </div>
+            <ul id="meaning-list" class="word-list"></ul>
+            <div id="meaning-hint" class="hint">Tab này giúp bạn nhớ từ theo chiều Việt sang Trung.</div>
+        </section>
+
+        <section id="sentences-panel" class="panel" hidden>
+            <h1>Học câu</h1>
+            <p>Mặc định chỉ hiện nghĩa tiếng Việt. Bấm vào từng câu để hiện tiếng Trung và pinyin.</p>
+            <ul id="sentence-list" class="word-list"></ul>
+            <div class="hint">Tab này hiển thị toàn bộ các câu bạn đã thêm.</div>
+        </section>
+
+        <section id="listen-panel" class="panel" hidden>
+            <h1>Luyện nghe tiếng Trung</h1>
+            <p>Bấm nút nghe để trình duyệt đọc tiếng Trung. Nếu máy bạn có nhiều giọng, trang sẽ ưu tiên giọng `zh-CN`.</p>
+
+            <div class="listen-section">
+                <h2 class="section-title">Từ vựng</h2>
+                <ul id="listen-word-list" class="word-list"></ul>
+            </div>
+
+            <div class="listen-section">
+                <h2 class="section-title">Câu</h2>
+                <ul id="listen-sentence-list" class="word-list"></ul>
+            </div>
+
+            <div id="listen-hint" class="hint">Nếu chưa nghe được, hãy thử mở trang bằng Chrome hoặc Edge mới.</div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
