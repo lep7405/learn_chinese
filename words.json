@@ -123,7 +123,35 @@
 
       
     ]
+  },
+  {
+    "date": "2026-03-31",
+    "label": "31/03/2026",
+    "words": [
+      { "hanzi": "生意", "pinyin": "shēngyi", "meaning": "việc kinh doanh / buôn bán" },
+      { "hanzi": "意思", "pinyin": "yìsi", "meaning": "nghĩa / thú vị" },
+      { "hanzi": "晚", "pinyin": "wǎn", "meaning": "muộn" },
+      { "hanzi": "同意", "pinyin": "tóng yì", "meaning": "đồng ý" },
+      { "hanzi": "看法", "pinyin": "kànfǎ", "meaning": "quan điểm" },
+      { "hanzi": "计划", "pinyin": "jìhuà", "meaning": "kế hoạch" },
+      { "hanzi": "办法", "pinyin": "bànfǎ", "meaning": "cách / phương pháp" },
+      { "hanzi": "法律", "pinyin": "fǎlǜ", "meaning": "pháp luật" },
+      { "hanzi": "违反", "pinyin": "wéifǎn", "meaning": "vi phạm" },
+      { "hanzi": "律师", "pinyin": "lǜshī", "meaning": "luật sư" },
+      { "hanzi": "估计", "pinyin": "gūjì", "meaning": "ước tính / đoán" },
+      { "hanzi": "问题", "pinyin": "wèntí", "meaning": "vấn đề" },
+      { "hanzi": "设计", "pinyin": "shèjì", "meaning": "thiết kế" },
+      { "hanzi": "软件", "pinyin": "ruǎnjiàn", "meaning": "phần mềm" },
+      { "hanzi": "房子", "pinyin": "fángzi", "meaning": "ngôi nhà" },
+      { "hanzi": "假设", "pinyin": "jiǎshè", "meaning": "giả sử" },
+      { "hanzi": "老板", "pinyin": "lǎobǎn", "meaning": "sếp" },
+      { "hanzi": "设备", "pinyin": "shèbèi", "meaning": "thiết bị" },
+      { "hanzi": "先进", "pinyin": "xiānjìn", "meaning": "hiện đại / tiên tiến" },
+      { "hanzi": "工厂", "pinyin": "gōngchǎng", "meaning": "nhà máy" },
+      { "hanzi": "新", "pinyin": "xīn", "meaning": "mới" },
+      { "hanzi": "坏了", "pinyin": "huài le", "meaning": "hỏng rồi" },
+      { "hanzi": "负责", "pinyin": "fùzé", "meaning": "phụ trách" },
+      { "hanzi": "管理", "pinyin": "guǎnlǐ", "meaning": "quản lý" }
+    ]
   }
 ]
-
-
