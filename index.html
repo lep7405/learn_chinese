@@ -71,6 +71,38 @@
             margin-bottom: 20px;
         }
 
+        .filter-bar {
+            display: grid;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .filter-label {
+            font-weight: 700;
+        }
+
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .date-select {
+            min-width: min(260px, 100%);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 12px 14px;
+            font: inherit;
+            background: #fffdfb;
+            color: var(--text);
+        }
+
+        .filter-note {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
         .tab-btn.active {
             background: var(--accent-dark);
         }
@@ -171,6 +203,16 @@
 </head>
 <body>
     <main class="app">
+        <div class="filter-bar">
+            <label class="filter-label" for="date-filter">Hiển thị từ theo ngày</label>
+            <div class="filter-controls">
+                <select id="date-filter" class="date-select">
+                    <option value="all">Tất cả các ngày</option>
+                </select>
+                <div id="date-summary" class="filter-note">Đang hiển thị toàn bộ từ vựng.</div>
+            </div>
+        </div>
+
         <div class="tabs">
             <button id="words-tab" class="tab-btn active" type="button">Từ</button>
             <button id="meaning-tab" class="tab-btn" type="button">Việt -> Trung</button>

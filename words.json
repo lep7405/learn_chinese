@@ -153,5 +153,33 @@
       { "hanzi": "负责", "pinyin": "fùzé", "meaning": "phụ trách" },
       { "hanzi": "管理", "pinyin": "guǎnlǐ", "meaning": "quản lý" }
     ]
+  },
+  {
+    "date": "2026-04-02",
+    "label": "02/04/2026",
+    "words": [
+      { "hanzi": "查收", "pinyin": "cháshōu", "meaning": "kiểm tra / xác nhận nhận" },
+      { "hanzi": "电子邮件", "pinyin": "diànzǐ yóujiàn", "meaning": "email" },
+      { "hanzi": "每天", "pinyin": "měitiān", "meaning": "mỗi ngày" },
+      { "hanzi": "重要", "pinyin": "zhòngyào", "meaning": "quan trọng" },
+      { "hanzi": "条件", "pinyin": "tiáojiàn", "meaning": "điều kiện" },
+      { "hanzi": "符合", "pinyin": "fúhé", "meaning": "đáp ứng / phù hợp" },
+      { "hanzi": "同意", "pinyin": "tóngyì", "meaning": "đồng ý" },
+      { "hanzi": "这里", "pinyin": "zhèlǐ", "meaning": "ở đây" },
+      { "hanzi": "面条", "pinyin": "miàntiáo", "meaning": "mì" },
+      { "hanzi": "桌子", "pinyin": "zhuōzi", "meaning": "bàn" },
+      { "hanzi": "忘了", "pinyin": "wàng le", "meaning": "quên" },
+      { "hanzi": "条理", "pinyin": "tiáolǐ", "meaning": "rõ ràng / logic" },
+      { "hanzi": "合作", "pinyin": "hézuò", "meaning": "hợp tác" },
+      { "hanzi": "位置", "pinyin": "wèizhi", "meaning": "vị trí" },
+      { "hanzi": "座位", "pinyin": "zuòwèi", "meaning": "chỗ ngồi" },
+      { "hanzi": "空", "pinyin": "kòng", "meaning": "trống / rảnh" },
+      { "hanzi": "房间", "pinyin": "fángjiān", "meaning": "căn phòng" },
+      { "hanzi": "空位", "pinyin": "kòngwèi", "meaning": "chỗ trống" },
+      { "hanzi": "很空", "pinyin": "hěn kòng", "meaning": "rất rảnh" },
+      { "hanzi": "职位", "pinyin": "zhíwèi", "meaning": "chức vị / chức vụ / vị trí công việc" },
+      { "hanzi": "申请", "pinyin": "shēnqǐng", "meaning": "ứng tuyển" },
+      { "hanzi": "三年经验", "pinyin": "sān nián jīngyàn", "meaning": "3 năm kinh nghiệm" }
+    ]
   }
 ]

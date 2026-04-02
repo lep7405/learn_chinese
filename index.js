@@ -1,6 +1,8 @@
 const wordList = document.getElementById("word-list");
 const randomBtn = document.getElementById("random-btn");
 const allBtn = document.getElementById("all-btn");
+const dateFilter = document.getElementById("date-filter");
+const dateSummary = document.getElementById("date-summary");
 const title = document.getElementById("page-title");
 const description = document.getElementById("page-description");
 const hint = document.getElementById("page-hint");
@@ -27,6 +29,9 @@ let words = [];
 let groups = [];
 let sentences = [];
 let availableVoices = [];
+let activeDate = "all";
+let wordsDisplayMode = "random";
+let meaningDisplayMode = "random";
 const fallbackGroups = [
     {
         date: "2026-03-25",
@@ -161,6 +166,54 @@ function shuffle(array) {
     }
 
     return copy;
+}
+
+function getSortedGroups() {
+    return [...groups].sort((left, right) => right.date.localeCompare(left.date));
+}
+
+function getActiveGroup() {
+    return groups.find((group) => group.date === activeDate) || null;
+}
+
+function getFilteredWords() {
+    if (activeDate === "all") {
+        return words;
+    }
+
+    return words.filter((word) => word.date === activeDate);
+}
+
+function getDateLabel() {
+    if (activeDate === "all") {
+        return "tất cả các ngày";
+    }
+
+    return getActiveGroup()?.label || activeDate;
+}
+
+function updateDateSummary() {
+    const filteredWords = getFilteredWords();
+    const dateLabel = getDateLabel();
+
+    if (activeDate === "all") {
+        dateSummary.textContent = `Đang hiển thị ${filteredWords.length} từ của tất cả các ngày.`;
+        return;
+    }
+
+    dateSummary.textContent = `Đang hiển thị ${filteredWords.length} từ của ngày ${dateLabel}.`;
+}
+
+function populateDateFilter() {
+    const options = ['<option value="all">Tất cả các ngày</option>'];
+
+    getSortedGroups().forEach((group) => {
+        options.push(`<option value="${group.date}">${group.label}</option>`);
+    });
+
+    dateFilter.innerHTML = options.join("");
+    dateFilter.value = activeDate;
+    updateDateSummary();
 }
 
 function renderWords(selectedWords) {
@@ -350,7 +403,7 @@ function renderListenPanel() {
     listenWordList.innerHTML = "";
     listenSentenceList.innerHTML = "";
 
-    words.forEach((word) => {
+    getFilteredWords().forEach((word) => {
         listenWordList.appendChild(createListenItem(word, { revealOnClick: true }));
     });
 
@@ -376,33 +429,82 @@ function activateTab(tabName) {
 }
 
 function showRandomWords() {
-    const selectedWords = shuffle(words).slice(0, 10);
-    title.textContent = "Hôm nay học 5 từ";
-    description.textContent = "Bấm nút để lấy ngẫu nhiên 5 từ tiếng Hán. Bấm vào từng từ để hiện pinyin và nghĩa.";
-    hint.textContent = "Mỗi lần bấm nút sẽ chọn lại 5 từ khác nhau.";
+    const filteredWords = getFilteredWords();
+    const selectedWords = shuffle(filteredWords).slice(0, 10);
+    const dateLabel = getDateLabel();
+
+    wordsDisplayMode = "random";
+    title.textContent = activeDate === "all" ? "Ngẫu nhiên 10 từ" : `Ngẫu nhiên 10 từ ngày ${dateLabel}`;
+    description.textContent = "Bấm nút để lấy ngẫu nhiên 10 từ tiếng Hán. Bấm vào từng từ để hiện pinyin và nghĩa.";
+    hint.textContent =
+        activeDate === "all"
+            ? "Mỗi lần bấm nút sẽ chọn lại 10 từ khác nhau từ toàn bộ danh sách."
+            : `Mỗi lần bấm nút sẽ chọn lại 10 từ khác nhau trong ngày ${dateLabel}.`;
     renderWords(selectedWords);
 }
 
 function showAllWords() {
-    title.textContent = `Tất cả ${words.length} từ`;
+    const filteredWords = getFilteredWords();
+    const dateLabel = getDateLabel();
+
+    wordsDisplayMode = "all";
+    title.textContent =
+        activeDate === "all" ? `Tất cả ${filteredWords.length} từ` : `${filteredWords.length} từ ngày ${dateLabel}`;
     description.textContent = "Danh sách đầy đủ các từ tiếng Hán hiện có. Bấm vào từng từ để hiện pinyin và nghĩa.";
-    hint.textContent = "Bạn có thể quay lại chế độ ngẫu nhiên bất cứ lúc nào.";
-    renderWords(words);
+    hint.textContent =
+        activeDate === "all"
+            ? "Bạn có thể quay lại chế độ ngẫu nhiên bất cứ lúc nào."
+            : `Bạn đang xem toàn bộ từ của ngày ${dateLabel}.`;
+    renderWords(filteredWords);
 }
 
 function showRandomMeanings() {
-    const selectedWords = shuffle(words).slice(0, 10);
-    meaningTitle.textContent = "Luyện 5 nghĩa tiếng Việt";
+    const filteredWords = getFilteredWords();
+    const selectedWords = shuffle(filteredWords).slice(0, 10);
+    const dateLabel = getDateLabel();
+
+    meaningDisplayMode = "random";
+    meaningTitle.textContent =
+        activeDate === "all" ? "Luyện 10 nghĩa tiếng Việt" : `Luyện 10 nghĩa ngày ${dateLabel}`;
     meaningDescription.textContent = "Mặc định chỉ hiện tiếng Việt. Bấm vào từng thẻ để hiện tiếng Trung và pinyin.";
-    meaningHint.textContent = "Mỗi lần bấm nút sẽ chọn lại 5 nghĩa khác nhau.";
+    meaningHint.textContent =
+        activeDate === "all"
+            ? "Mỗi lần bấm nút sẽ chọn lại 10 nghĩa khác nhau."
+            : `Mỗi lần bấm nút sẽ chọn lại 10 nghĩa khác nhau trong ngày ${dateLabel}.`;
     renderMeaningWords(selectedWords);
 }
 
 function showAllMeanings() {
-    meaningTitle.textContent = `Tất cả ${words.length} nghĩa`;
+    const filteredWords = getFilteredWords();
+    const dateLabel = getDateLabel();
+
+    meaningDisplayMode = "all";
+    meaningTitle.textContent =
+        activeDate === "all" ? `Tất cả ${filteredWords.length} nghĩa` : `${filteredWords.length} nghĩa ngày ${dateLabel}`;
     meaningDescription.textContent = "Danh sách đầy đủ nghĩa tiếng Việt. Bấm vào từng thẻ để hiện tiếng Trung và pinyin.";
-    meaningHint.textContent = "Tab này phù hợp để tự nhớ từ trước khi xem đáp án.";
-    renderMeaningWords(words);
+    meaningHint.textContent =
+        activeDate === "all"
+            ? "Tab này phù hợp để tự nhớ từ trước khi xem đáp án."
+            : `Tab này đang lọc theo ngày ${dateLabel}.`;
+    renderMeaningWords(filteredWords);
+}
+
+function refreshWordViews() {
+    updateDateSummary();
+
+    if (wordsDisplayMode === "all") {
+        showAllWords();
+    } else {
+        showRandomWords();
+    }
+
+    if (meaningDisplayMode === "all") {
+        showAllMeanings();
+    } else {
+        showRandomMeanings();
+    }
+
+    renderListenPanel();
 }
 
 async function loadWords() {
@@ -419,9 +521,9 @@ async function loadWords() {
     }
 
     words = flattenGroups(groups);
-    showRandomWords();
-    showRandomMeanings();
-    renderListenPanel();
+    activeDate = getSortedGroups()[0]?.date || "all";
+    populateDateFilter();
+    refreshWordViews();
 }
 
 async function loadSentences() {
@@ -445,6 +547,10 @@ randomBtn.addEventListener("click", showRandomWords);
 allBtn.addEventListener("click", showAllWords);
 meaningRandomBtn.addEventListener("click", showRandomMeanings);
 meaningAllBtn.addEventListener("click", showAllMeanings);
+dateFilter.addEventListener("change", (event) => {
+    activeDate = event.target.value;
+    refreshWordViews();
+});
 wordsTab.addEventListener("click", () => activateTab("words"));
 meaningTab.addEventListener("click", () => activateTab("meaning"));
 sentencesTab.addEventListener("click", () => activateTab("sentences"));
