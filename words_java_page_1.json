@@ -1,0 +1,5121 @@
+{
+  "date": "2026-04-04",
+  "label": "04/04/2026",
+  "words": [
+    {
+      "hanzi": "前言",
+      "pinyin": "qián yán",
+      "meaning": "lời nói đầu"
+    },
+    {
+      "hanzi": "语言",
+      "pinyin": "yǔ yán",
+      "meaning": "Ngôn ngữ"
+    },
+     {
+      "hanzi": "发言",
+      "pinyin": "fā yán",
+      "meaning": "phát biểu"
+    },
+    {
+      "hanzi": "前面",
+      "pinyin": "qián miàn",
+      "meaning": "Phía trước / đằng trước"
+    },
+    {
+      "hanzi": "前途",
+      "pinyin": "qiántú",
+      "meaning": "tương lai"
+    },
+    {
+      "hanzi": "Java",
+      "pinyin": "Java",
+      "meaning": "Java"
+    },
+    {
+      "hanzi": "是",
+      "pinyin": "shì",
+      "meaning": "là"
+    },
+    {
+      "hanzi": "目前",
+      "pinyin": "mùqián",
+      "meaning": "hiện tại"
+    },
+    {
+      "hanzi": "用户",
+      "pinyin": "yònghù",
+      "meaning": "người dùng"
+    },
+    {
+      "hanzi": "窗户",
+      "pinyin": "chuāng hu",
+      "meaning": "cửa sổ"
+    },
+    {
+      "hanzi": "打开",
+      "pinyin": "dǎkāi",
+      "meaning": "mở"
+    },
+    {
+      "hanzi": "账户",
+      "pinyin": "zhàng hù",
+      "meaning": "tài khoản"
+    },
+    {
+      "hanzi": "最多",
+      "pinyin": "zuìduō",
+      "meaning": "nhiều nhất"
+    },
+    {
+      "hanzi": "最后",
+      "pinyin": "zuì hòu",
+      "meaning": "cuối cùng / sau cùng"
+    },
+    {
+      "hanzi": "使用",
+      "pinyin": "shǐyòng",
+      "meaning": "sử dụng"
+    },
+    {
+      "hanzi": "大使馆",
+      "pinyin": "dà shǐ guǎn",
+      "meaning": "đại sứ quán"
+    },
+    {
+      "hanzi": "范围",
+      "pinyin": "fànwéi",
+      "meaning": "phạm vi"
+    },
+    {
+      "hanzi": "最广",
+      "pinyin": "zuìguǎng",
+      "meaning": "rộng nhất"
+    },
+    {
+      "hanzi": "的",
+      "pinyin": "de",
+      "meaning": "của"
+    },
+    {
+      "hanzi": "软件",
+      "pinyin": "ruǎnjiàn",
+      "meaning": "phần mềm"
+    },
+    {
+      "hanzi": "开发",
+      "pinyin": "kāifā",
+      "meaning": "phát triển"
+    },
+    {
+      "hanzi": "技术",
+      "pinyin": "jìshù",
+      "meaning": "kỹ thuật"
+    },
+    {
+      "hanzi": "体系",
+      "pinyin": "tǐxì",
+      "meaning": "hệ thống"
+    },
+    {
+      "hanzi": "身体",
+      "pinyin": "shēntǐ",
+      "meaning": "Sức khỏe"
+    },
+    {
+      "hanzi": "具体",
+      "pinyin": "jù tǐ",
+      "meaning": "cụ thể / chi tiết"
+    },
+    {
+      "hanzi": "主要",
+      "pinyin": "zhǔyào",
+      "meaning": "chủ yếu"
+    },
+    {
+      "hanzi": "由",
+      "pinyin": "yóu",
+      "meaning": "do / bởi"
+    },
+    {
+      "hanzi": "支撑",
+      "pinyin": "zhīchēng",
+      "meaning": "chống đỡ / hỗ trợ"
+    },
+    {
+      "hanzi": "程序",
+      "pinyin": "chéngxù",
+      "meaning": "chương trình"
+    },
+    {
+      "hanzi": "过程",
+      "pinyin": "guò chéng",
+      "meaning": "quá trình"
+    },
+    {
+      "hanzi": "程度",
+      "pinyin": "chéng dù",
+      "meaning": "mức độ"
+    },
+    {
+      "hanzi": "课程",
+      "pinyin": "kè chéng",
+      "meaning": "khóa học / môn học"
+    },
+    {
+      "hanzi": "工程师",
+      "pinyin": "gōng chéng shī",
+      "meaning": "kỹ sư"
+    },
+    {
+      "hanzi": "日程",
+      "pinyin": "rì chéng",
+      "meaning": "lịch trình"
+    },
+    {
+      "hanzi": "运行",
+      "pinyin": "yùnxíng",
+      "meaning": "vận hành / chạy"
+    },
+    {
+      "hanzi": "运动",
+      "pinyin": "yùn dòng",
+      "meaning": "vận động / thể thao"
+    },
+     {
+      "hanzi": "幸运",
+      "pinyin": "xìng yùn",
+      "meaning": "may mắn / may mắn"
+    },
+    {
+      "hanzi": "虚拟机",
+      "pinyin": "xūnǐjī",
+      "meaning": "máy ảo"
+    },
+    {
+      "hanzi": "提供",
+      "pinyin": "tígōng",
+      "meaning": "cung cấp"
+    },
+     {
+      "hanzi": "提高",
+      "pinyin": "tí gāo",
+      "meaning": "nâng cao / cải thiện"
+    },
+    {
+      "hanzi": "各",
+      "pinyin": "gè",
+      "meaning": "các"
+    },
+    {
+      "hanzi": "开发领域",
+      "pinyin": "kāifā lǐngyù",
+      "meaning": "lĩnh vực phát triển"
+    },
+    {
+      "hanzi": "领导",
+      "pinyin": "lǐng dǎo",
+      "meaning": "lãnh đạo / người lãnh đạo"
+    },
+    {
+      "hanzi": "本领",
+      "pinyin": "běn lǐng",
+      "meaning": "bản lĩnh / năng lực / kỹ năng"
+    },
+    {
+      "hanzi": "领先",
+      "pinyin": "lǐng xiān",
+      "meaning": "dẫn đầu / đi trước / vượt lên trước"
+    },
+    {
+      "hanzi": "接口",
+      "pinyin": "jiēkǒu",
+      "meaning": "giao diện / interface"
+    },
+     {
+      "hanzi": "接受",
+      "pinyin": "jiē shòu",
+      "meaning": "chấp nhận / tiếp nhận"
+    },
+    {
+      "hanzi": "支持",
+      "pinyin": "zhīchí",
+      "meaning": "hỗ trợ"
+    },
+    {
+      "hanzi": "开支",
+      "pinyin": "kāi zhī",
+      "meaning": "chi tiêu / khoản chi"
+    },
+    {
+      "hanzi": "支柱",
+      "pinyin": "zhī zhù",
+      "meaning": "trụ cột / chỗ dựa chính"
+    },
+    {
+      "hanzi": "类库",
+      "pinyin": "lèikù",
+      "meaning": "thư viện"
+    },
+    {
+      "hanzi": "类似",
+      "pinyin": "lèi sì",
+      "meaning": "giống / tương tự"
+    },
+    {
+      "hanzi": "仓库",
+      "pinyin": "cāng kù",
+      "meaning": "kho / nhà kho"
+    },
+    {
+      "hanzi": "仓促",
+      "pinyin": "cāng cù",
+      "meaning": "vội vàng / gấp gáp / hấp tấp"
+    },
+    {
+      "hanzi": "编程语言",
+      "pinyin": "biānchéng yǔyán",
+      "meaning": "ngôn ngữ lập trình"
+    },
+    {
+      "hanzi": "及",
+      "pinyin": "jí",
+      "meaning": "và"
+    },
+    {
+      "hanzi": "许许多多",
+      "pinyin": "xǔxǔ duōduō",
+      "meaning": "rất nhiều"
+    },
+    {
+      "hanzi": "第三方",
+      "pinyin": "dì sān fāng",
+      "meaning": "bên thứ ba"
+    },
+    {
+      "hanzi": "框架",
+      "pinyin": "kuàngjià",
+      "meaning": "framework / khung"
+    },
+    {
+      "hanzi": "如",
+      "pinyin": "rú",
+      "meaning": "như"
+    },
+    {
+      "hanzi": "等",
+      "pinyin": "děng",
+      "meaning": "v.v."
+    },
+    {
+      "hanzi": "构成",
+      "pinyin": "gòuchéng",
+      "meaning": "cấu thành"
+    },
+    {
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaning": "ở / trong"
+    },
+    {
+      "hanzi": "国内",
+      "pinyin": "guónèi",
+      "meaning": "trong nước"
+    },
+    {
+      "hanzi": "内容",
+      "pinyin": "nèi róng",
+      "meaning": "nội dung"
+    },
+    {
+      "hanzi": "有关",
+      "pinyin": "yǒuguān",
+      "meaning": "liên quan"
+    },
+    {
+      "hanzi": "API",
+      "pinyin": "API",
+      "meaning": "API"
+    },
+    {
+      "hanzi": "语法",
+      "pinyin": "yǔfǎ",
+      "meaning": "ngữ pháp"
+    },
+    {
+      "hanzi": "技术资料",
+      "pinyin": "jìshù zīliào",
+      "meaning": "tài liệu kỹ thuật"
+    },
+    {
+      "hanzi": "工资",
+      "pinyin": "gōng zī",
+      "meaning": "tiền lương / lương"
+    },
+    {
+      "hanzi": "投资",
+      "pinyin": "tóu zī",
+      "meaning": "đầu tư"
+    },
+    {
+      "hanzi": "书籍",
+      "pinyin": "shūjí",
+      "meaning": "sách"
+    },
+    {
+      "hanzi": "非常",
+      "pinyin": "fēicháng",
+      "meaning": "rất"
+    },
+    {
+      "hanzi": "丰富",
+      "pinyin": "fēngfù",
+      "meaning": "phong phú"
+    },
+    {
+      "hanzi": "相比而言",
+      "pinyin": "xiāngbǐ éryán",
+      "meaning": "so sánh mà nói"
+    },
+    {
+      "hanzi": "却",
+      "pinyin": "què",
+      "meaning": "nhưng lại"
+    },
+    {
+      "hanzi": "显得",
+      "pinyin": "xiǎnde",
+      "meaning": "tỏ ra / trở nên"
+    },
+    {
+      "hanzi": "异常",
+      "pinyin": "yìcháng",
+      "meaning": "cực kỳ / bất thường"
+    },
+    {
+      "hanzi": "贫乏",
+      "pinyin": "pínfá",
+      "meaning": "thiếu thốn"
+    },
+    {
+      "hanzi": "这种",
+      "pinyin": "zhè zhǒng",
+      "meaning": "loại này / kiểu này"
+    },
+    {
+      "hanzi": "状况",
+      "pinyin": "zhuàngkuàng",
+      "meaning": "tình trạng"
+    },
+    {
+      "hanzi": "很大程度上",
+      "pinyin": "hěn dà chéngdù shàng",
+      "meaning": "ở mức độ rất lớn"
+    },
+    {
+      "hanzi": "本身",
+      "pinyin": "běnshēn",
+      "meaning": "bản thân"
+    },
+    {
+      "hanzi": "一个",
+      "pinyin": "yí gè",
+      "meaning": "một"
+    },
+    {
+      "hanzi": "重要",
+      "pinyin": "zhòngyào",
+      "meaning": "quan trọng"
+    },
+    {
+      "hanzi": "优点",
+      "pinyin": "yōudiǎn",
+      "meaning": "ưu điểm"
+    },
+    {
+      "hanzi": "导致",
+      "pinyin": "dǎozhì",
+      "meaning": "dẫn đến"
+    },
+    {
+      "hanzi": "层面",
+      "pinyin": "céngmiàn",
+      "meaning": "bình diện / cấp độ"
+    },
+    {
+      "hanzi": "隐藏",
+      "pinyin": "yǐncáng",
+      "meaning": "ẩn giấu"
+    },
+    {
+      "hanzi": "底层",
+      "pinyin": "dǐcéng",
+      "meaning": "tầng thấp"
+    },
+    {
+      "hanzi": "复杂性",
+      "pinyin": "fùzáxìng",
+      "meaning": "tính phức tạp"
+    },
+    {
+      "hanzi": "以及",
+      "pinyin": "yǐjí",
+      "meaning": "cũng như"
+    },
+    {
+      "hanzi": "机器",
+      "pinyin": "jīqì",
+      "meaning": "máy"
+    },
+    {
+      "hanzi": "与",
+      "pinyin": "yǔ",
+      "meaning": "và"
+    },
+    {
+      "hanzi": "操作系统",
+      "pinyin": "cāozuò xìtǒng",
+      "meaning": "hệ điều hành"
+    },
+    {
+      "hanzi": "差异性",
+      "pinyin": "chāyìxìng",
+      "meaning": "tính khác biệt"
+    },
+    {
+      "hanzi": "物理机",
+      "pinyin": "wùlǐjī",
+      "meaning": "máy vật lý"
+    },
+    {
+      "hanzi": "千差万别",
+      "pinyin": "qiānchā wànbié",
+      "meaning": "muôn hình vạn trạng / rất khác nhau"
+    },
+    {
+      "hanzi": "则",
+      "pinyin": "zé",
+      "meaning": "thì / lại"
+    },
+    {
+      "hanzi": "上面",
+      "pinyin": "shàngmiàn",
+      "meaning": "trên"
+    },
+    {
+      "hanzi": "建立",
+      "pinyin": "jiànlì",
+      "meaning": "xây dựng"
+    },
+    {
+      "hanzi": "统一",
+      "pinyin": "tǒngyī",
+      "meaning": "thống nhất"
+    },
+    {
+      "hanzi": "平台",
+      "pinyin": "píngtái",
+      "meaning": "nền tảng"
+    },
+    {
+      "hanzi": "实现",
+      "pinyin": "shíxiàn",
+      "meaning": "thực hiện"
+    },
+    {
+      "hanzi": "任意",
+      "pinyin": "rènyì",
+      "meaning": "bất kỳ"
+    },
+    {
+      "hanzi": "一台",
+      "pinyin": "yì tái",
+      "meaning": "một chiếc / một máy"
+    },
+    {
+      "hanzi": "编译",
+      "pinyin": "biānyì",
+      "meaning": "biên dịch"
+    },
+    {
+      "hanzi": "都",
+      "pinyin": "dōu",
+      "meaning": "đều"
+    },
+    {
+      "hanzi": "能",
+      "pinyin": "néng",
+      "meaning": "có thể"
+    },
+    {
+      "hanzi": "任何",
+      "pinyin": "rènhé",
+      "meaning": "bất kỳ"
+    },
+    {
+      "hanzi": "其他",
+      "pinyin": "qítā",
+      "meaning": "khác"
+    },
+    {
+      "hanzi": "正常",
+      "pinyin": "zhèngcháng",
+      "meaning": "bình thường"
+    },
+    {
+      "hanzi": "这一",
+      "pinyin": "zhè yī",
+      "meaning": "điều này / cái này"
+    },
+    {
+      "hanzi": "极大",
+      "pinyin": "jídà",
+      "meaning": "cực lớn"
+    },
+    {
+      "hanzi": "优势",
+      "pinyin": "yōushì",
+      "meaning": "ưu thế"
+    },
+    {
+      "hanzi": "使得",
+      "pinyin": "shǐde",
+      "meaning": "khiến cho"
+    },
+    {
+      "hanzi": "应用",
+      "pinyin": "yìngyòng",
+      "meaning": "ứng dụng"
+    },
+    {
+      "hanzi": "比",
+      "pinyin": "bǐ",
+      "meaning": "so với"
+    },
+    {
+      "hanzi": "传统",
+      "pinyin": "chuántǒng",
+      "meaning": "truyền thống"
+    },
+    {
+      "hanzi": "更",
+      "pinyin": "gèng",
+      "meaning": "hơn"
+    },
+    {
+      "hanzi": "高效快捷",
+      "pinyin": "gāoxiào kuàijié",
+      "meaning": "hiệu quả và nhanh chóng"
+    },
+    {
+      "hanzi": "程序员",
+      "pinyin": "chéngxùyuán",
+      "meaning": "lập trình viên"
+    },
+    {
+      "hanzi": "可以",
+      "pinyin": "kěyǐ",
+      "meaning": "có thể"
+    },
+    {
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "meaning": "đem / đặt"
+    },
+    {
+      "hanzi": "精力",
+      "pinyin": "jīnglì",
+      "meaning": "tinh lực / công sức"
+    },
+    {
+      "hanzi": "放在",
+      "pinyin": "fàng zài",
+      "meaning": "đặt vào / tập trung vào"
+    },
+    {
+      "hanzi": "具体",
+      "pinyin": "jùtǐ",
+      "meaning": "cụ thể"
+    },
+    {
+      "hanzi": "业务逻辑",
+      "pinyin": "yèwù luójí",
+      "meaning": "logic nghiệp vụ"
+    },
+    {
+      "hanzi": "而不是",
+      "pinyin": "ér bú shì",
+      "meaning": "chứ không phải"
+    },
+    {
+      "hanzi": "保障",
+      "pinyin": "bǎozhàng",
+      "meaning": "bảo đảm"
+    },
+    {
+      "hanzi": "物理硬件",
+      "pinyin": "wùlǐ yìngjiàn",
+      "meaning": "phần cứng vật lý"
+    },
+    {
+      "hanzi": "兼容性",
+      "pinyin": "jiānróngxìng",
+      "meaning": "tính tương thích"
+    },
+    {
+      "hanzi": "通常情况下",
+      "pinyin": "tōngcháng qíngkuàng xià",
+      "meaning": "trong điều kiện thông thường"
+    },
+    {
+      "hanzi": "只要",
+      "pinyin": "zhǐyào",
+      "meaning": "chỉ cần"
+    },
+    {
+      "hanzi": "了解",
+      "pinyin": "liǎojiě",
+      "meaning": "hiểu"
+    },
+    {
+      "hanzi": "必要",
+      "pinyin": "bìyào",
+      "meaning": "cần thiết"
+    },
+    {
+      "hanzi": "学习",
+      "pinyin": "xuéxí",
+      "meaning": "học"
+    },
+    {
+      "hanzi": "适当",
+      "pinyin": "shìdàng",
+      "meaning": "thích hợp"
+    },
+    {
+      "hanzi": "就",
+      "pinyin": "jiù",
+      "meaning": "thì / liền"
+    },
+    {
+      "hanzi": "已经",
+      "pinyin": "yǐjīng",
+      "meaning": "đã"
+    },
+    {
+      "hanzi": "基本",
+      "pinyin": "jīběn",
+      "meaning": "cơ bản"
+    },
+    {
+      "hanzi": "日常",
+      "pinyin": "rìcháng",
+      "meaning": "hằng ngày"
+    },
+    {
+      "hanzi": "需要",
+      "pinyin": "xūyào",
+      "meaning": "nhu cầu / cần"
+    },
+    {
+      "hanzi": "用户不知不觉中",
+      "pinyin": "yònghù bùzhībùjué zhōng",
+      "meaning": "một cách người dùng không hề hay biết"
+    },
+    {
+      "hanzi": "完成",
+      "pinyin": "wánchéng",
+      "meaning": "hoàn thành"
+    },
+    {
+      "hanzi": "对",
+      "pinyin": "duì",
+      "meaning": "đối với"
+    },
+    {
+      "hanzi": "资源",
+      "pinyin": "zīyuán",
+      "meaning": "tài nguyên"
+    },
+    {
+      "hanzi": "管理工作",
+      "pinyin": "guǎnlǐ gōngzuò",
+      "meaning": "công việc quản lý"
+    },
+    {
+      "hanzi": "因此",
+      "pinyin": "yīncǐ",
+      "meaning": "vì vậy"
+    },
+    {
+      "hanzi": "运作",
+      "pinyin": "yùnzuò",
+      "meaning": "vận hành"
+    },
+    {
+      "hanzi": "并不是",
+      "pinyin": "bìng bú shì",
+      "meaning": "không phải"
+    },
+    {
+      "hanzi": "普通",
+      "pinyin": "pǔtōng",
+      "meaning": "thông thường"
+    },
+    {
+      "hanzi": "开发人员",
+      "pinyin": "kāifā rényuán",
+      "meaning": "nhân viên phát triển / developer"
+    },
+    {
+      "hanzi": "必备",
+      "pinyin": "bìbèi",
+      "meaning": "cần phải có"
+    },
+    {
+      "hanzi": "或者说",
+      "pinyin": "huòzhě shuō",
+      "meaning": "hay nói cách khác"
+    },
+    {
+      "hanzi": "首要",
+      "pinyin": "shǒuyào",
+      "meaning": "hàng đầu"
+    },
+    {
+      "hanzi": "然而",
+      "pinyin": "rán'ér",
+      "meaning": "tuy nhiên"
+    },
+    {
+      "hanzi": "凡事",
+      "pinyin": "fánshì",
+      "meaning": "mọi việc"
+    },
+    {
+      "hanzi": "具备",
+      "pinyin": "jùbèi",
+      "meaning": "có / mang"
+    },
+    {
+      "hanzi": "两面性",
+      "pinyin": "liǎngmiànxìng",
+      "meaning": "tính hai mặt"
+    },
+    {
+      "hanzi": "随着",
+      "pinyin": "suízhe",
+      "meaning": "cùng với"
+    },
+    {
+      "hanzi": "不断",
+      "pinyin": "bùduàn",
+      "meaning": "không ngừng"
+    },
+    {
+      "hanzi": "发展",
+      "pinyin": "fāzhǎn",
+      "meaning": "phát triển"
+    },
+    {
+      "hanzi": "它",
+      "pinyin": "tā",
+      "meaning": "nó"
+    },
+    {
+      "hanzi": "已",
+      "pinyin": "yǐ",
+      "meaning": "đã"
+    },
+    {
+      "hanzi": "被",
+      "pinyin": "bèi",
+      "meaning": "được / bị"
+    },
+    {
+      "hanzi": "应用于",
+      "pinyin": "yìngyòng yú",
+      "meaning": "được ứng dụng vào"
+    },
+    {
+      "hanzi": "越来越多",
+      "pinyin": "yuèláiyuè duō",
+      "meaning": "ngày càng nhiều"
+    },
+    {
+      "hanzi": "之中",
+      "pinyin": "zhī zhōng",
+      "meaning": "trong đó"
+    },
+    {
+      "hanzi": "其中",
+      "pinyin": "qízhōng",
+      "meaning": "trong đó"
+    },
+    {
+      "hanzi": "一些",
+      "pinyin": "yìxiē",
+      "meaning": "một số"
+    },
+    {
+      "hanzi": "互联网",
+      "pinyin": "hùliánwǎng",
+      "meaning": "Internet"
+    },
+    {
+      "hanzi": "能源",
+      "pinyin": "néngyuán",
+      "meaning": "năng lượng"
+    },
+    {
+      "hanzi": "金融",
+      "pinyin": "jīnróng",
+      "meaning": "tài chính"
+    },
+    {
+      "hanzi": "通信",
+      "pinyin": "tōngxìn",
+      "meaning": "viễn thông"
+    },
+    {
+      "hanzi": "性能",
+      "pinyin": "xìngnéng",
+      "meaning": "hiệu năng"
+    },
+    {
+      "hanzi": "稳定性",
+      "pinyin": "wěndìngxìng",
+      "meaning": "tính ổn định"
+    },
+    {
+      "hanzi": "扩展性",
+      "pinyin": "kuòzhǎnxìng",
+      "meaning": "khả năng mở rộng"
+    },
+    {
+      "hanzi": "方面",
+      "pinyin": "fāngmiàn",
+      "meaning": "phương diện"
+    },
+    {
+      "hanzi": "会",
+      "pinyin": "huì",
+      "meaning": "sẽ"
+    },
+    {
+      "hanzi": "有",
+      "pinyin": "yǒu",
+      "meaning": "có"
+    },
+    {
+      "hanzi": "极高",
+      "pinyin": "jígāo",
+      "meaning": "rất cao"
+    },
+    {
+      "hanzi": "要求",
+      "pinyin": "yāoqiú",
+      "meaning": "yêu cầu"
+    },
+    {
+      "hanzi": "一段",
+      "pinyin": "yí duàn",
+      "meaning": "một đoạn"
+    },
+    {
+      "hanzi": "很可能",
+      "pinyin": "hěn kěnéng",
+      "meaning": "rất có thể"
+    },
+    {
+      "hanzi": "10",
+      "pinyin": "shí",
+      "meaning": "10"
+    },
+    {
+      "hanzi": "个人",
+      "pinyin": "gè rén",
+      "meaning": "người"
+    },
+    {
+      "hanzi": "同时",
+      "pinyin": "tóngshí",
+      "meaning": "đồng thời"
+    },
+    {
+      "hanzi": "完全",
+      "pinyin": "wánquán",
+      "meaning": "hoàn toàn"
+    },
+    {
+      "hanzi": "10000",
+      "pinyin": "yī wàn",
+      "meaning": "10000"
+    },
+    {
+      "hanzi": "缓慢",
+      "pinyin": "huǎnmàn",
+      "meaning": "chậm chạp"
+    },
+    {
+      "hanzi": "死锁",
+      "pinyin": "sǐsuǒ",
+      "meaning": "deadlock"
+    },
+    {
+      "hanzi": "甚至",
+      "pinyin": "shènzhì",
+      "meaning": "thậm chí"
+    },
+    {
+      "hanzi": "崩溃",
+      "pinyin": "bēngkuì",
+      "meaning": "sụp đổ / crash"
+    },
+    {
+      "hanzi": "毫无疑问",
+      "pinyin": "háo wú yíwèn",
+      "meaning": "không còn nghi ngờ gì"
+    },
+    {
+      "hanzi": "要",
+      "pinyin": "yào",
+      "meaning": "cần / muốn"
+    },
+    {
+      "hanzi": "满足",
+      "pinyin": "mǎnzú",
+      "meaning": "đáp ứng"
+    },
+    {
+      "hanzi": "更高性能",
+      "pinyin": "gèng gāo xìngnéng",
+      "meaning": "hiệu năng cao hơn"
+    },
+    {
+      "hanzi": "但是",
+      "pinyin": "dànshì",
+      "meaning": "nhưng"
+    },
+    {
+      "hanzi": "绝大多数",
+      "pinyin": "juédà duōshù",
+      "meaning": "đa số tuyệt đối"
+    },
+    {
+      "hanzi": "提升",
+      "pinyin": "tíshēng",
+      "meaning": "nâng cao"
+    },
+    {
+      "hanzi": "无法",
+      "pinyin": "wúfǎ",
+      "meaning": "không thể"
+    },
+    {
+      "hanzi": "等比例",
+      "pinyin": "děng bǐlì",
+      "meaning": "theo tỷ lệ tương ứng"
+    },
+    {
+      "hanzi": "并发能力",
+      "pinyin": "bìngfā nénglì",
+      "meaning": "năng lực đồng thời"
+    },
+    {
+      "hanzi": "甚至有可能",
+      "pinyin": "shènzhì yǒu kěnéng",
+      "meaning": "thậm chí có khả năng"
+    },
+    {
+      "hanzi": "运行状况",
+      "pinyin": "yùnxíng zhuàngkuàng",
+      "meaning": "tình trạng vận hành"
+    },
+    {
+      "hanzi": "改善",
+      "pinyin": "gǎishàn",
+      "meaning": "cải thiện"
+    },
+    {
+      "hanzi": "这里面",
+      "pinyin": "zhè lǐmiàn",
+      "meaning": "trong chuyện này"
+    },
+    {
+      "hanzi": "原因",
+      "pinyin": "yuányīn",
+      "meaning": "nguyên nhân"
+    },
+    {
+      "hanzi": "为了",
+      "pinyin": "wèile",
+      "meaning": "để"
+    },
+    {
+      "hanzi": "达到",
+      "pinyin": "dádào",
+      "meaning": "đạt tới"
+    },
+    {
+      "hanzi": "所有",
+      "pinyin": "suǒyǒu",
+      "meaning": "tất cả"
+    },
+    {
+      "hanzi": "一致",
+      "pinyin": "yízhì",
+      "meaning": "nhất quán"
+    },
+    {
+      "hanzi": "目的",
+      "pinyin": "mùdì",
+      "meaning": "mục đích"
+    },
+    {
+      "hanzi": "牺牲",
+      "pinyin": "xīshēng",
+      "meaning": "hy sinh"
+    },
+    {
+      "hanzi": "相关",
+      "pinyin": "xiāngguān",
+      "meaning": "liên quan"
+    },
+    {
+      "hanzi": "特性",
+      "pinyin": "tèxìng",
+      "meaning": "đặc tính"
+    },
+    {
+      "hanzi": "更重要",
+      "pinyin": "gèng zhòngyào",
+      "meaning": "quan trọng hơn"
+    },
+    {
+      "hanzi": "人为",
+      "pinyin": "rénwéi",
+      "meaning": "do con người"
+    },
+    {
+      "hanzi": "如果",
+      "pinyin": "rúguǒ",
+      "meaning": "nếu"
+    },
+    {
+      "hanzi": "不了解",
+      "pinyin": "bù liǎojiě",
+      "meaning": "không hiểu"
+    },
+    {
+      "hanzi": "诸多",
+      "pinyin": "zhūduō",
+      "meaning": "nhiều"
+    },
+    {
+      "hanzi": "运行原理",
+      "pinyin": "yùnxíng yuánlǐ",
+      "meaning": "nguyên lý vận hành"
+    },
+    {
+      "hanzi": "最适合",
+      "pinyin": "zuì shìhé",
+      "meaning": "phù hợp nhất"
+    },
+    {
+      "hanzi": "自优化",
+      "pinyin": "zì yōuhuà",
+      "meaning": "tự tối ưu"
+    },
+    {
+      "hanzi": "代码",
+      "pinyin": "dàimǎ",
+      "meaning": "mã nguồn / code"
+    },
+    {
+      "hanzi": "其实",
+      "pinyin": "qíshí",
+      "meaning": "thực ra"
+    },
+    {
+      "hanzi": "商用",
+      "pinyin": "shāngyòng",
+      "meaning": "thương mại"
+    },
+    {
+      "hanzi": "相当多",
+      "pinyin": "xiāngdāng duō",
+      "meaning": "khá nhiều"
+    },
+    {
+      "hanzi": "优化参数",
+      "pinyin": "yōuhuà cānshù",
+      "meaning": "tham số tối ưu"
+    },
+    {
+      "hanzi": "调节手段",
+      "pinyin": "tiáojié shǒuduàn",
+      "meaning": "biện pháp điều chỉnh"
+    },
+    {
+      "hanzi": "用于",
+      "pinyin": "yòngyú",
+      "meaning": "dùng cho"
+    },
+    {
+      "hanzi": "应用程序",
+      "pinyin": "yìngyòng chéngxù",
+      "meaning": "application"
+    },
+    {
+      "hanzi": "实际",
+      "pinyin": "shíjì",
+      "meaning": "thực tế"
+    },
+    {
+      "hanzi": "生产环境",
+      "pinyin": "shēngchǎn huánjìng",
+      "meaning": "môi trường production"
+    },
+    {
+      "hanzi": "入门",
+      "pinyin": "rùmén",
+      "meaning": "nhập môn"
+    },
+    {
+      "hanzi": "让",
+      "pinyin": "ràng",
+      "meaning": "để / khiến"
+    },
+    {
+      "hanzi": "自己",
+      "pinyin": "zìjǐ",
+      "meaning": "bản thân mình"
+    },
+    {
+      "hanzi": "机器上",
+      "pinyin": "jīqì shàng",
+      "meaning": "trên máy"
+    },
+    {
+      "hanzi": "工作",
+      "pinyin": "gōngzuò",
+      "meaning": "làm việc / chạy"
+    },
+    {
+      "hanzi": "那么",
+      "pinyin": "nàme",
+      "meaning": "thì / vậy"
+    },
+    {
+      "hanzi": "这些",
+      "pinyin": "zhèxiē",
+      "meaning": "những cái này"
+    },
+    {
+      "hanzi": "可以说",
+      "pinyin": "kěyǐ shuō",
+      "meaning": "có thể nói"
+    },
+    {
+      "hanzi": "可有可无",
+      "pinyin": "kě yǒu kě wú",
+      "meaning": "có cũng được, không có cũng được"
+    },
+    {
+      "hanzi": "尤其是",
+      "pinyin": "yóuqí shì",
+      "meaning": "đặc biệt là"
+    },
+    {
+      "hanzi": "大规模",
+      "pinyin": "dà guīmó",
+      "meaning": "quy mô lớn"
+    },
+    {
+      "hanzi": "企业级",
+      "pinyin": "qǐyèjí",
+      "meaning": "cấp doanh nghiệp"
+    },
+    {
+      "hanzi": "迫切",
+      "pinyin": "pòqiè",
+      "meaning": "cấp thiết"
+    },
+    {
+      "hanzi": "至少",
+      "pinyin": "zhìshǎo",
+      "meaning": "ít nhất"
+    },
+    {
+      "hanzi": "一部分",
+      "pinyin": "yí bùfen",
+      "meaning": "một bộ phận"
+    },
+    {
+      "hanzi": "调节方法",
+      "pinyin": "tiáojié fāngfǎ",
+      "meaning": "cách điều chỉnh"
+    },
+    {
+      "hanzi": "具有",
+      "pinyin": "jùyǒu",
+      "meaning": "có"
+    },
+    {
+      "hanzi": "清晰",
+      "pinyin": "qīngxī",
+      "meaning": "rõ ràng"
+    },
+    {
+      "hanzi": "认识",
+      "pinyin": "rènshi",
+      "meaning": "nhận thức / hiểu"
+    },
+    {
+      "hanzi": "所以",
+      "pinyin": "suǒyǐ",
+      "meaning": "vì vậy"
+    },
+    {
+      "hanzi": "架构师",
+      "pinyin": "jiàgòushī",
+      "meaning": "kiến trúc sư"
+    },
+    {
+      "hanzi": "系统调优师",
+      "pinyin": "xìtǒng tiáoyōushī",
+      "meaning": "kỹ sư tối ưu hệ thống"
+    },
+    {
+      "hanzi": "高级程序员",
+      "pinyin": "gāojí chéngxùyuán",
+      "meaning": "lập trình viên cao cấp"
+    },
+    {
+      "hanzi": "角色",
+      "pinyin": "juésè",
+      "meaning": "vai trò"
+    },
+    {
+      "hanzi": "需求",
+      "pinyin": "xūqiú",
+      "meaning": "nhu cầu"
+    },
+    {
+      "hanzi": "一直",
+      "pinyin": "yìzhí",
+      "meaning": "luôn luôn"
+    },
+    {
+      "hanzi": "成为",
+      "pinyin": "chéngwéi",
+      "meaning": "trở thành"
+    },
+    {
+      "hanzi": "各种",
+      "pinyin": "gèzhǒng",
+      "meaning": "các loại"
+    },
+    {
+      "hanzi": "自动运作",
+      "pinyin": "zìdòng yùnzuò",
+      "meaning": "vận hành tự động"
+    },
+    {
+      "hanzi": "原理",
+      "pinyin": "yuánlǐ",
+      "meaning": "nguyên lý"
+    },
+    {
+      "hanzi": "成长路上",
+      "pinyin": "chéngzhǎng lùshàng",
+      "meaning": "trên con đường trưởng thành"
+    },
+    {
+      "hanzi": "最终",
+      "pinyin": "zuìzhōng",
+      "meaning": "cuối cùng"
+    },
+    {
+      "hanzi": "必然",
+      "pinyin": "bìrán",
+      "meaning": "tất nhiên / chắc chắn"
+    },
+    {
+      "hanzi": "接触到",
+      "pinyin": "jiēchù dào",
+      "meaning": "tiếp xúc tới"
+    },
+    {
+      "hanzi": "一课",
+      "pinyin": "yí kè",
+      "meaning": "một bài học"
+    },
+    {
+      "hanzi": "通过",
+      "pinyin": "tōngguò",
+      "meaning": "thông qua"
+    },
+    {
+      "hanzi": "本书",
+      "pinyin": "běnshū",
+      "meaning": "cuốn sách này"
+    },
+    {
+      "hanzi": "读者",
+      "pinyin": "dúzhě",
+      "meaning": "độc giả"
+    },
+    {
+      "hanzi": "以",
+      "pinyin": "yǐ",
+      "meaning": "bằng"
+    },
+    {
+      "hanzi": "相对",
+      "pinyin": "xiāngduì",
+      "meaning": "tương đối"
+    },
+    {
+      "hanzi": "轻松",
+      "pinyin": "qīngsōng",
+      "meaning": "nhẹ nhàng"
+    },
+    {
+      "hanzi": "方式",
+      "pinyin": "fāngshì",
+      "meaning": "cách thức"
+    },
+    {
+      "hanzi": "学到",
+      "pinyin": "xué dào",
+      "meaning": "học được"
+    },
+    {
+      "hanzi": "面向",
+      "pinyin": "miànxiàng",
+      "meaning": "hướng tới"
+    },
+    {
+      "hanzi": "中级",
+      "pinyin": "zhōngjí",
+      "meaning": "trung cấp"
+    },
+    {
+      "hanzi": "修炼",
+      "pinyin": "xiūliàn",
+      "meaning": "rèn luyện"
+    },
+    {
+      "hanzi": "门槛",
+      "pinyin": "ménkǎn",
+      "meaning": "ngưỡng / độ khó"
+    },
+    {
+      "hanzi": "教材",
+      "pinyin": "jiàocái",
+      "meaning": "giáo trình"
+    },
+    {
+      "hanzi": "最近几年",
+      "pinyin": "zuìjìn jǐ nián",
+      "meaning": "vài năm gần đây"
+    },
+    {
+      "hanzi": "才",
+      "pinyin": "cái",
+      "meaning": "mới"
+    },
+    {
+      "hanzi": "兴起",
+      "pinyin": "xīngqǐ",
+      "meaning": "nổi lên"
+    },
+    {
+      "hanzi": "迅速",
+      "pinyin": "xùnsù",
+      "meaning": "nhanh chóng"
+    },
+    {
+      "hanzi": "流行",
+      "pinyin": "liúxíng",
+      "meaning": "phổ biến"
+    },
+    {
+      "hanzi": "职业",
+      "pinyin": "zhíyè",
+      "meaning": "nghề nghiệp"
+    },
+    {
+      "hanzi": "大量",
+      "pinyin": "dàliàng",
+      "meaning": "số lượng lớn"
+    },
+    {
+      "hanzi": "案例",
+      "pinyin": "ànlì",
+      "meaning": "ví dụ / case"
+    },
+    {
+      "hanzi": "调优实战",
+      "pinyin": "tiáoyōu shízhàn",
+      "meaning": "thực chiến tối ưu"
+    },
+    {
+      "hanzi": "将会",
+      "pinyin": "jiānghuì",
+      "meaning": "sẽ"
+    },
+    {
+      "hanzi": "直接",
+      "pinyin": "zhíjiē",
+      "meaning": "trực tiếp"
+    },
+    {
+      "hanzi": "参考作用",
+      "pinyin": "cānkǎo zuòyòng",
+      "meaning": "tác dụng tham khảo"
+    },
+    {
+      "hanzi": "系统架构师",
+      "pinyin": "xìtǒng jiàgòushī",
+      "meaning": "kiến trúc sư hệ thống"
+    },
+    {
+      "hanzi": "并发",
+      "pinyin": "bìngfā",
+      "meaning": "đồng thời / concurrency"
+    },
+    {
+      "hanzi": "伸缩",
+      "pinyin": "shēnsuō",
+      "meaning": "co giãn / scaling"
+    },
+    {
+      "hanzi": "能力",
+      "pinyin": "nénglì",
+      "meaning": "năng lực"
+    },
+    {
+      "hanzi": "职责之一",
+      "pinyin": "zhízé zhī yī",
+      "meaning": "một trong những trách nhiệm"
+    },
+    {
+      "hanzi": "这部分",
+      "pinyin": "zhè bùfen",
+      "meaning": "phần này"
+    },
+    {
+      "hanzi": "密不可分",
+      "pinyin": "mì bù kě fēn",
+      "meaning": "không thể tách rời"
+    },
+    {
+      "hanzi": "制定",
+      "pinyin": "zhìdìng",
+      "meaning": "xây dựng / hoạch định"
+    },
+    {
+      "hanzi": "底层框架",
+      "pinyin": "dǐcéng kuàngjià",
+      "meaning": "framework tầng dưới"
+    },
+    {
+      "hanzi": "参考资料",
+      "pinyin": "cānkǎo zīliào",
+      "meaning": "tài liệu tham khảo"
+    },
+    {
+      "hanzi": "如何",
+      "pinyin": "rúhé",
+      "meaning": "làm thế nào"
+    },
+    {
+      "hanzi": "阅读",
+      "pinyin": "yuèdú",
+      "meaning": "đọc"
+    },
+    {
+      "hanzi": "一共",
+      "pinyin": "yígòng",
+      "meaning": "tổng cộng"
+    },
+    {
+      "hanzi": "分为",
+      "pinyin": "fēnwéi",
+      "meaning": "chia thành"
+    },
+    {
+      "hanzi": "五个部分",
+      "pinyin": "wǔ gè bùfen",
+      "meaning": "năm phần"
+    },
+    {
+      "hanzi": "走近",
+      "pinyin": "zǒujìn",
+      "meaning": "đến gần / tiếp cận"
+    },
+    {
+      "hanzi": "自动内存管理",
+      "pinyin": "zìdòng nèicún guǎnlǐ",
+      "meaning": "quản lý bộ nhớ tự động"
+    },
+    {
+      "hanzi": "执行子系统",
+      "pinyin": "zhíxíng zǐ xìtǒng",
+      "meaning": "tiểu hệ thống thực thi"
+    },
+    {
+      "hanzi": "程序编译",
+      "pinyin": "chéngxù biānyì",
+      "meaning": "biên dịch chương trình"
+    },
+    {
+      "hanzi": "代码优化",
+      "pinyin": "dàimǎ yōuhuà",
+      "meaning": "tối ưu mã"
+    },
+    {
+      "hanzi": "高效并发",
+      "pinyin": "gāoxiào bìngfā",
+      "meaning": "concurrency hiệu quả cao"
+    },
+    {
+      "hanzi": "各个",
+      "pinyin": "gègè",
+      "meaning": "từng"
+    },
+    {
+      "hanzi": "之间",
+      "pinyin": "zhījiān",
+      "meaning": "giữa"
+    },
+    {
+      "hanzi": "基本上",
+      "pinyin": "jīběn shàng",
+      "meaning": "về cơ bản"
+    },
+    {
+      "hanzi": "互相独立",
+      "pinyin": "hùxiāng dúlì",
+      "meaning": "độc lập với nhau"
+    },
+    {
+      "hanzi": "没有",
+      "pinyin": "méiyǒu",
+      "meaning": "không có"
+    },
+    {
+      "hanzi": "前后",
+      "pinyin": "qiánhòu",
+      "meaning": "trước sau"
+    },
+    {
+      "hanzi": "依赖关系",
+      "pinyin": "yīlài guānxì",
+      "meaning": "quan hệ phụ thuộc"
+    },
+    {
+      "hanzi": "感兴趣",
+      "pinyin": "gǎn xìngqù",
+      "meaning": "có hứng thú"
+    },
+    {
+      "hanzi": "专题",
+      "pinyin": "zhuāntí",
+      "meaning": "chuyên đề"
+    },
+    {
+      "hanzi": "开始",
+      "pinyin": "kāishǐ",
+      "meaning": "bắt đầu"
+    },
+    {
+      "hanzi": "章节",
+      "pinyin": "zhāngjié",
+      "meaning": "chương mục"
+    },
+    {
+      "hanzi": "先后顺序",
+      "pinyin": "xiānhòu shùnxù",
+      "meaning": "thứ tự trước sau"
+    },
+    {
+      "hanzi": "这里",
+      "pinyin": "zhèlǐ",
+      "meaning": "ở đây"
+    },
+    {
+      "hanzi": "并没有",
+      "pinyin": "bìng méiyǒu",
+      "meaning": "không hề"
+    },
+    {
+      "hanzi": "假定",
+      "pinyin": "jiǎdìng",
+      "meaning": "giả định"
+    },
+    {
+      "hanzi": "所有读者",
+      "pinyin": "suǒyǒu dúzhě",
+      "meaning": "mọi độc giả"
+    },
+    {
+      "hanzi": "领域",
+      "pinyin": "lǐngyù",
+      "meaning": "lĩnh vực"
+    },
+    {
+      "hanzi": "特别",
+      "pinyin": "tèbié",
+      "meaning": "đặc biệt"
+    },
+    {
+      "hanzi": "专业",
+      "pinyin": "zhuānyè",
+      "meaning": "chuyên môn"
+    },
+    {
+      "hanzi": "技术水平",
+      "pinyin": "jìshù shuǐpíng",
+      "meaning": "trình độ kỹ thuật"
+    },
+    {
+      "hanzi": "保证",
+      "pinyin": "bǎozhèng",
+      "meaning": "bảo đảm"
+    },
+    {
+      "hanzi": "逻辑完整",
+      "pinyin": "luójí wánzhěng",
+      "meaning": "logic hoàn chỉnh"
+    },
+    {
+      "hanzi": "描述准确",
+      "pinyin": "miáoshù zhǔnquè",
+      "meaning": "mô tả chính xác"
+    },
+    {
+      "hanzi": "前提下",
+      "pinyin": "qiántí xià",
+      "meaning": "trong tiền đề"
+    },
+    {
+      "hanzi": "尽量",
+      "pinyin": "jǐnliàng",
+      "meaning": "cố gắng hết mức"
+    },
+    {
+      "hanzi": "通俗",
+      "pinyin": "tōngsú",
+      "meaning": "dễ hiểu"
+    },
+    {
+      "hanzi": "讲述",
+      "pinyin": "jiǎngshù",
+      "meaning": "trình bày / kể"
+    },
+    {
+      "hanzi": "最为密切",
+      "pinyin": "zuìwéi mìqiè",
+      "meaning": "mật thiết nhất"
+    },
+    {
+      "hanzi": "内容",
+      "pinyin": "nèiróng",
+      "meaning": "nội dung"
+    },
+    {
+      "hanzi": "毕竟",
+      "pinyin": "bìjìng",
+      "meaning": "dù sao"
+    },
+    {
+      "hanzi": "探讨",
+      "pinyin": "tàntǎo",
+      "meaning": "thảo luận / tìm hiểu"
+    },
+    {
+      "hanzi": "不可避免地",
+      "pinyin": "bùkě bìmiǎn de",
+      "meaning": "một cách không tránh khỏi"
+    },
+    {
+      "hanzi": "一定",
+      "pinyin": "yídìng",
+      "meaning": "nhất định / nhất định phải"
+    },
+    {
+      "hanzi": "技术基础",
+      "pinyin": "jìshù jīchǔ",
+      "meaning": "nền tảng kỹ thuật"
+    },
+    {
+      "hanzi": "定位",
+      "pinyin": "dìngwèi",
+      "meaning": "định vị"
+    },
+    {
+      "hanzi": "群体",
+      "pinyin": "qúntǐ",
+      "meaning": "nhóm"
+    },
+    {
+      "hanzi": "常用",
+      "pinyin": "chángyòng",
+      "meaning": "thường dùng"
+    },
+    {
+      "hanzi": "基础知识点",
+      "pinyin": "jīchǔ zhīshi diǎn",
+      "meaning": "điểm kiến thức cơ bản"
+    },
+    {
+      "hanzi": "将",
+      "pinyin": "jiāng",
+      "meaning": "sẽ"
+    },
+    {
+      "hanzi": "假设",
+      "pinyin": "jiǎshè",
+      "meaning": "giả sử / giả định"
+    },
+    {
+      "hanzi": "已有所了解",
+      "pinyin": "yǐ yǒu suǒ liǎojiě",
+      "meaning": "đã có hiểu biết"
+    },
+    {
+      "hanzi": "介绍",
+      "pinyin": "jièshào",
+      "meaning": "giới thiệu"
+    },
+    {
+      "hanzi": "并不局限于",
+      "pinyin": "bìng bù júxiàn yú",
+      "meaning": "không giới hạn ở"
+    },
+    {
+      "hanzi": "某一个",
+      "pinyin": "mǒu yí gè",
+      "meaning": "một cái nào đó"
+    },
+    {
+      "hanzi": "特定",
+      "pinyin": "tèdìng",
+      "meaning": "cụ thể / đặc định"
+    },
+    {
+      "hanzi": "发行商",
+      "pinyin": "fāxíngshāng",
+      "meaning": "nhà phát hành"
+    },
+    {
+      "hanzi": "某一款",
+      "pinyin": "mǒu yì kuǎn",
+      "meaning": "một loại nào đó"
+    },
+    {
+      "hanzi": "只是",
+      "pinyin": "zhǐshì",
+      "meaning": "chỉ là"
+    },
+    {
+      "hanzi": "由于",
+      "pinyin": "yóuyú",
+      "meaning": "do / bởi vì"
+    },
+    {
+      "hanzi": "OracleJDK",
+      "pinyin": "OracleJDK",
+      "meaning": "OracleJDK"
+    },
+    {
+      "hanzi": "OpenJDK",
+      "pinyin": "OpenJDK",
+      "meaning": "OpenJDK"
+    },
+    {
+      "hanzi": "市场占有率",
+      "pinyin": "shìchǎng zhànyǒulǜ",
+      "meaning": "thị phần"
+    },
+    {
+      "hanzi": "绝对优势",
+      "pinyin": "juéduì yōushì",
+      "meaning": "ưu thế tuyệt đối"
+    },
+    {
+      "hanzi": "HotSpot",
+      "pinyin": "HotSpot",
+      "meaning": "HotSpot"
+    },
+    {
+      "hanzi": "不可避免",
+      "pinyin": "bùkě bìmiǎn",
+      "meaning": "không thể tránh"
+    },
+    {
+      "hanzi": "分析",
+      "pinyin": "fēnxī",
+      "meaning": "phân tích"
+    },
+    {
+      "hanzi": "讲解",
+      "pinyin": "jiǎngjiě",
+      "meaning": "giảng giải"
+    },
+    {
+      "hanzi": "对象",
+      "pinyin": "duìxiàng",
+      "meaning": "đối tượng"
+    },
+    {
+      "hanzi": "涉及",
+      "pinyin": "shèjí",
+      "meaning": "liên quan tới"
+    },
+    {
+      "hanzi": "自身实现",
+      "pinyin": "zìshēn shíxiàn",
+      "meaning": "cách hiện thực của chính nó"
+    },
+    {
+      "hanzi": "大多",
+      "pinyin": "dàduō",
+      "meaning": "phần lớn"
+    },
+    {
+      "hanzi": "目标对象",
+      "pinyin": "mùbiāo duìxiàng",
+      "meaning": "đối tượng mục tiêu"
+    },
+    {
+      "hanzi": "撰写",
+      "pinyin": "zhuànxiě",
+      "meaning": "soạn viết"
+    },
+    {
+      "hanzi": "意图",
+      "pinyin": "yìtú",
+      "meaning": "ý đồ"
+    },
+    {
+      "hanzi": "源码导读",
+      "pinyin": "yuánmǎ dǎodú",
+      "meaning": "đọc hiểu mã nguồn"
+    },
+    {
+      "hanzi": "解析",
+      "pinyin": "jiěxī",
+      "meaning": "phân tích / giải thích"
+    },
+    {
+      "hanzi": "通用原理",
+      "pinyin": "tōngyòng yuánlǐ",
+      "meaning": "nguyên lý chung"
+    },
+    {
+      "hanzi": "即使",
+      "pinyin": "jíshǐ",
+      "meaning": "ngay cả khi"
+    },
+    {
+      "hanzi": "之外",
+      "pinyin": "zhīwài",
+      "meaning": "ngoài"
+    },
+    {
+      "hanzi": "有所收获",
+      "pinyin": "yǒu suǒ shōuhuò",
+      "meaning": "thu được điều gì đó"
+    },
+    {
+      "hanzi": "最后",
+      "pinyin": "zuìhòu",
+      "meaning": "cuối cùng"
+    },
+    {
+      "hanzi": "希望",
+      "pinyin": "xīwàng",
+      "meaning": "hy vọng"
+    },
+    {
+      "hanzi": "跟随",
+      "pinyin": "gēnsuí",
+      "meaning": "theo cùng"
+    },
+    {
+      "hanzi": "实践相关",
+      "pinyin": "shíjiàn xiāngguān",
+      "meaning": "liên quan thực tiễn"
+    },
+    {
+      "hanzi": "亲自",
+      "pinyin": "qīnzì",
+      "meaning": "tự mình"
+    },
+    {
+      "hanzi": "验证",
+      "pinyin": "yànzhèng",
+      "meaning": "kiểm chứng"
+    },
+    {
+      "hanzi": "一遍",
+      "pinyin": "yí biàn",
+      "meaning": "một lượt"
+    },
+    {
+      "hanzi": "用到",
+      "pinyin": "yòng dào",
+      "meaning": "dùng tới"
+    },
+    {
+      "hanzi": "代码清单",
+      "pinyin": "dàimǎ qīngdān",
+      "meaning": "danh sách mã"
+    },
+    {
+      "hanzi": "华章图书",
+      "pinyin": "Huázhāng Túshū",
+      "meaning": "Nhà sách Huazhang"
+    },
+    {
+      "hanzi": "网站",
+      "pinyin": "wǎngzhàn",
+      "meaning": "website"
+    },
+    {
+      "hanzi": "下载",
+      "pinyin": "xiàzǎi",
+      "meaning": "tải xuống"
+    },
+    {
+      "hanzi": "语言约定",
+      "pinyin": "yǔyán yuēdìng",
+      "meaning": "quy ước ngôn ngữ"
+    },
+    {
+      "hanzi": "之前",
+      "pinyin": "zhīqián",
+      "meaning": "trước đó"
+    },
+    {
+      "hanzi": "技术上",
+      "pinyin": "jìshù shàng",
+      "meaning": "về mặt kỹ thuật"
+    },
+    {
+      "hanzi": "先",
+      "pinyin": "xiān",
+      "meaning": "trước"
+    },
+    {
+      "hanzi": "如下",
+      "pinyin": "rúxià",
+      "meaning": "như sau"
+    },
+    {
+      "hanzi": "约定",
+      "pinyin": "yuēdìng",
+      "meaning": "quy ước"
+    },
+    {
+      "hanzi": "JDK",
+      "pinyin": "JDK",
+      "meaning": "JDK"
+    },
+    {
+      "hanzi": "从",
+      "pinyin": "cóng",
+      "meaning": "từ"
+    },
+    {
+      "hanzi": "1.5",
+      "pinyin": "yī diǎn wǔ",
+      "meaning": "1.5"
+    },
+    {
+      "hanzi": "版本",
+      "pinyin": "bǎnběn",
+      "meaning": "phiên bản"
+    },
+    {
+      "hanzi": "其",
+      "pinyin": "qí",
+      "meaning": "của nó"
+    },
+    {
+      "hanzi": "官方",
+      "pinyin": "guānfāng",
+      "meaning": "chính thức"
+    },
+    {
+      "hanzi": "正式",
+      "pinyin": "zhèngshì",
+      "meaning": "chính thức"
+    },
+    {
+      "hanzi": "文档",
+      "pinyin": "wéndàng",
+      "meaning": "tài liệu"
+    },
+    {
+      "hanzi": "宣传材料",
+      "pinyin": "xuānchuán cáiliào",
+      "meaning": "tài liệu quảng bá"
+    },
+    {
+      "hanzi": "发行版本号",
+      "pinyin": "fāxíng bǎnběn hào",
+      "meaning": "số phiên bản phát hành"
+    },
+    {
+      "hanzi": "启用",
+      "pinyin": "qǐyòng",
+      "meaning": "bắt đầu dùng"
+    },
+    {
+      "hanzi": "命名方式",
+      "pinyin": "mìngmíng fāngshì",
+      "meaning": "cách đặt tên"
+    },
+    {
+      "hanzi": "2018年3月",
+      "pinyin": "èr líng yī bā nián sān yuè",
+      "meaning": "tháng 3 năm 2018"
+    },
+    {
+      "hanzi": "发布",
+      "pinyin": "fābù",
+      "meaning": "phát hành"
+    },
+    {
+      "hanzi": "起",
+      "pinyin": "qǐ",
+      "meaning": "kể từ"
+    },
+    {
+      "hanzi": "开发版本号",
+      "pinyin": "kāifā bǎnběn hào",
+      "meaning": "số phiên bản phát triển"
+    },
+    {
+      "hanzi": "java-version",
+      "pinyin": "java-version",
+      "meaning": "java-version"
+    },
+    {
+      "hanzi": "也",
+      "pinyin": "yě",
+      "meaning": "cũng"
+    },
+    {
+      "hanzi": "放弃",
+      "pinyin": "fàngqì",
+      "meaning": "từ bỏ"
+    },
+    {
+      "hanzi": "以前",
+      "pinyin": "yǐqián",
+      "meaning": "trước đây"
+    },
+    {
+      "hanzi": "1.x",
+      "pinyin": "yī diǎn x",
+      "meaning": "1.x"
+    },
+    {
+      "hanzi": "命名形式",
+      "pinyin": "mìngmíng xíngshì",
+      "meaning": "hình thức đặt tên"
+    },
+    {
+      "hanzi": "改为",
+      "pinyin": "gǎiwéi",
+      "meaning": "đổi thành"
+    },
+    {
+      "hanzi": "按",
+      "pinyin": "àn",
+      "meaning": "theo"
+    },
+    {
+      "hanzi": "日期时间",
+      "pinyin": "rìqī shíjiān",
+      "meaning": "ngày giờ"
+    },
+    {
+      "hanzi": "行文一致",
+      "pinyin": "xíngwén yízhì",
+      "meaning": "thống nhất trong cách viết"
+    },
+    {
+      "hanzi": "所有场合",
+      "pinyin": "suǒyǒu chǎnghé",
+      "meaning": "mọi trường hợp"
+    },
+    {
+      "hanzi": "统一采用",
+      "pinyin": "tǒngyī cǎiyòng",
+      "meaning": "thống nhất sử dụng"
+    },
+    {
+      "hanzi": "指代",
+      "pinyin": "zhǐdài",
+      "meaning": "chỉ tới"
+    },
+    {
+      "hanzi": "版面原因",
+      "pinyin": "bǎnmiàn yuányīn",
+      "meaning": "lý do bố cục trang"
+    },
+    {
+      "hanzi": "许多",
+      "pinyin": "xǔduō",
+      "meaning": "nhiều"
+    },
+    {
+      "hanzi": "示例代码",
+      "pinyin": "shìlì dàimǎ",
+      "meaning": "mã ví dụ"
+    },
+    {
+      "hanzi": "遵循",
+      "pinyin": "zūnxún",
+      "meaning": "tuân theo"
+    },
+    {
+      "hanzi": "最优",
+      "pinyin": "zuìyōu",
+      "meaning": "tối ưu nhất"
+    },
+    {
+      "hanzi": "程序编写风格",
+      "pinyin": "chéngxù biānxiě fēnggé",
+      "meaning": "phong cách viết chương trình"
+    },
+    {
+      "hanzi": "流",
+      "pinyin": "liú",
+      "meaning": "stream"
+    },
+    {
+      "hanzi": "关闭",
+      "pinyin": "guānbì",
+      "meaning": "đóng"
+    },
+    {
+      "hanzi": "输出",
+      "pinyin": "shūchū",
+      "meaning": "xuất ra"
+    },
+    {
+      "hanzi": "日志",
+      "pinyin": "rìzhì",
+      "meaning": "log"
+    },
+    {
+      "hanzi": "注意",
+      "pinyin": "zhùyì",
+      "meaning": "chú ý"
+    },
+    {
+      "hanzi": "这一点",
+      "pinyin": "zhè yì diǎn",
+      "meaning": "điểm này"
+    },
+    {
+      "hanzi": "JRockit",
+      "pinyin": "JRockit",
+      "meaning": "JRockit"
+    },
+    {
+      "hanzi": "WebLogic",
+      "pinyin": "WebLogic",
+      "meaning": "WebLogic"
+    },
+    {
+      "hanzi": "服务器",
+      "pinyin": "fúwùqì",
+      "meaning": "máy chủ"
+    },
+    {
+      "hanzi": "产品",
+      "pinyin": "chǎnpǐn",
+      "meaning": "sản phẩm"
+    },
+    {
+      "hanzi": "所有者",
+      "pinyin": "suǒyǒuzhě",
+      "meaning": "người sở hữu"
+    },
+    {
+      "hanzi": "仍然",
+      "pinyin": "réngrán",
+      "meaning": "vẫn"
+    },
+    {
+      "hanzi": "BEA",
+      "pinyin": "BEA",
+      "meaning": "BEA"
+    },
+    {
+      "hanzi": "Sun",
+      "pinyin": "Sun",
+      "meaning": "Sun"
+    },
+    {
+      "hanzi": "公司",
+      "pinyin": "gōngsī",
+      "meaning": "công ty"
+    },
+    {
+      "hanzi": "名称",
+      "pinyin": "míngchēng",
+      "meaning": "tên gọi"
+    },
+    {
+      "hanzi": "实际上",
+      "pinyin": "shíjì shàng",
+      "meaning": "thực tế"
+    },
+    {
+      "hanzi": "分别",
+      "pinyin": "fēnbié",
+      "meaning": "lần lượt"
+    },
+    {
+      "hanzi": "2008年",
+      "pinyin": "èr líng líng bā nián",
+      "meaning": "năm 2008"
+    },
+    {
+      "hanzi": "2010年",
+      "pinyin": "èr líng yī líng nián",
+      "meaning": "năm 2010"
+    },
+    {
+      "hanzi": "收购",
+      "pinyin": "shōugòu",
+      "meaning": "mua lại"
+    },
+    {
+      "hanzi": "现在",
+      "pinyin": "xiànzài",
+      "meaning": "hiện nay"
+    },
+    {
+      "hanzi": "已经不存在",
+      "pinyin": "yǐjīng bù cúnzài",
+      "meaning": "không còn tồn tại"
+    },
+    {
+      "hanzi": "商标",
+      "pinyin": "shāngbiāo",
+      "meaning": "thương hiệu"
+    },
+    {
+      "hanzi": "做出",
+      "pinyin": "zuòchū",
+      "meaning": "tạo ra / làm nên"
+    },
+    {
+      "hanzi": "卓越贡献",
+      "pinyin": "zhuóyuè gòngxiàn",
+      "meaning": "đóng góp xuất sắc"
+    },
+    {
+      "hanzi": "值得",
+      "pinyin": "zhídé",
+      "meaning": "đáng"
+    },
+    {
+      "hanzi": "纪念",
+      "pinyin": "jìniàn",
+      "meaning": "ghi nhớ / tưởng niệm"
+    },
+    {
+      "hanzi": "先驱企业",
+      "pinyin": "xiānqū qǐyè",
+      "meaning": "doanh nghiệp tiên phong"
+    },
+    {
+      "hanzi": "第3版",
+      "pinyin": "dì sān bǎn",
+      "meaning": "bản thứ 3"
+    },
+    {
+      "hanzi": "撰写于",
+      "pinyin": "zhuànxiě yú",
+      "meaning": "được viết vào"
+    },
+    {
+      "hanzi": "2019年中期",
+      "pinyin": "èr líng yī jiǔ nián zhōngqī",
+      "meaning": "giữa năm 2019"
+    },
+    {
+      "hanzi": "此时",
+      "pinyin": "cǐshí",
+      "meaning": "lúc này"
+    },
+    {
+      "hanzi": "已有",
+      "pinyin": "yǐ yǒu",
+      "meaning": "đã có"
+    },
+    {
+      "hanzi": "技术预览版",
+      "pinyin": "jìshù yùlǎn bǎn",
+      "meaning": "bản xem trước kỹ thuật"
+    },
+    {
+      "hanzi": "Early Access",
+      "pinyin": "Early Access",
+      "meaning": "Early Access"
+    },
+    {
+      "hanzi": "尚未",
+      "pinyin": "shàngwèi",
+      "meaning": "chưa"
+    },
+    {
+      "hanzi": "讨论",
+      "pinyin": "tǎolùn",
+      "meaning": "thảo luận"
+    },
+    {
+      "hanzi": "基于",
+      "pinyin": "jīyú",
+      "meaning": "dựa trên"
+    },
+    {
+      "hanzi": "时间点",
+      "pinyin": "shíjiān diǎn",
+      "meaning": "mốc thời gian"
+    },
+    {
+      "hanzi": "并不针对",
+      "pinyin": "bìng bù zhēnduì",
+      "meaning": "không nhằm riêng vào"
+    },
+    {
+      "hanzi": "新版本",
+      "pinyin": "xīn bǎnběn",
+      "meaning": "phiên bản mới"
+    },
+    {
+      "hanzi": "加入",
+      "pinyin": "jiārù",
+      "meaning": "được thêm vào"
+    },
+    {
+      "hanzi": "功能",
+      "pinyin": "gōngnéng",
+      "meaning": "tính năng"
+    },
+    {
+      "hanzi": "有所变化",
+      "pinyin": "yǒu suǒ biànhuà",
+      "meaning": "có thay đổi"
+    },
+    {
+      "hanzi": "笔者",
+      "pinyin": "bǐzhě",
+      "meaning": "tác giả"
+    },
+    {
+      "hanzi": "明确指出",
+      "pinyin": "míngquè zhǐchū",
+      "meaning": "chỉ rõ"
+    },
+    {
+      "hanzi": "专门",
+      "pinyin": "zhuānmén",
+      "meaning": "chuyên / riêng"
+    },
+    {
+      "hanzi": "阐述",
+      "pinyin": "chǎnshù",
+      "meaning": "trình bày"
+    },
+    {
+      "hanzi": "内容特色",
+      "pinyin": "nèiróng tèsè",
+      "meaning": "đặc sắc nội dung"
+    },
+    {
+      "hanzi": "更新",
+      "pinyin": "gēngxīn",
+      "meaning": "cập nhật"
+    },
+    {
+      "hanzi": "成文于",
+      "pinyin": "chéngwén yú",
+      "meaning": "được viết thành vào"
+    },
+    {
+      "hanzi": "2011至2012年间",
+      "pinyin": "èr líng yī yī zhì èr líng yī èr nián jiān",
+      "meaning": "giai đoạn 2011 đến 2012"
+    },
+    {
+      "hanzi": "出版",
+      "pinyin": "chūbǎn",
+      "meaning": "xuất bản"
+    },
+    {
+      "hanzi": "早期版本",
+      "pinyin": "zǎoqī bǎnběn",
+      "meaning": "phiên bản đầu"
+    },
+    {
+      "hanzi": "彼时",
+      "pinyin": "bǐshí",
+      "meaning": "lúc bấy giờ"
+    },
+    {
+      "hanzi": "正值",
+      "pinyin": "zhèng zhí",
+      "meaning": "đúng vào lúc"
+    },
+    {
+      "hanzi": "全面替代",
+      "pinyin": "quánmiàn tìdài",
+      "meaning": "thay thế hoàn toàn"
+    },
+    {
+      "hanzi": "领导",
+      "pinyin": "lǐngdǎo",
+      "meaning": "dẫn dắt"
+    },
+    {
+      "hanzi": "起点",
+      "pinyin": "qǐdiǎn",
+      "meaning": "điểm khởi đầu"
+    },
+    {
+      "hanzi": "经过",
+      "pinyin": "jīngguò",
+      "meaning": "trải qua"
+    },
+    {
+      "hanzi": "将近十年",
+      "pinyin": "jiāngjìn shí nián",
+      "meaning": "gần mười năm"
+    },
+    {
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "meaning": "ngày nay"
+    },
+    {
+      "hanzi": "预览版",
+      "pinyin": "yùlǎn bǎn",
+      "meaning": "bản xem trước"
+    },
+    {
+      "hanzi": "整个",
+      "pinyin": "zhěnggè",
+      "meaning": "toàn bộ"
+    },
+    {
+      "hanzi": "一改",
+      "pinyin": "yìgǎi",
+      "meaning": "thay đổi hẳn"
+    },
+    {
+      "hanzi": "时代",
+      "pinyin": "shídài",
+      "meaning": "thời đại"
+    },
+    {
+      "hanzi": "迟缓作风",
+      "pinyin": "chíhuǎn zuòfēng",
+      "meaning": "tác phong chậm chạp"
+    },
+    {
+      "hanzi": "出现",
+      "pinyin": "chūxiàn",
+      "meaning": "xuất hiện"
+    },
+    {
+      "hanzi": "激烈",
+      "pinyin": "jīliè",
+      "meaning": "mạnh mẽ / dữ dội"
+    },
+    {
+      "hanzi": "变革",
+      "pinyin": "biàngé",
+      "meaning": "biến革"
+    },
+    {
+      "hanzi": "涌现",
+      "pinyin": "yǒngxiàn",
+      "meaning": "xuất hiện hàng loạt"
+    },
+    {
+      "hanzi": "令人欣喜",
+      "pinyin": "lìng rén xīnxǐ",
+      "meaning": "đáng mừng"
+    },
+    {
+      "hanzi": "新变化",
+      "pinyin": "xīn biànhuà",
+      "meaning": "thay đổi mới"
+    },
+    {
+      "hanzi": "新风潮",
+      "pinyin": "xīn fēngcháo",
+      "meaning": "làn sóng mới"
+    },
+    {
+      "hanzi": "期望",
+      "pinyin": "qīwàng",
+      "meaning": "kỳ vọng"
+    },
+    {
+      "hanzi": "融合",
+      "pinyin": "rónghé",
+      "meaning": "hòa nhập / kết hợp"
+    },
+    {
+      "hanzi": "知识框架",
+      "pinyin": "zhīshi kuàngjià",
+      "meaning": "khung kiến thức"
+    },
+    {
+      "hanzi": "修改",
+      "pinyin": "xiūgǎi",
+      "meaning": "sửa đổi"
+    },
+    {
+      "hanzi": "反馈",
+      "pinyin": "fǎnkuì",
+      "meaning": "phản hồi"
+    },
+    {
+      "hanzi": "问题",
+      "pinyin": "wèntí",
+      "meaning": "vấn đề"
+    },
+    {
+      "hanzi": "叙述",
+      "pinyin": "xùshù",
+      "meaning": "cách trình bày"
+    },
+    {
+      "hanzi": "准确性",
+      "pinyin": "zhǔnquèxìng",
+      "meaning": "tính chính xác"
+    },
+    {
+      "hanzi": "可读性",
+      "pinyin": "kědúxìng",
+      "meaning": "tính dễ đọc"
+    },
+    {
+      "hanzi": "字数",
+      "pinyin": "zìshù",
+      "meaning": "số chữ"
+    },
+    {
+      "hanzi": "原有",
+      "pinyin": "yuányǒu",
+      "meaning": "vốn có"
+    },
+    {
+      "hanzi": "增加",
+      "pinyin": "zēngjiā",
+      "meaning": "tăng lên"
+    },
+    {
+      "hanzi": "针对",
+      "pinyin": "zhēnduì",
+      "meaning": "nhắm vào"
+    },
+    {
+      "hanzi": "每章",
+      "pinyin": "měi zhāng",
+      "meaning": "mỗi chương"
+    },
+    {
+      "hanzi": "列举",
+      "pinyin": "lièjǔ",
+      "meaning": "liệt kê"
+    },
+    {
+      "hanzi": "快速定位",
+      "pinyin": "kuàisù dìngwèi",
+      "meaning": "định vị nhanh"
+    },
+    {
+      "hanzi": "获取",
+      "pinyin": "huòqǔ",
+      "meaning": "thu được"
+    },
+    {
+      "hanzi": "新的知识",
+      "pinyin": "xīn de zhīshi",
+      "meaning": "kiến thức mới"
+    },
+    {
+      "hanzi": "当然",
+      "pinyin": "dāngrán",
+      "meaning": "đương nhiên"
+    },
+    {
+      "hanzi": "尚有余暇",
+      "pinyin": "shàng yǒu yúxiá",
+      "meaning": "vẫn còn thời gian rảnh"
+    },
+    {
+      "hanzi": "不妨",
+      "pinyin": "bùfáng",
+      "meaning": "không ngại"
+    },
+    {
+      "hanzi": "从头",
+      "pinyin": "cóngtóu",
+      "meaning": "từ đầu"
+    },
+    {
+      "hanzi": "一次",
+      "pinyin": "yí cì",
+      "meaning": "một lần"
+    },
+    {
+      "hanzi": "相信",
+      "pinyin": "xiāngxìn",
+      "meaning": "tin rằng"
+    },
+    {
+      "hanzi": "体验",
+      "pinyin": "tǐyàn",
+      "meaning": "trải nghiệm"
+    },
+    {
+      "hanzi": "收获",
+      "pinyin": "shōuhuò",
+      "meaning": "thu hoạch / thu được"
+    },
+    {
+      "hanzi": "第一部分",
+      "pinyin": "dì yī bùfen",
+      "meaning": "phần thứ nhất"
+    },
+    {
+      "hanzi": "后文",
+      "pinyin": "hòuwén",
+      "meaning": "phần sau"
+    },
+    {
+      "hanzi": "研究",
+      "pinyin": "yánjiū",
+      "meaning": "nghiên cứu"
+    },
+    {
+      "hanzi": "良好",
+      "pinyin": "liánghǎo",
+      "meaning": "tốt"
+    },
+    {
+      "hanzi": "基础",
+      "pinyin": "jīchǔ",
+      "meaning": "nền tảng"
+    },
+    {
+      "hanzi": "虽然",
+      "pinyin": "suīrán",
+      "meaning": "mặc dù"
+    },
+    {
+      "hanzi": "来龙去脉",
+      "pinyin": "láilóngqùmài",
+      "meaning": "đầu đuôi / nguồn gốc"
+    },
+    {
+      "hanzi": "对于",
+      "pinyin": "duìyú",
+      "meaning": "đối với"
+    },
+    {
+      "hanzi": "理解",
+      "pinyin": "lǐjiě",
+      "meaning": "hiểu"
+    },
+    {
+      "hanzi": "不是必须",
+      "pinyin": "bú shì bìxū",
+      "meaning": "không phải bắt buộc"
+    },
+    {
+      "hanzi": "准备过程",
+      "pinyin": "zhǔnbèi guòchéng",
+      "meaning": "quá trình chuẩn bị"
+    },
+    {
+      "hanzi": "引导",
+      "pinyin": "yǐndǎo",
+      "meaning": "dẫn dắt"
+    },
+    {
+      "hanzi": "只有",
+      "pinyin": "zhǐyǒu",
+      "meaning": "chỉ có"
+    },
+    {
+      "hanzi": "第1章",
+      "pinyin": "dì yī zhāng",
+      "meaning": "chương 1"
+    },
+    {
+      "hanzi": "过去",
+      "pinyin": "guòqù",
+      "meaning": "quá khứ"
+    },
+    {
+      "hanzi": "未来",
+      "pinyin": "wèilái",
+      "meaning": "tương lai"
+    },
+    {
+      "hanzi": "发展趋势",
+      "pinyin": "fāzhǎn qūshì",
+      "meaning": "xu hướng phát triển"
+    },
+    {
+      "hanzi": "实践中",
+      "pinyin": "shíjiàn zhōng",
+      "meaning": "trong thực tế"
+    },
+    {
+      "hanzi": "编译一个",
+      "pinyin": "biānyì yí gè",
+      "meaning": "biên dịch một"
+    },
+    {
+      "hanzi": "续写",
+      "pinyin": "xùxiě",
+      "meaning": "viết tiếp"
+    },
+    {
+      "hanzi": "发展史",
+      "pinyin": "fāzhǎn shǐ",
+      "meaning": "lịch sử phát triển"
+    },
+    {
+      "hanzi": "世界",
+      "pinyin": "shìjiè",
+      "meaning": "thế giới"
+    },
+    {
+      "hanzi": "着实",
+      "pinyin": "zhuóshí",
+      "meaning": "quả thực"
+    },
+    {
+      "hanzi": "值得记录",
+      "pinyin": "zhídé jìlù",
+      "meaning": "đáng ghi lại"
+    },
+    {
+      "hanzi": "大事件",
+      "pinyin": "dà shìjiàn",
+      "meaning": "sự kiện lớn"
+    },
+    {
+      "hanzi": "完全重写",
+      "pinyin": "wánquán chóngxiě",
+      "meaning": "viết lại hoàn toàn"
+    },
+    {
+      "hanzi": "展望预测",
+      "pinyin": "zhǎnwàng yùcè",
+      "meaning": "dự báo triển vọng"
+    },
+    {
+      "hanzi": "畅想",
+      "pinyin": "chàngxiǎng",
+      "meaning": "hình dung / mơ tưởng"
+    },
+    {
+      "hanzi": "如约而至",
+      "pinyin": "rúyuē ér zhì",
+      "meaning": "đến đúng như hẹn"
+    },
+    {
+      "hanzi": "时候",
+      "pinyin": "shíhou",
+      "meaning": "lúc"
+    },
+    {
+      "hanzi": "聚光灯",
+      "pinyin": "jùguāngdēng",
+      "meaning": "ánh đèn sân khấu"
+    },
+    {
+      "hanzi": "交给",
+      "pinyin": "jiāogěi",
+      "meaning": "trao cho"
+    },
+    {
+      "hanzi": "下一个十年",
+      "pinyin": "xià yí gè shínián",
+      "meaning": "mười năm tiếp theo"
+    },
+    {
+      "hanzi": "发生过",
+      "pinyin": "fāshēng guò",
+      "meaning": "đã từng xảy ra"
+    },
+    {
+      "hanzi": "不小",
+      "pinyin": "bù xiǎo",
+      "meaning": "không nhỏ"
+    },
+    {
+      "hanzi": "变动",
+      "pinyin": "biàndòng",
+      "meaning": "biến động"
+    },
+    {
+      "hanzi": "本次",
+      "pinyin": "běncì",
+      "meaning": "lần này"
+    },
+    {
+      "hanzi": "提升到",
+      "pinyin": "tíshēng dào",
+      "meaning": "nâng lên tới"
+    },
+    {
+      "hanzi": "第二部分",
+      "pinyin": "dì èr bùfen",
+      "meaning": "phần thứ hai"
+    },
+    {
+      "hanzi": "因为",
+      "pinyin": "yīnwèi",
+      "meaning": "bởi vì"
+    },
+    {
+      "hanzi": "控制",
+      "pinyin": "kòngzhì",
+      "meaning": "kiểm soát"
+    },
+    {
+      "hanzi": "内存",
+      "pinyin": "nèicún",
+      "meaning": "bộ nhớ"
+    },
+    {
+      "hanzi": "权力",
+      "pinyin": "quánlì",
+      "meaning": "quyền lực"
+    },
+    {
+      "hanzi": "编码",
+      "pinyin": "biānmǎ",
+      "meaning": "coding"
+    },
+    {
+      "hanzi": "享受",
+      "pinyin": "xiǎngshòu",
+      "meaning": "tận hưởng"
+    },
+    {
+      "hanzi": "一旦",
+      "pinyin": "yídàn",
+      "meaning": "một khi"
+    },
+    {
+      "hanzi": "内存泄漏",
+      "pinyin": "nèicún xièlòu",
+      "meaning": "rò rỉ bộ nhớ"
+    },
+    {
+      "hanzi": "溢出",
+      "pinyin": "yìchū",
+      "meaning": "tràn"
+    },
+    {
+      "hanzi": "排查错误",
+      "pinyin": "páichá cuòwù",
+      "meaning": "truy lỗi"
+    },
+    {
+      "hanzi": "一项",
+      "pinyin": "yí xiàng",
+      "meaning": "một hạng mục"
+    },
+    {
+      "hanzi": "艰难",
+      "pinyin": "jiānnán",
+      "meaning": "gian nan"
+    },
+    {
+      "hanzi": "包括",
+      "pinyin": "bāokuò",
+      "meaning": "bao gồm"
+    },
+    {
+      "hanzi": "2～5章",
+      "pinyin": "èr dào wǔ zhāng",
+      "meaning": "chương 2 đến 5"
+    },
+    {
+      "hanzi": "划分",
+      "pinyin": "huàfēn",
+      "meaning": "phân chia"
+    },
+    {
+      "hanzi": "区域",
+      "pinyin": "qūyù",
+      "meaning": "khu vực"
+    },
+    {
+      "hanzi": "操作",
+      "pinyin": "cāozuò",
+      "meaning": "thao tác"
+    },
+    {
+      "hanzi": "可能",
+      "pinyin": "kěnéng",
+      "meaning": "có thể"
+    },
+    {
+      "hanzi": "内存溢出异常",
+      "pinyin": "nèicún yìchū yìcháng",
+      "meaning": "ngoại lệ tràn bộ nhớ"
+    },
+    {
+      "hanzi": "常见原因",
+      "pinyin": "chángjiàn yuányīn",
+      "meaning": "nguyên nhân thường gặp"
+    },
+    {
+      "hanzi": "第3章",
+      "pinyin": "dì sān zhāng",
+      "meaning": "chương 3"
+    },
+    {
+      "hanzi": "垃圾收集",
+      "pinyin": "lājī shōují",
+      "meaning": "garbage collection"
+    },
+    {
+      "hanzi": "算法",
+      "pinyin": "suànfǎ",
+      "meaning": "thuật toán"
+    },
+    {
+      "hanzi": "收集器",
+      "pinyin": "shōujíqì",
+      "meaning": "bộ thu gom"
+    },
+    {
+      "hanzi": "特点",
+      "pinyin": "tèdiǎn",
+      "meaning": "đặc điểm"
+    },
+    {
+      "hanzi": "实例",
+      "pinyin": "shílì",
+      "meaning": "ví dụ thực tế"
+    },
+    {
+      "hanzi": "自动内存分配",
+      "pinyin": "zìdòng nèicún fēnpèi",
+      "meaning": "cấp phát bộ nhớ tự động"
+    },
+    {
+      "hanzi": "回收",
+      "pinyin": "huíshōu",
+      "meaning": "thu hồi"
+    },
+    {
+      "hanzi": "主要规则",
+      "pinyin": "zhǔyào guīzé",
+      "meaning": "quy tắc chính"
+    },
+    {
+      "hanzi": "刚刚",
+      "pinyin": "gānggāng",
+      "meaning": "vừa mới"
+    },
+    {
+      "hanzi": "实践数据",
+      "pinyin": "shíjiàn shùjù",
+      "meaning": "dữ liệu thực tiễn"
+    },
+    {
+      "hanzi": "可查",
+      "pinyin": "kě chá",
+      "meaning": "có thể tra cứu"
+    },
+    {
+      "hanzi": "比较含糊",
+      "pinyin": "bǐjiào hánhú",
+      "meaning": "khá mơ hồ"
+    },
+    {
+      "hanzi": "重点",
+      "pinyin": "zhòngdiǎn",
+      "meaning": "trọng điểm"
+    },
+    {
+      "hanzi": "新出现",
+      "pinyin": "xīn chūxiàn",
+      "meaning": "mới xuất hiện"
+    },
+    {
+      "hanzi": "低延迟",
+      "pinyin": "dī yánchí",
+      "meaning": "độ trễ thấp"
+    },
+    {
+      "hanzi": "全并发",
+      "pinyin": "quán bìngfā",
+      "meaning": "toàn bộ đồng thời"
+    },
+    {
+      "hanzi": "详细",
+      "pinyin": "xiángxì",
+      "meaning": "chi tiết"
+    },
+    {
+      "hanzi": "方向",
+      "pinyin": "fāngxiàng",
+      "meaning": "hướng"
+    },
+    {
+      "hanzi": "统一收集器接口",
+      "pinyin": "tǒngyī shōujíqì jiēkǒu",
+      "meaning": "giao diện bộ thu gom thống nhất"
+    },
+    {
+      "hanzi": "Epsilon",
+      "pinyin": "Epsilon",
+      "meaning": "Epsilon"
+    },
+    {
+      "hanzi": "对应介绍",
+      "pinyin": "duìyìng jièshào",
+      "meaning": "giới thiệu tương ứng"
+    },
+    {
+      "hanzi": "此外",
+      "pinyin": "cǐwài",
+      "meaning": "ngoài ra"
+    },
+    {
+      "hanzi": "关键技术点",
+      "pinyin": "guānjiàn jìshù diǎn",
+      "meaning": "điểm kỹ thuật then chốt"
+    },
+    {
+      "hanzi": "解决",
+      "pinyin": "jiějué",
+      "meaning": "giải quyết"
+    },
+    {
+      "hanzi": "跨代引用",
+      "pinyin": "kuàdài yǐnyòng",
+      "meaning": "tham chiếu liên thế hệ"
+    },
+    {
+      "hanzi": "记忆集",
+      "pinyin": "jìyì jí",
+      "meaning": "remembered set"
+    },
+    {
+      "hanzi": "卡表",
+      "pinyin": "kǎbiǎo",
+      "meaning": "card table"
+    },
+    {
+      "hanzi": "并发标记",
+      "pinyin": "bìngfā biāojì",
+      "meaning": "đánh dấu đồng thời"
+    },
+    {
+      "hanzi": "增量更新",
+      "pinyin": "zēngliàng gēngxīn",
+      "meaning": "cập nhật tăng dần"
+    },
+    {
+      "hanzi": "原始快照",
+      "pinyin": "yuánshǐ kuàizhào",
+      "meaning": "snapshot at the beginning"
+    },
+    {
+      "hanzi": "内存读",
+      "pinyin": "nèicún dú",
+      "meaning": "đọc bộ nhớ"
+    },
+    {
+      "hanzi": "写屏障",
+      "pinyin": "xiě píngzhàng",
+      "meaning": "write barrier"
+    },
+    {
+      "hanzi": "小节",
+      "pinyin": "xiǎojié",
+      "meaning": "tiểu mục"
+    },
+    {
+      "hanzi": "后续",
+      "pinyin": "hòuxù",
+      "meaning": "về sau"
+    },
+    {
+      "hanzi": "深入阅读",
+      "pinyin": "shēnrù yuèdú",
+      "meaning": "đọc sâu"
+    },
+    {
+      "hanzi": "设计",
+      "pinyin": "shèjì",
+      "meaning": "thiết kế"
+    },
+    {
+      "hanzi": "理论基础",
+      "pinyin": "lǐlùn jīchǔ",
+      "meaning": "nền tảng lý thuyết"
+    },
+    {
+      "hanzi": "第4章",
+      "pinyin": "dì sì zhāng",
+      "meaning": "chương 4"
+    },
+    {
+      "hanzi": "基础命令行工具",
+      "pinyin": "jīchǔ mìnglìng háng gōngjù",
+      "meaning": "công cụ dòng lệnh cơ bản"
+    },
+    {
+      "hanzi": "可视化",
+      "pinyin": "kěshìhuà",
+      "meaning": "trực quan hóa"
+    },
+    {
+      "hanzi": "故障处理工具",
+      "pinyin": "gùzhàng chǔlǐ gōngjù",
+      "meaning": "công cụ xử lý sự cố"
+    },
+    {
+      "hanzi": "使用方法",
+      "pinyin": "shǐyòng fāngfǎ",
+      "meaning": "cách dùng"
+    },
+    {
+      "hanzi": "监控",
+      "pinyin": "jiānkòng",
+      "meaning": "giám sát"
+    },
+    {
+      "hanzi": "辅助工具",
+      "pinyin": "fǔzhù gōngjù",
+      "meaning": "công cụ hỗ trợ"
+    },
+    {
+      "hanzi": "数量",
+      "pinyin": "shùliàng",
+      "meaning": "số lượng"
+    },
+    {
+      "hanzi": "或多或少",
+      "pinyin": "huò duō huò shǎo",
+      "meaning": "nhiều ít khác nhau"
+    },
+    {
+      "hanzi": "新增",
+      "pinyin": "xīnzēng",
+      "meaning": "thêm mới"
+    },
+    {
+      "hanzi": "JHSDB",
+      "pinyin": "JHSDB",
+      "meaning": "JHSDB"
+    },
+    {
+      "hanzi": "JFR",
+      "pinyin": "JFR",
+      "meaning": "JFR"
+    },
+    {
+      "hanzi": "JMC",
+      "pinyin": "JMC",
+      "meaning": "JMC"
+    },
+    {
+      "hanzi": "工作原理",
+      "pinyin": "gōngzuò yuánlǐ",
+      "meaning": "nguyên lý hoạt động"
+    },
+    {
+      "hanzi": "外部",
+      "pinyin": "wàibù",
+      "meaning": "bên ngoài"
+    },
+    {
+      "hanzi": "JIT Watch",
+      "pinyin": "JIT Watch",
+      "meaning": "JIT Watch"
+    },
+    {
+      "hanzi": "简要介绍",
+      "pinyin": "jiǎnyào jièshào",
+      "meaning": "giới thiệu ngắn gọn"
+    },
+    {
+      "hanzi": "第5章",
+      "pinyin": "dì wǔ zhāng",
+      "meaning": "chương 5"
+    },
+    {
+      "hanzi": "分享",
+      "pinyin": "fēnxiǎng",
+      "meaning": "chia sẻ"
+    },
+    {
+      "hanzi": "代表性",
+      "pinyin": "dàibiǎoxìng",
+      "meaning": "tính tiêu biểu"
+    },
+    {
+      "hanzi": "亲身实战",
+      "pinyin": "qīnshēn shízhàn",
+      "meaning": "tự mình thực chiến"
+    },
+    {
+      "hanzi": "练习",
+      "pinyin": "liànxí",
+      "meaning": "bài luyện tập"
+    },
+    {
+      "hanzi": "获得",
+      "pinyin": "huòdé",
+      "meaning": "đạt được"
+    },
+    {
+      "hanzi": "经验",
+      "pinyin": "jīngyàn",
+      "meaning": "kinh nghiệm"
+    },
+    {
+      "hanzi": "增补",
+      "pinyin": "zēngbǔ",
+      "meaning": "bổ sung thêm"
+    },
+    {
+      "hanzi": "着重",
+      "pinyin": "zhuózhòng",
+      "meaning": "nhấn mạnh"
+    },
+    {
+      "hanzi": "补充",
+      "pinyin": "bǔchōng",
+      "meaning": "bổ sung"
+    },
+    {
+      "hanzi": "相对应",
+      "pinyin": "xiāng duìyìng",
+      "meaning": "tương ứng"
+    },
+    {
+      "hanzi": "软件版本",
+      "pinyin": "ruǎnjiàn bǎnběn",
+      "meaning": "phiên bản phần mềm"
+    },
+    {
+      "hanzi": "落后",
+      "pinyin": "luòhòu",
+      "meaning": "lạc hậu"
+    },
+    {
+      "hanzi": "影响",
+      "pinyin": "yǐngxiǎng",
+      "meaning": "ảnh hưởng"
+    },
+    {
+      "hanzi": "表达",
+      "pinyin": "biǎodá",
+      "meaning": "biểu đạt"
+    },
+    {
+      "hanzi": "相同",
+      "pinyin": "xiāngtóng",
+      "meaning": "giống nhau"
+    },
+    {
+      "hanzi": "价值",
+      "pinyin": "jiàzhí",
+      "meaning": "giá trị"
+    },
+    {
+      "hanzi": "刻意",
+      "pinyin": "kèyì",
+      "meaning": "cố ý"
+    },
+    {
+      "hanzi": "升级",
+      "pinyin": "shēngjí",
+      "meaning": "nâng cấp"
+    },
+    {
+      "hanzi": "重写",
+      "pinyin": "chóngxiě",
+      "meaning": "viết lại"
+    },
+    {
+      "hanzi": "第三部分",
+      "pinyin": "dì sān bùfen",
+      "meaning": "phần thứ ba"
+    },
+    {
+      "hanzi": "必不可少",
+      "pinyin": "bì bù kě shǎo",
+      "meaning": "không thể thiếu"
+    },
+    {
+      "hanzi": "组成部分",
+      "pinyin": "zǔchéng bùfen",
+      "meaning": "bộ phận cấu thành"
+    },
+    {
+      "hanzi": "怎样",
+      "pinyin": "zěnyàng",
+      "meaning": "như thế nào"
+    },
+    {
+      "hanzi": "优秀",
+      "pinyin": "yōuxiù",
+      "meaning": "xuất sắc"
+    },
+    {
+      "hanzi": "6～9章",
+      "pinyin": "liù dào jiǔ zhāng",
+      "meaning": "chương 6 đến 9"
+    },
+    {
+      "hanzi": "第6章",
+      "pinyin": "dì liù zhāng",
+      "meaning": "chương 6"
+    },
+    {
+      "hanzi": "Class",
+      "pinyin": "Class",
+      "meaning": "Class"
+    },
+    {
+      "hanzi": "文件结构",
+      "pinyin": "wénjiàn jiégòu",
+      "meaning": "cấu trúc tệp"
+    },
+    {
+      "hanzi": "组成",
+      "pinyin": "zǔchéng",
+      "meaning": "thành phần"
+    },
+    {
+      "hanzi": "定义",
+      "pinyin": "dìngyì",
+      "meaning": "định nghĩa"
+    },
+    {
+      "hanzi": "数据结构",
+      "pinyin": "shùjù jiégòu",
+      "meaning": "cấu trúc dữ liệu"
+    },
+    {
+      "hanzi": "实战方式",
+      "pinyin": "shízhàn fāngshì",
+      "meaning": "cách thực chiến"
+    },
+    {
+      "hanzi": "演示",
+      "pinyin": "yǎnshì",
+      "meaning": "trình diễn"
+    },
+    {
+      "hanzi": "存储",
+      "pinyin": "cúnchǔ",
+      "meaning": "lưu trữ"
+    },
+    {
+      "hanzi": "访问",
+      "pinyin": "fǎngwèn",
+      "meaning": "truy cập"
+    },
+    {
+      "hanzi": "技术手册",
+      "pinyin": "jìshù shǒucè",
+      "meaning": "sổ tay kỹ thuật"
+    },
+    {
+      "hanzi": "形式",
+      "pinyin": "xíngshì",
+      "meaning": "hình thức"
+    },
+    {
+      "hanzi": "存在",
+      "pinyin": "cúnzài",
+      "meaning": "tồn tại"
+    },
+    {
+      "hanzi": "适合查阅",
+      "pinyin": "shìhé cháyuè",
+      "meaning": "phù hợp để tra cứu"
+    },
+    {
+      "hanzi": "多于",
+      "pinyin": "duō yú",
+      "meaning": "nhiều hơn"
+    },
+    {
+      "hanzi": "枯燥",
+      "pinyin": "kūzào",
+      "meaning": "khô khan"
+    },
+    {
+      "hanzi": "无法回避",
+      "pinyin": "wúfǎ huíbì",
+      "meaning": "không thể tránh"
+    },
+    {
+      "hanzi": "跟进到",
+      "pinyin": "gēnjìn dào",
+      "meaning": "cập nhật tới"
+    },
+    {
+      "hanzi": "规范",
+      "pinyin": "guīfàn",
+      "meaning": "quy phạm / specification"
+    },
+    {
+      "hanzi": "增强",
+      "pinyin": "zēngqiáng",
+      "meaning": "tăng cường"
+    },
+    {
+      "hanzi": "反映",
+      "pinyin": "fǎnyìng",
+      "meaning": "phản ánh"
+    },
+    {
+      "hanzi": "琐碎",
+      "pinyin": "suǒsuì",
+      "meaning": "lặt vặt"
+    },
+    {
+      "hanzi": "例如",
+      "pinyin": "lìrú",
+      "meaning": "ví dụ"
+    },
+    {
+      "hanzi": "模块化系统",
+      "pinyin": "mókuàihuà xìtǒng",
+      "meaning": "hệ thống module hóa"
+    },
+    {
+      "hanzi": "属性表",
+      "pinyin": "shǔxìng biǎo",
+      "meaning": "bảng thuộc tính"
+    },
+    {
+      "hanzi": "Module",
+      "pinyin": "Module",
+      "meaning": "Module"
+    },
+    {
+      "hanzi": "ModulePackages",
+      "pinyin": "ModulePackages",
+      "meaning": "ModulePackages"
+    },
+    {
+      "hanzi": "ModuleMain-Class",
+      "pinyin": "ModuleMain-Class",
+      "meaning": "ModuleMain-Class"
+    },
+    {
+      "hanzi": "常量池",
+      "pinyin": "chángliàng chí",
+      "meaning": "constant pool"
+    },
+    {
+      "hanzi": "CONSTANT_Module_info",
+      "pinyin": "CONSTANT_Module_info",
+      "meaning": "hằng CONSTANT_Module_info"
+    },
+    {
+      "hanzi": "CONSTANT_Package_info",
+      "pinyin": "CONSTANT_Package_info",
+      "meaning": "hằng CONSTANT_Package_info"
+    },
+    {
+      "hanzi": "嵌套内",
+      "pinyin": "qiàntào nèi",
+      "meaning": "lồng bên trong"
+    },
+    {
+      "hanzi": "内部类",
+      "pinyin": "nèibù lèi",
+      "meaning": "lớp bên trong"
+    },
+    {
+      "hanzi": "访问控制",
+      "pinyin": "fǎngwèn kòngzhì",
+      "meaning": "kiểm soát truy cập"
+    },
+    {
+      "hanzi": "NestHost",
+      "pinyin": "NestHost",
+      "meaning": "NestHost"
+    },
+    {
+      "hanzi": "NestMembers",
+      "pinyin": "NestMembers",
+      "meaning": "NestMembers"
+    },
+    {
+      "hanzi": "进一步",
+      "pinyin": "jìn yí bù",
+      "meaning": "thêm một bước"
+    },
+    {
+      "hanzi": "动态语言",
+      "pinyin": "dòngtài yǔyán",
+      "meaning": "ngôn ngữ động"
+    },
+    {
+      "hanzi": "CONSTANT_Dynamic_info",
+      "pinyin": "CONSTANT_Dynamic_info",
+      "meaning": "hằng CONSTANT_Dynamic_info"
+    },
+    {
+      "hanzi": "第7章",
+      "pinyin": "dì qī zhāng",
+      "meaning": "chương 7"
+    },
+    {
+      "hanzi": "类加载过程",
+      "pinyin": "lèi jiāzài guòchéng",
+      "meaning": "quá trình nạp lớp"
+    },
+    {
+      "hanzi": "加载",
+      "pinyin": "jiāzài",
+      "meaning": "nạp"
+    },
+    {
+      "hanzi": "准备",
+      "pinyin": "zhǔnbèi",
+      "meaning": "chuẩn bị"
+    },
+    {
+      "hanzi": "初始化",
+      "pinyin": "chūshǐhuà",
+      "meaning": "khởi tạo"
+    },
+    {
+      "hanzi": "五个阶段",
+      "pinyin": "wǔ gè jiēduàn",
+      "meaning": "năm giai đoạn"
+    },
+    {
+      "hanzi": "进行了",
+      "pinyin": "jìnxíng le",
+      "meaning": "đã tiến hành"
+    },
+    {
+      "hanzi": "类加载器",
+      "pinyin": "lèi jiāzàiqì",
+      "meaning": "class loader"
+    },
+    {
+      "hanzi": "意义",
+      "pinyin": "yìyì",
+      "meaning": "ý nghĩa"
+    },
+    {
+      "hanzi": "细节性变动",
+      "pinyin": "xìjiéxìng biàndòng",
+      "meaning": "thay đổi chi tiết"
+    },
+    {
+      "hanzi": "标准",
+      "pinyin": "biāozhǔn",
+      "meaning": "tiêu chuẩn"
+    },
+    {
+      "hanzi": "同步更新",
+      "pinyin": "tóngbù gēngxīn",
+      "meaning": "cập nhật đồng bộ"
+    },
+    {
+      "hanzi": "引入",
+      "pinyin": "yǐnrù",
+      "meaning": "giới thiệu / đưa vào"
+    },
+    {
+      "hanzi": "近年来",
+      "pinyin": "jìnniánlái",
+      "meaning": "những năm gần đây"
+    },
+    {
+      "hanzi": "重要升级",
+      "pinyin": "zhòngyào shēngjí",
+      "meaning": "nâng cấp quan trọng"
+    },
+    {
+      "hanzi": "影响巨大",
+      "pinyin": "yǐngxiǎng jùdà",
+      "meaning": "ảnh hưởng rất lớn"
+    },
+    {
+      "hanzi": "专门的小节",
+      "pinyin": "zhuānmén de xiǎojié",
+      "meaning": "tiểu mục riêng"
+    },
+    {
+      "hanzi": "第8章",
+      "pinyin": "dì bā zhāng",
+      "meaning": "chương 8"
+    },
+    {
+      "hanzi": "找到",
+      "pinyin": "zhǎodào",
+      "meaning": "tìm thấy"
+    },
+    {
+      "hanzi": "正确",
+      "pinyin": "zhèngquè",
+      "meaning": "đúng"
+    },
+    {
+      "hanzi": "方法",
+      "pinyin": "fāngfǎ",
+      "meaning": "phương pháp / method"
+    },
+    {
+      "hanzi": "方法内",
+      "pinyin": "fāngfǎ nèi",
+      "meaning": "bên trong phương thức"
+    },
+    {
+      "hanzi": "字节码",
+      "pinyin": "zìjiémǎ",
+      "meaning": "bytecode"
+    },
+    {
+      "hanzi": "概念模型",
+      "pinyin": "gàiniàn móxíng",
+      "meaning": "mô hình khái niệm"
+    },
+    {
+      "hanzi": "属于",
+      "pinyin": "shǔyú",
+      "meaning": "thuộc về"
+    },
+    {
+      "hanzi": "变化不大",
+      "pinyin": "biànhuà bù dà",
+      "meaning": "thay đổi không lớn"
+    },
+    {
+      "hanzi": "类型语言支持",
+      "pinyin": "lèixíng yǔyán zhīchí",
+      "meaning": "hỗ trợ ngôn ngữ kiểu động"
+    },
+    {
+      "hanzi": "第9章",
+      "pinyin": "dì jiǔ zhāng",
+      "meaning": "chương 9"
+    },
+    {
+      "hanzi": "几个",
+      "pinyin": "jǐ gè",
+      "meaning": "vài"
+    },
+    {
+      "hanzi": "欣赏",
+      "pinyin": "xīnshǎng",
+      "meaning": "đánh giá cao"
+    },
+    {
+      "hanzi": "借鉴",
+      "pinyin": "jièjiàn",
+      "meaning": "học hỏi / tham khảo"
+    },
+    {
+      "hanzi": "思路",
+      "pinyin": "sīlù",
+      "meaning": "tư duy / hướng suy nghĩ"
+    },
+    {
+      "hanzi": "加深",
+      "pinyin": "jiāshēn",
+      "meaning": "làm sâu thêm"
+    },
+    {
+      "hanzi": "前面",
+      "pinyin": "qiánmiàn",
+      "meaning": "phía trước"
+    },
+    {
+      "hanzi": "理论知识",
+      "pinyin": "lǐlùn zhīshi",
+      "meaning": "kiến thức lý thuyết"
+    },
+    {
+      "hanzi": "陈旧",
+      "pinyin": "chénjiù",
+      "meaning": "cũ kỹ"
+    },
+    {
+      "hanzi": "版本进行了升级",
+      "pinyin": "bǎnběn jìnxíng le shēngjí",
+      "meaning": "đã nâng cấp phiên bản"
+    },
+    {
+      "hanzi": "Lambda 表达式",
+      "pinyin": "Lambda biǎodáshì",
+      "meaning": "biểu thức Lambda"
+    },
+    {
+      "hanzi": "相应变化",
+      "pinyin": "xiāngyìng biànhuà",
+      "meaning": "thay đổi tương ứng"
+    },
+    {
+      "hanzi": "第四部分",
+      "pinyin": "dì sì bùfen",
+      "meaning": "phần thứ tư"
+    },
+    {
+      "hanzi": "源码",
+      "pinyin": "yuánmǎ",
+      "meaning": "mã nguồn"
+    },
+    {
+      "hanzi": "编译成",
+      "pinyin": "biānyì chéng",
+      "meaning": "biên dịch thành"
+    },
+    {
+      "hanzi": "本地机器码",
+      "pinyin": "běndì jīqìmǎ",
+      "meaning": "mã máy cục bộ"
+    },
+    {
+      "hanzi": "两个过程",
+      "pinyin": "liǎng gè guòchéng",
+      "meaning": "hai quá trình"
+    },
+    {
+      "hanzi": "整体来看",
+      "pinyin": "zhěngtǐ láikàn",
+      "meaning": "nhìn tổng thể"
+    },
+    {
+      "hanzi": "等同于",
+      "pinyin": "děngtóng yú",
+      "meaning": "tương đương với"
+    },
+    {
+      "hanzi": "传统编译器",
+      "pinyin": "chuántǒng biānyìqì",
+      "meaning": "trình biên dịch truyền thống"
+    },
+    {
+      "hanzi": "编译前端",
+      "pinyin": "biānyì qiánduān",
+      "meaning": "front-end biên dịch"
+    },
+    {
+      "hanzi": "后端过程",
+      "pinyin": "hòuduān guòchéng",
+      "meaning": "quá trình back-end"
+    },
+    {
+      "hanzi": "10～11章",
+      "pinyin": "shí yī dào shí yī zhāng",
+      "meaning": "chương 10 đến 11"
+    },
+    {
+      "hanzi": "第10章",
+      "pinyin": "dì shí zhāng",
+      "meaning": "chương 10"
+    },
+    {
+      "hanzi": "泛型",
+      "pinyin": "fànxíng",
+      "meaning": "generic"
+    },
+    {
+      "hanzi": "主动装箱拆箱",
+      "pinyin": "zhǔdòng zhuāngxiāng chāixiāng",
+      "meaning": "autoboxing/unboxing"
+    },
+    {
+      "hanzi": "条件编译",
+      "pinyin": "tiáojiàn biānyì",
+      "meaning": "biên dịch có điều kiện"
+    },
+    {
+      "hanzi": "多种",
+      "pinyin": "duōzhǒng",
+      "meaning": "nhiều loại"
+    },
+    {
+      "hanzi": "语法糖",
+      "pinyin": "yǔfǎtáng",
+      "meaning": "syntactic sugar"
+    },
+    {
+      "hanzi": "前因后果",
+      "pinyin": "qiányīn hòuguǒ",
+      "meaning": "nguyên do và kết quả"
+    },
+    {
+      "hanzi": "插入式注解处理器",
+      "pinyin": "chārùshì zhùjiě chǔlǐqì",
+      "meaning": "annotation processor kiểu cắm"
+    },
+    {
+      "hanzi": "检查",
+      "pinyin": "jiǎnchá",
+      "meaning": "kiểm tra"
+    },
+    {
+      "hanzi": "命名规范",
+      "pinyin": "mìngmíng guīfàn",
+      "meaning": "quy chuẩn đặt tên"
+    },
+    {
+      "hanzi": "编译器插件",
+      "pinyin": "biānyìqì chājiàn",
+      "meaning": "plugin trình biên dịch"
+    },
+    {
+      "hanzi": "全文重写",
+      "pinyin": "quánwén chóngxiě",
+      "meaning": "viết lại toàn bộ"
+    },
+    {
+      "hanzi": "不同语言",
+      "pinyin": "bùtóng yǔyán",
+      "meaning": "các ngôn ngữ khác nhau"
+    },
+    {
+      "hanzi": "实现方式",
+      "pinyin": "shíxiàn fāngshì",
+      "meaning": "cách hiện thực"
+    },
+    {
+      "hanzi": "历史背景",
+      "pinyin": "lìshǐ bèijǐng",
+      "meaning": "bối cảnh lịch sử"
+    },
+    {
+      "hanzi": "类型擦除",
+      "pinyin": "lèixíng cāchú",
+      "meaning": "type erasure"
+    },
+    {
+      "hanzi": "带来",
+      "pinyin": "dàilái",
+      "meaning": "mang lại"
+    },
+    {
+      "hanzi": "限制",
+      "pinyin": "xiànzhì",
+      "meaning": "hạn chế"
+    },
+    {
+      "hanzi": "值类型",
+      "pinyin": "zhí lèixíng",
+      "meaning": "kiểu giá trị"
+    },
+    {
+      "hanzi": "第11章",
+      "pinyin": "dì shíyī zhāng",
+      "meaning": "chương 11"
+    },
+    {
+      "hanzi": "热点探测",
+      "pinyin": "rèdiǎn tàncè",
+      "meaning": "hotspot detection"
+    },
+    {
+      "hanzi": "即时编译器",
+      "pinyin": "jíshí biānyìqì",
+      "meaning": "JIT compiler"
+    },
+    {
+      "hanzi": "触发条件",
+      "pinyin": "chùfā tiáojiàn",
+      "meaning": "điều kiện kích hoạt"
+    },
+    {
+      "hanzi": "从外部观察",
+      "pinyin": "cóng wàibù guānchá",
+      "meaning": "quan sát từ bên ngoài"
+    },
+    {
+      "hanzi": "结果",
+      "pinyin": "jiéguǒ",
+      "meaning": "kết quả"
+    },
+    {
+      "hanzi": "编译期优化技术",
+      "pinyin": "biānyìqī yōuhuà jìshù",
+      "meaning": "kỹ thuật tối ưu ở thời điểm biên dịch"
+    },
+    {
+      "hanzi": "提前编译器",
+      "pinyin": "tíqián biānyìqì",
+      "meaning": "ahead-of-time compiler"
+    },
+    {
+      "hanzi": "Graal",
+      "pinyin": "Graal",
+      "meaning": "Graal"
+    },
+    {
+      "hanzi": "JVMCI",
+      "pinyin": "JVMCI",
+      "meaning": "JVMCI"
+    },
+    {
+      "hanzi": "进行实战练习",
+      "pinyin": "jìnxíng shízhàn liànxí",
+      "meaning": "tiến hành bài thực hành"
+    },
+    {
+      "hanzi": "第五部分",
+      "pinyin": "dì wǔ bùfen",
+      "meaning": "phần thứ năm"
+    },
+    {
+      "hanzi": "原生",
+      "pinyin": "yuánshēng",
+      "meaning": "nguyên bản / native"
+    },
+    {
+      "hanzi": "完善",
+      "pinyin": "wánshàn",
+      "meaning": "hoàn thiện"
+    },
+    {
+      "hanzi": "多线程支持",
+      "pinyin": "duō xiànchéng zhīchí",
+      "meaning": "hỗ trợ đa luồng"
+    },
+    {
+      "hanzi": "天生",
+      "pinyin": "tiānshēng",
+      "meaning": "bẩm sinh"
+    },
+    {
+      "hanzi": "适合",
+      "pinyin": "shìhé",
+      "meaning": "phù hợp"
+    },
+    {
+      "hanzi": "多线程并发",
+      "pinyin": "duō xiànchéng bìngfā",
+      "meaning": "concurrency đa luồng"
+    },
+    {
+      "hanzi": "不过",
+      "pinyin": "búguò",
+      "meaning": "tuy nhiên"
+    },
+    {
+      "hanzi": "所有与并发相关的处理",
+      "pinyin": "suǒyǒu yǔ bìngfā xiāngguān de chǔlǐ",
+      "meaning": "mọi xử lý liên quan concurrency"
+    },
+    {
+      "hanzi": "内幕",
+      "pinyin": "nèimù",
+      "meaning": "nội tình / phần bên trong"
+    },
+    {
+      "hanzi": "不可缺少",
+      "pinyin": "bùkě quēshǎo",
+      "meaning": "không thể thiếu"
+    },
+    {
+      "hanzi": "课程",
+      "pinyin": "kèchéng",
+      "meaning": "bài học / khóa học"
+    },
+    {
+      "hanzi": "12～13章",
+      "pinyin": "shí'èr dào shísān zhāng",
+      "meaning": "chương 12 đến 13"
+    },
+    {
+      "hanzi": "第12章",
+      "pinyin": "dì shí'èr zhāng",
+      "meaning": "chương 12"
+    },
+    {
+      "hanzi": "内存模型",
+      "pinyin": "nèicún móxíng",
+      "meaning": "mô hình bộ nhớ"
+    },
+    {
+      "hanzi": "结构",
+      "pinyin": "jiégòu",
+      "meaning": "cấu trúc"
+    },
+    {
+      "hanzi": "原子性",
+      "pinyin": "yuánzǐxìng",
+      "meaning": "tính nguyên tử"
+    },
+    {
+      "hanzi": "可见性",
+      "pinyin": "kějiànxìng",
+      "meaning": "tính hiển thị"
+    },
+    {
+      "hanzi": "有序性",
+      "pinyin": "yǒuxùxìng",
+      "meaning": "tính có thứ tự"
+    },
+    {
+      "hanzi": "体现",
+      "pinyin": "tǐxiàn",
+      "meaning": "thể hiện"
+    },
+    {
+      "hanzi": "先行发生原则",
+      "pinyin": "xiānxíng fāshēng yuánzé",
+      "meaning": "nguyên tắc happens-before"
+    },
+    {
+      "hanzi": "规则",
+      "pinyin": "guīzé",
+      "meaning": "quy tắc"
+    },
+    {
+      "hanzi": "线程",
+      "pinyin": "xiànchéng",
+      "meaning": "luồng"
+    },
+    {
+      "hanzi": "如何实现",
+      "pinyin": "rúhé shíxiàn",
+      "meaning": "được hiện thực như thế nào"
+    },
+    {
+      "hanzi": "提前介绍",
+      "pinyin": "tíqián jièshào",
+      "meaning": "giới thiệu trước"
+    },
+    {
+      "hanzi": "实验室状态",
+      "pinyin": "shíyànshì zhuàngtài",
+      "meaning": "trạng thái trong phòng thí nghiệm"
+    },
+    {
+      "hanzi": "协程",
+      "pinyin": "xiéchéng",
+      "meaning": "coroutine"
+    },
+    {
+      "hanzi": "相关内容",
+      "pinyin": "xiāngguān nèiróng",
+      "meaning": "nội dung liên quan"
+    },
+    {
+      "hanzi": "过时",
+      "pinyin": "guòshí",
+      "meaning": "lỗi thời"
+    },
+    {
+      "hanzi": "晦涩",
+      "pinyin": "huìsè",
+      "meaning": "khó hiểu"
+    },
+    {
+      "hanzi": "新并发模型",
+      "pinyin": "xīn bìngfā móxíng",
+      "meaning": "mô hình concurrency mới"
+    },
+    {
+      "hanzi": "第13章",
+      "pinyin": "dì shísān zhāng",
+      "meaning": "chương 13"
+    },
+    {
+      "hanzi": "线程安全",
+      "pinyin": "xiànchéng ānquán",
+      "meaning": "an toàn luồng"
+    },
+    {
+      "hanzi": "概念",
+      "pinyin": "gàiniàn",
+      "meaning": "khái niệm"
+    },
+    {
+      "hanzi": "分类",
+      "pinyin": "fēnlèi",
+      "meaning": "phân loại"
+    },
+    {
+      "hanzi": "同步实现",
+      "pinyin": "tóngbù shíxiàn",
+      "meaning": "hiện thực đồng bộ"
+    },
+    {
+      "hanzi": "底层运作原理",
+      "pinyin": "dǐcéng yùnzuò yuánlǐ",
+      "meaning": "nguyên lý vận hành tầng thấp"
+    },
+    {
+      "hanzi": "一系列",
+      "pinyin": "yí xìliè",
+      "meaning": "một loạt"
+    },
+    {
+      "hanzi": "锁优化措施",
+      "pinyin": "suǒ yōuhuà cuòshī",
+      "meaning": "biện pháp tối ưu khóa"
+    },
+    {
+      "hanzi": "主体内容",
+      "pinyin": "zhǔtǐ nèiróng",
+      "meaning": "nội dung chính"
+    },
+    {
+      "hanzi": "过多变化",
+      "pinyin": "guòduō biànhuà",
+      "meaning": "quá nhiều thay đổi"
+    },
+    {
+      "hanzi": "细节",
+      "pinyin": "xìjié",
+      "meaning": "chi tiết"
+    },
+    {
+      "hanzi": "修饰",
+      "pinyin": "xiūshì",
+      "meaning": "chỉnh sửa / trau chuốt"
+    },
+    {
+      "hanzi": "疑问",
+      "pinyin": "yíwèn",
+      "meaning": "thắc mắc"
+    },
+    {
+      "hanzi": "补充讲解",
+      "pinyin": "bǔchōng jiǎngjiě",
+      "meaning": "giải thích bổ sung"
+    },
+    {
+      "hanzi": "名为",
+      "pinyin": "míngwéi",
+      "meaning": "mang tên"
+    },
+    {
+      "hanzi": "真的",
+      "pinyin": "zhēn de",
+      "meaning": "thật sự"
+    },
+    {
+      "hanzi": "仅凭",
+      "pinyin": "jǐnpíng",
+      "meaning": "chỉ dựa vào"
+    },
+    {
+      "hanzi": "肯定",
+      "pinyin": "kěndìng",
+      "meaning": "chắc chắn"
+    },
+    {
+      "hanzi": "远远不够",
+      "pinyin": "yuǎnyuǎn bùgòu",
+      "meaning": "còn lâu mới đủ"
+    },
+    {
+      "hanzi": "以下方式",
+      "pinyin": "yǐxià fāngshì",
+      "meaning": "các cách dưới đây"
+    },
+    {
+      "hanzi": "查找到",
+      "pinyin": "chádǎo dào",
+      "meaning": "tra tìm được"
+    },
+    {
+      "hanzi": "写作",
+      "pinyin": "xiězuò",
+      "meaning": "viết lách"
+    },
+    {
+      "hanzi": "得到过",
+      "pinyin": "dédào guò",
+      "meaning": "đã nhận được"
+    },
+    {
+      "hanzi": "很大的帮助",
+      "pinyin": "hěn dà de bāngzhù",
+      "meaning": "sự giúp đỡ lớn"
+    },
+    {
+      "hanzi": "虚拟机规范",
+      "pinyin": "xūnǐjī guīfàn",
+      "meaning": "quy phạm máy ảo"
+    },
+    {
+      "hanzi": "无论如何",
+      "pinyin": "wúlùn rúhé",
+      "meaning": "dù thế nào"
+    },
+    {
+      "hanzi": "必须读",
+      "pinyin": "bìxū dú",
+      "meaning": "phải đọc"
+    },
+    {
+      "hanzi": "概念和细节描述",
+      "pinyin": "gàiniàn hé xìjié miáoshù",
+      "meaning": "mô tả khái niệm và chi tiết"
+    },
+    {
+      "hanzi": "高度吻合",
+      "pinyin": "gāodù wěnhé",
+      "meaning": "phù hợp ở mức cao"
+    },
+    {
+      "hanzi": "真正",
+      "pinyin": "zhēnzhèng",
+      "meaning": "thực sự"
+    },
+    {
+      "hanzi": "渐渐",
+      "pinyin": "jiànjiàn",
+      "meaning": "dần dần"
+    },
+    {
+      "hanzi": "差距",
+      "pinyin": "chājù",
+      "meaning": "khoảng cách"
+    },
+    {
+      "hanzi": "选择",
+      "pinyin": "xuǎnzé",
+      "meaning": "lựa chọn"
+    },
+    {
+      "hanzi": "一本参考书",
+      "pinyin": "yì běn cānkǎoshū",
+      "meaning": "một sách tham khảo"
+    },
+    {
+      "hanzi": "那",
+      "pinyin": "nà",
+      "meaning": "thì đó"
+    },
+    {
+      "hanzi": "语言规范",
+      "pinyin": "yǔyán guīfàn",
+      "meaning": "quy phạm ngôn ngữ"
+    },
+    {
+      "hanzi": "专有",
+      "pinyin": "zhuānyǒu",
+      "meaning": "riêng có"
+    },
+    {
+      "hanzi": "各种细节规定",
+      "pinyin": "gèzhǒng xìjié guīdìng",
+      "meaning": "các quy định chi tiết"
+    },
+    {
+      "hanzi": "行为",
+      "pinyin": "xíngwéi",
+      "meaning": "hành vi"
+    },
+    {
+      "hanzi": "帮助",
+      "pinyin": "bāngzhù",
+      "meaning": "giúp đỡ"
+    },
+    {
+      "hanzi": "一样",
+      "pinyin": "yíyàng",
+      "meaning": "giống nhau"
+    },
+    {
+      "hanzi": "Java之父",
+      "pinyin": "Java zhī fù",
+      "meaning": "cha đẻ Java"
+    },
+    {
+      "hanzi": "James Gosling",
+      "pinyin": "James Gosling",
+      "meaning": "James Gosling"
+    },
+    {
+      "hanzi": "执笔撰写",
+      "pinyin": "zhíbǐ zhuànxiě",
+      "meaning": "chấp bút viết"
+    },
+    {
+      "hanzi": "垃圾回收算法手册",
+      "pinyin": "lājī huíshōu suànfǎ shǒucè",
+      "meaning": "sổ tay thuật toán GC"
+    },
+    {
+      "hanzi": "自动内存管理的艺术",
+      "pinyin": "zìdòng nèicún guǎnlǐ de yìshù",
+      "meaning": "nghệ thuật quản lý bộ nhớ tự động"
+    },
+    {
+      "hanzi": "机械工业出版社",
+      "pinyin": "Jīxiè Gōngyè Chūbǎnshè",
+      "meaning": "Nhà xuất bản Công nghiệp Cơ khí"
+    },
+    {
+      "hanzi": "引进翻译",
+      "pinyin": "yǐnjìn fānyì",
+      "meaning": "du nhập và dịch"
+    },
+    {
+      "hanzi": "教科书式",
+      "pinyin": "jiàokēshūshì",
+      "meaning": "mang tính giáo trình"
+    },
+    {
+      "hanzi": "学术著作",
+      "pinyin": "xuéshù zhùzuò",
+      "meaning": "tác phẩm học thuật"
+    },
+    {
+      "hanzi": "唯一必读",
+      "pinyin": "wéiyī bìdú",
+      "meaning": "duy nhất bắt buộc đọc"
+    },
+    {
+      "hanzi": "硬件与软件",
+      "pinyin": "yìngjiàn yǔ ruǎnjiàn",
+      "meaning": "phần cứng và phần mềm"
+    },
+    {
+      "hanzi": "新挑战",
+      "pinyin": "xīn tiǎozhàn",
+      "meaning": "thử thách mới"
+    },
+    {
+      "hanzi": "出发",
+      "pinyin": "chūfā",
+      "meaning": "xuất phát"
+    },
+    {
+      "hanzi": "设计者",
+      "pinyin": "shèjìzhě",
+      "meaning": "người thiết kế"
+    },
+    {
+      "hanzi": "实现者",
+      "pinyin": "shíxiànzhě",
+      "meaning": "người hiện thực"
+    },
+    {
+      "hanzi": "涵盖",
+      "pinyin": "hángài",
+      "meaning": "bao quát"
+    },
+    {
+      "hanzi": "并行垃圾回收",
+      "pinyin": "bìngxíng lājī huíshōu",
+      "meaning": "GC song song"
+    },
+    {
+      "hanzi": "增量式垃圾回收",
+      "pinyin": "zēngliàngshì lājī huíshōu",
+      "meaning": "GC tăng dần"
+    },
+    {
+      "hanzi": "并发垃圾回收",
+      "pinyin": "bìngfā lājī huíshōu",
+      "meaning": "GC đồng thời"
+    },
+    {
+      "hanzi": "实时垃圾回收",
+      "pinyin": "shíshí lājī huíshōu",
+      "meaning": "GC thời gian thực"
+    },
+    {
+      "hanzi": "描述",
+      "pinyin": "miáoshù",
+      "meaning": "mô tả"
+    },
+    {
+      "hanzi": "唯一缺点",
+      "pinyin": "wéiyī quēdiǎn",
+      "meaning": "nhược điểm duy nhất"
+    },
+    {
+      "hanzi": "过于专业",
+      "pinyin": "guòyú zhuānyè",
+      "meaning": "quá chuyên sâu"
+    },
+    {
+      "hanzi": "不适合作为入门书籍使用",
+      "pinyin": "bù shìhé zuòwéi rùmén shūjí shǐyòng",
+      "meaning": "không hợp làm sách nhập môn"
+    },
+    {
+      "hanzi": "Virtual Machines：Versatile Platforms for Systems and Processes",
+      "pinyin": "Virtual Machines: Versatile Platforms for Systems and Processes",
+      "meaning": "tên sách"
+    },
+    {
+      "hanzi": "百科全书",
+      "pinyin": "bǎikē quánshū",
+      "meaning": "bách khoa toàn thư"
+    },
+    {
+      "hanzi": "一词",
+      "pinyin": "yì cí",
+      "meaning": "một từ"
+    },
+    {
+      "hanzi": "到底",
+      "pinyin": "dàodǐ",
+      "meaning": "rốt cuộc"
+    },
+    {
+      "hanzi": "不同类型",
+      "pinyin": "bùtóng lèixíng",
+      "meaning": "các loại khác nhau"
+    },
+    {
+      "hanzi": "大概",
+      "pinyin": "dàgài",
+      "meaning": "đại khái"
+    },
+    {
+      "hanzi": "并不直接针对",
+      "pinyin": "bìng bù zhíjiē zhēnduì",
+      "meaning": "không trực tiếp nhắm vào"
+    },
+    {
+      "hanzi": "2005年",
+      "pinyin": "èr líng líng wǔ nián",
+      "meaning": "năm 2005"
+    },
+    {
+      "hanzi": "中文版",
+      "pinyin": "Zhōngwén bǎn",
+      "meaning": "bản tiếng Trung"
+    },
+    {
+      "hanzi": "因素限制",
+      "pinyin": "yīnsù xiànzhì",
+      "meaning": "hạn chế do yếu tố"
+    },
+    {
+      "hanzi": "仍然推荐",
+      "pinyin": "réngrán tuījiàn",
+      "meaning": "vẫn khuyến nghị"
+    },
+    {
+      "hanzi": "全局性观念",
+      "pinyin": "quánjúxìng guānniàn",
+      "meaning": "quan niệm toàn cục"
+    },
+    {
+      "hanzi": "Java 性能优化权威指南",
+      "pinyin": "Java xìngnéng yōuhuà quánwēi zhǐnán",
+      "meaning": "hướng dẫn uy tín tối ưu hiệu năng Java"
+    },
+    {
+      "hanzi": "系列",
+      "pinyin": "xìliè",
+      "meaning": "loạt / series"
+    },
+    {
+      "hanzi": "最出名",
+      "pinyin": "zuì chūmíng",
+      "meaning": "nổi tiếng nhất"
+    },
+    {
+      "hanzi": "Effective Java",
+      "pinyin": "Effective Java",
+      "meaning": "Effective Java"
+    },
+    {
+      "hanzi": "许多人",
+      "pinyin": "xǔduō rén",
+      "meaning": "nhiều người"
+    },
+    {
+      "hanzi": "最新",
+      "pinyin": "zuìxīn",
+      "meaning": "mới nhất"
+    },
+    {
+      "hanzi": "历史",
+      "pinyin": "lìshǐ",
+      "meaning": "lịch sử"
+    },
+    {
+      "hanzi": "人民邮电出版社",
+      "pinyin": "Rénmín Yóudiàn Chūbǎnshè",
+      "meaning": "Nhà xuất bản Bưu điện Nhân dân"
+    },
+    {
+      "hanzi": "围绕",
+      "pinyin": "wéirào",
+      "meaning": "xoay quanh"
+    },
+    {
+      "hanzi": "上层程序",
+      "pinyin": "shàngcéng chéngxù",
+      "meaning": "chương trình tầng trên"
+    },
+    {
+      "hanzi": "性能度量",
+      "pinyin": "xìngnéng dùliàng",
+      "meaning": "đo lường hiệu năng"
+    },
+    {
+      "hanzi": "全面介绍",
+      "pinyin": "quánmiàn jièshào",
+      "meaning": "giới thiệu toàn diện"
+    },
+    {
+      "hanzi": "具备一定深度",
+      "pinyin": "jùbèi yídìng shēndù",
+      "meaning": "có chiều sâu nhất định"
+    },
+    {
+      "hanzi": "可实践性",
+      "pinyin": "kě shíjiàn xìng",
+      "meaning": "tính thực hành"
+    },
+    {
+      "hanzi": "网站资源",
+      "pinyin": "wǎngzhàn zīyuán",
+      "meaning": "tài nguyên website"
+    },
+    {
+      "hanzi": "高级语言虚拟机圈子",
+      "pinyin": "gāojí yǔyán xūnǐjī quānzi",
+      "meaning": "cộng đồng máy ảo ngôn ngữ bậc cao"
+    },
+    {
+      "hanzi": "并不只限于",
+      "pinyin": "bìng bù zhǐ xiànyú",
+      "meaning": "không chỉ giới hạn ở"
+    },
+    {
+      "hanzi": "HighLevel Language Virtual Machine",
+      "pinyin": "HighLevel Language Virtual Machine",
+      "meaning": "máy ảo ngôn ngữ bậc cao"
+    },
+    {
+      "hanzi": "主流",
+      "pinyin": "zhǔliú",
+      "meaning": "dòng chính"
+    },
+    {
+      "hanzi": "圈主",
+      "pinyin": "quānzhǔ",
+      "meaning": "chủ nhóm"
+    },
+    {
+      "hanzi": "莫枢",
+      "pinyin": "Mò Shū",
+      "meaning": "Mạc Xu"
+    },
+    {
+      "hanzi": "博客",
+      "pinyin": "bókè",
+      "meaning": "blog"
+    },
+    {
+      "hanzi": "编译原理",
+      "pinyin": "biānyì yuánlǐ",
+      "meaning": "nguyên lý biên dịch"
+    },
+    {
+      "hanzi": "分享园地",
+      "pinyin": "fēnxiǎng yuándì",
+      "meaning": "nơi chia sẻ"
+    },
+    {
+      "hanzi": "HotSpot Internals",
+      "pinyin": "HotSpot Internals",
+      "meaning": "HotSpot Internals"
+    },
+    {
+      "hanzi": "Wiki",
+      "pinyin": "Wiki",
+      "meaning": "Wiki"
+    },
+    {
+      "hanzi": "开发团队",
+      "pinyin": "kāifā tuánduì",
+      "meaning": "đội phát triển"
+    },
+    {
+      "hanzi": "更新很慢",
+      "pinyin": "gēngxīn hěn màn",
+      "meaning": "cập nhật rất chậm"
+    },
+    {
+      "hanzi": "参考价值",
+      "pinyin": "cānkǎo jiàzhí",
+      "meaning": "giá trị tham khảo"
+    },
+    {
+      "hanzi": "The HotSpot Group",
+      "pinyin": "The HotSpot Group",
+      "meaning": "The HotSpot Group"
+    },
+    {
+      "hanzi": "组群",
+      "pinyin": "zǔqún",
+      "meaning": "nhóm"
+    },
+    {
+      "hanzi": "邮件组",
+      "pinyin": "yóujiàn zǔ",
+      "meaning": "mailing list"
+    },
+    {
+      "hanzi": "最新讨论",
+      "pinyin": "zuìxīn tǎolùn",
+      "meaning": "thảo luận mới nhất"
+    },
+    {
+      "hanzi": "联系作者",
+      "pinyin": "liánxì zuòzhě",
+      "meaning": "liên hệ tác giả"
+    },
+    {
+      "hanzi": "交稿",
+      "pinyin": "jiāogǎo",
+      "meaning": "nộp bản thảo"
+    },
+    {
+      "hanzi": "想象中",
+      "pinyin": "xiǎngxiàng zhōng",
+      "meaning": "trong tưởng tượng"
+    },
+    {
+      "hanzi": "兴奋",
+      "pinyin": "xīngfèn",
+      "meaning": "hưng phấn"
+    },
+    {
+      "hanzi": "放松",
+      "pinyin": "fàngsōng",
+      "meaning": "thả lỏng"
+    },
+    {
+      "hanzi": "战战兢兢",
+      "pinyin": "zhànzhàn jīngjīng",
+      "meaning": "run sợ / cẩn trọng"
+    },
+    {
+      "hanzi": "如履薄冰",
+      "pinyin": "rú lǚ bóbīng",
+      "meaning": "như đi trên băng mỏng"
+    },
+    {
+      "hanzi": "感觉",
+      "pinyin": "gǎnjué",
+      "meaning": "cảm giác"
+    },
+    {
+      "hanzi": "依然",
+      "pinyin": "yīrán",
+      "meaning": "vẫn"
+    },
+    {
+      "hanzi": "萦绕",
+      "pinyin": "yíngrào",
+      "meaning": "quẩn quanh"
+    },
+    {
+      "hanzi": "心头",
+      "pinyin": "xīntóu",
+      "meaning": "trong lòng"
+    },
+    {
+      "hanzi": "每一章",
+      "pinyin": "měi yì zhāng",
+      "meaning": "mỗi chương"
+    },
+    {
+      "hanzi": "每一节",
+      "pinyin": "měi yì jié",
+      "meaning": "mỗi mục"
+    },
+    {
+      "hanzi": "落笔",
+      "pinyin": "luòbǐ",
+      "meaning": "hạ bút"
+    },
+    {
+      "hanzi": "考虑",
+      "pinyin": "kǎolǜ",
+      "meaning": "cân nhắc"
+    },
+    {
+      "hanzi": "条理",
+      "pinyin": "tiáolǐ",
+      "meaning": "mạch lạc"
+    },
+    {
+      "hanzi": "担心",
+      "pinyin": "dānxīn",
+      "meaning": "lo lắng"
+    },
+    {
+      "hanzi": "理解有偏差",
+      "pinyin": "lǐjiě yǒu piānchā",
+      "meaning": "hiểu lệch"
+    },
+    {
+      "hanzi": "误导",
+      "pinyin": "wùdǎo",
+      "meaning": "làm hiểu sai"
+    },
+    {
+      "hanzi": "大家",
+      "pinyin": "dàjiā",
+      "meaning": "mọi người"
+    },
+    {
+      "hanzi": "囿于",
+      "pinyin": "yòuyú",
+      "meaning": "bị hạn chế bởi"
+    },
+    {
+      "hanzi": "写作水平",
+      "pinyin": "xiězuò shuǐpíng",
+      "meaning": "trình độ viết"
+    },
+    {
+      "hanzi": "写作时间",
+      "pinyin": "xiězuò shíjiān",
+      "meaning": "thời gian viết"
+    },
+    {
+      "hanzi": "难免",
+      "pinyin": "nánmiǎn",
+      "meaning": "khó tránh"
+    },
+    {
+      "hanzi": "不妥之处",
+      "pinyin": "bùtuǒ zhī chù",
+      "meaning": "chỗ chưa ổn"
+    },
+    {
+      "hanzi": "特地",
+      "pinyin": "tèdì",
+      "meaning": "đặc biệt"
+    },
+    {
+      "hanzi": "开通",
+      "pinyin": "kāitōng",
+      "meaning": "mở ra"
+    },
+    {
+      "hanzi": "读者邮箱",
+      "pinyin": "dúzhě yóuxiāng",
+      "meaning": "hộp thư độc giả"
+    },
+    {
+      "hanzi": "任何意见",
+      "pinyin": "rènhé yìjiàn",
+      "meaning": "mọi ý kiến"
+    },
+    {
+      "hanzi": "建议",
+      "pinyin": "jiànyì",
+      "meaning": "góp ý"
+    },
+    {
+      "hanzi": "欢迎",
+      "pinyin": "huānyíng",
+      "meaning": "hoan nghênh"
+    },
+    {
+      "hanzi": "写书",
+      "pinyin": "xiěshū",
+      "meaning": "viết sách"
+    },
+    {
+      "hanzi": "作品",
+      "pinyin": "zuòpǐn",
+      "meaning": "tác phẩm"
+    },
+    {
+      "hanzi": "不完美",
+      "pinyin": "bù wánměi",
+      "meaning": "không hoàn hảo"
+    },
+    {
+      "hanzi": "追求完美",
+      "pinyin": "zhuīqiú wánměi",
+      "meaning": "theo đuổi sự hoàn hảo"
+    },
+    {
+      "hanzi": "动力",
+      "pinyin": "dònglì",
+      "meaning": "động lực"
+    },
+    {
+      "hanzi": "致谢",
+      "pinyin": "zhìxiè",
+      "meaning": "lời cảm ơn"
+    },
+    {
+      "hanzi": "首先",
+      "pinyin": "shǒuxiān",
+      "meaning": "trước hết"
+    },
+    {
+      "hanzi": "家人",
+      "pinyin": "jiārén",
+      "meaning": "gia đình"
+    },
+    {
+      "hanzi": "全靠",
+      "pinyin": "quánkào",
+      "meaning": "hoàn toàn nhờ"
+    },
+    {
+      "hanzi": "悉心照顾",
+      "pinyin": "xīxīn zhàogù",
+      "meaning": "chăm sóc tận tình"
+    },
+    {
+      "hanzi": "全身心",
+      "pinyin": "quánshēnxīn",
+      "meaning": "toàn tâm toàn ý"
+    },
+    {
+      "hanzi": "投入",
+      "pinyin": "tóurù",
+      "meaning": "dồn vào"
+    },
+    {
+      "hanzi": "无后顾之忧",
+      "pinyin": "wú hòugù zhī yōu",
+      "meaning": "không còn nỗi lo phía sau"
+    },
+    {
+      "hanzi": "其次",
+      "pinyin": "qícì",
+      "meaning": "thứ hai"
+    },
+    {
+      "hanzi": "畅销",
+      "pinyin": "chàngxiāo",
+      "meaning": "bán chạy"
+    },
+    {
+      "hanzi": "原创",
+      "pinyin": "yuánchuàng",
+      "meaning": "nguyên bản"
+    },
+    {
+      "hanzi": "累计",
+      "pinyin": "lěijì",
+      "meaning": "cộng dồn"
+    },
+    {
+      "hanzi": "印刷",
+      "pinyin": "yìnshuā",
+      "meaning": "in ấn"
+    },
+    {
+      "hanzi": "销量",
+      "pinyin": "xiāoliàng",
+      "meaning": "số lượng bán"
+    },
+    {
+      "hanzi": "超过",
+      "pinyin": "chāoguò",
+      "meaning": "vượt quá"
+    },
+    {
+      "hanzi": "修正",
+      "pinyin": "xiūzhèng",
+      "meaning": "sửa chữa"
+    },
+    {
+      "hanzi": "成熟",
+      "pinyin": "chéngshú",
+      "meaning": "chín muồi"
+    },
+    {
+      "hanzi": "不完整",
+      "pinyin": "bù wánzhěng",
+      "meaning": "không hoàn chỉnh"
+    },
+    {
+      "hanzi": "乃至",
+      "pinyin": "nǎizhì",
+      "meaning": "thậm chí đến"
+    },
+    {
+      "hanzi": "不正确",
+      "pinyin": "bù zhèngquè",
+      "meaning": "không chính xác"
+    },
+    {
+      "hanzi": "工作单位",
+      "pinyin": "gōngzuò dānwèi",
+      "meaning": "đơn vị công tác"
+    },
+    {
+      "hanzi": "远光软件",
+      "pinyin": "Yuǎnguāng Ruǎnjiàn",
+      "meaning": "Yuanguang Software"
+    },
+    {
+      "hanzi": "宝贵",
+      "pinyin": "bǎoguì",
+      "meaning": "quý báu"
+    },
+    {
+      "hanzi": "环境",
+      "pinyin": "huánjìng",
+      "meaning": "môi trường"
+    },
+    {
+      "hanzi": "知识点",
+      "pinyin": "zhīshi diǎn",
+      "meaning": "điểm kiến thức"
+    },
+    {
+      "hanzi": "来自于",
+      "pinyin": "láizì yú",
+      "meaning": "đến từ"
+    },
+    {
+      "hanzi": "同事们",
+      "pinyin": "tóngshìmen",
+      "meaning": "các đồng nghiệp"
+    },
+    {
+      "hanzi": "非常荣幸",
+      "pinyin": "fēicháng róngxìng",
+      "meaning": "rất vinh dự"
+    },
+    {
+      "hanzi": "富有激情",
+      "pinyin": "fùyǒu jīqíng",
+      "meaning": "đầy nhiệt huyết"
+    },
+    {
+      "hanzi": "团队",
+      "pinyin": "tuánduì",
+      "meaning": "đội ngũ"
+    },
+    {
+      "hanzi": "共同奋斗",
+      "pinyin": "gòngtóng fèndòu",
+      "meaning": "cùng phấn đấu"
+    },
+    {
+      "hanzi": "感谢",
+      "pinyin": "gǎnxiè",
+      "meaning": "cảm ơn"
+    },
+    {
+      "hanzi": "RednaxelaFX",
+      "pinyin": "RednaxelaFX",
+      "meaning": "RednaxelaFX"
+    },
+    {
+      "hanzi": "普及",
+      "pinyin": "pǔjí",
+      "meaning": "phổ cập"
+    },
+    {
+      "hanzi": "最有贡献",
+      "pinyin": "zuì yǒu gòngxiàn",
+      "meaning": "có đóng góp lớn nhất"
+    },
+    {
+      "hanzi": "几个人之一",
+      "pinyin": "jǐ gè rén zhī yī",
+      "meaning": "một trong vài người"
+    },
+    {
+      "hanzi": "百忙之中",
+      "pinyin": "bǎimáng zhī zhōng",
+      "meaning": "giữa lúc rất bận"
+    },
+    {
+      "hanzi": "抽空",
+      "pinyin": "chōukòng",
+      "meaning": "tranh thủ thời gian"
+    },
+    {
+      "hanzi": "审阅",
+      "pinyin": "shěnyuè",
+      "meaning": "xem xét / duyệt"
+    },
+    {
+      "hanzi": "意见",
+      "pinyin": "yìjiàn",
+      "meaning": "ý kiến"
+    },
+    {
+      "hanzi": "编辑",
+      "pinyin": "biānjí",
+      "meaning": "biên tập viên"
+    },
+    {
+      "hanzi": "顺利出版",
+      "pinyin": "shùnlì chūbǎn",
+      "meaning": "xuất bản thuận lợi"
+    },
+    {
+      "hanzi": "离不开",
+      "pinyin": "lí bùkāi",
+      "meaning": "không thể tách khỏi"
+    },
+    {
+      "hanzi": "敬业精神",
+      "pinyin": "jìngyè jīngshén",
+      "meaning": "tinh thần tận tâm nghề nghiệp"
+    },
+    {
+      "hanzi": "一丝不苟",
+      "pinyin": "yìsī bùgǒu",
+      "meaning": "cẩn thận tỉ mỉ"
+    },
+    {
+      "hanzi": "工作态度",
+      "pinyin": "gōngzuò tàidù",
+      "meaning": "thái độ làm việc"
+    },
+    {
+      "hanzi": "周志明",
+      "pinyin": "Zhōu Zhìmíng",
+      "meaning": "Chu Chí Minh"
+    }
+  ]
+}

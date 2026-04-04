@@ -13,10 +13,14 @@ const sentenceList = document.getElementById("sentence-list");
 const wordsTab = document.getElementById("words-tab");
 const meaningTab = document.getElementById("meaning-tab");
 const sentencesTab = document.getElementById("sentences-tab");
+const javaTab = document.getElementById("java-tab");
+const javaPageTab = document.getElementById("java-page-tab");
 const listenTab = document.getElementById("listen-tab");
 const wordsPanel = document.getElementById("words-panel");
 const meaningPanel = document.getElementById("meaning-panel");
 const sentencesPanel = document.getElementById("sentences-panel");
+const javaPanel = document.getElementById("java-panel");
+const javaPagePanel = document.getElementById("java-page-panel");
 const listenPanel = document.getElementById("listen-panel");
 const meaningList = document.getElementById("meaning-list");
 const meaningRandomBtn = document.getElementById("meaning-random-btn");
@@ -24,14 +28,36 @@ const meaningAllBtn = document.getElementById("meaning-all-btn");
 const listenWordList = document.getElementById("listen-word-list");
 const listenSentenceList = document.getElementById("listen-sentence-list");
 const listenHint = document.getElementById("listen-hint");
+const javaTitle = document.getElementById("java-title");
+const javaDescription = document.getElementById("java-description");
+const javaCategoryChips = document.getElementById("java-category-chips");
+const javaSummary = document.getElementById("java-summary");
+const javaRandomBtn = document.getElementById("java-random-btn");
+const javaAllBtn = document.getElementById("java-all-btn");
+const javaList = document.getElementById("java-list");
+const javaHint = document.getElementById("java-hint");
+const javaPageTitle = document.getElementById("java-page-title");
+const javaPageDescription = document.getElementById("java-page-description");
+const javaPageSummary = document.getElementById("java-page-summary");
+const javaPageRandomBtn = document.getElementById("java-page-random-btn");
+const javaPageAllBtn = document.getElementById("java-page-all-btn");
+const javaPageList = document.getElementById("java-page-list");
+const javaPageHint = document.getElementById("java-page-hint");
 
 let words = [];
 let groups = [];
 let sentences = [];
+let javaWords = [];
+let javaCategories = [];
+let javaPageWords = [];
+let javaPageMeta = null;
 let availableVoices = [];
 let activeDate = "all";
 let wordsDisplayMode = "random";
 let meaningDisplayMode = "random";
+let javaDisplayMode = "random";
+let javaPageDisplayMode = "random";
+let activeJavaCategory = "all";
 const fallbackGroups = [
     {
         date: "2026-03-25",
@@ -157,6 +183,15 @@ function flattenGroups(sourceGroups) {
     );
 }
 
+function flattenJavaCategories(sourceCategories) {
+    return sourceCategories.flatMap((entry) =>
+        entry.words.map((word) => ({
+            ...word,
+            category: entry.category
+        }))
+    );
+}
+
 function shuffle(array) {
     const copy = [...array];
 
@@ -190,6 +225,18 @@ function getDateLabel() {
     }
 
     return getActiveGroup()?.label || activeDate;
+}
+
+function getFilteredJavaWords() {
+    if (activeJavaCategory === "all") {
+        return javaWords;
+    }
+
+    return javaWords.filter((word) => word.category === activeJavaCategory);
+}
+
+function getJavaCategoryLabel() {
+    return activeJavaCategory === "all" ? "tất cả chủ đề" : activeJavaCategory;
 }
 
 function updateDateSummary() {
@@ -309,6 +356,68 @@ function renderSentences(selectedSentences) {
     });
 }
 
+function renderJavaWords(selectedWords) {
+    javaList.innerHTML = "";
+
+    selectedWords.forEach((word) => {
+        const item = document.createElement("li");
+        item.className = "word-item";
+        item.setAttribute("role", "button");
+        item.setAttribute("tabindex", "0");
+        item.innerHTML = `
+            <span class="hanzi">${word.hanzi}</span>
+            <div class="pinyin"></div>
+            <div class="meaning"></div>
+        `;
+
+        const revealWordDetails = () => {
+            item.querySelector(".pinyin").textContent = word.pinyin;
+            item.querySelector(".meaning").textContent = word.meaning;
+        };
+
+        item.addEventListener("click", revealWordDetails);
+        item.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                revealWordDetails();
+            }
+        });
+
+        javaList.appendChild(item);
+    });
+}
+
+function renderJavaPageWords(selectedWords) {
+    javaPageList.innerHTML = "";
+
+    selectedWords.forEach((word) => {
+        const item = document.createElement("li");
+        item.className = "word-item";
+        item.setAttribute("role", "button");
+        item.setAttribute("tabindex", "0");
+        item.innerHTML = `
+            <span class="hanzi">${word.hanzi}</span>
+            <div class="pinyin"></div>
+            <div class="meaning"></div>
+        `;
+
+        const revealWordDetails = () => {
+            item.querySelector(".pinyin").textContent = word.pinyin;
+            item.querySelector(".meaning").textContent = word.meaning;
+        };
+
+        item.addEventListener("click", revealWordDetails);
+        item.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                revealWordDetails();
+            }
+        });
+
+        javaPageList.appendChild(item);
+    });
+}
+
 function loadVoices() {
     if (!("speechSynthesis" in window)) {
         availableVoices = [];
@@ -416,15 +525,21 @@ function activateTab(tabName) {
     const showWords = tabName === "words";
     const showMeaning = tabName === "meaning";
     const showSentences = tabName === "sentences";
+    const showJava = tabName === "java";
+    const showJavaPage = tabName === "java-page";
     const showListen = tabName === "listen";
 
     wordsPanel.hidden = !showWords;
     meaningPanel.hidden = !showMeaning;
     sentencesPanel.hidden = !showSentences;
+    javaPanel.hidden = !showJava;
+    javaPagePanel.hidden = !showJavaPage;
     listenPanel.hidden = !showListen;
     wordsTab.classList.toggle("active", showWords);
     meaningTab.classList.toggle("active", showMeaning);
     sentencesTab.classList.toggle("active", showSentences);
+    javaTab.classList.toggle("active", showJava);
+    javaPageTab.classList.toggle("active", showJavaPage);
     listenTab.classList.toggle("active", showListen);
 }
 
@@ -489,6 +604,119 @@ function showAllMeanings() {
     renderMeaningWords(filteredWords);
 }
 
+function updateJavaSummary() {
+    const filteredWords = getFilteredJavaWords();
+    const categoryLabel = getJavaCategoryLabel();
+
+    javaSummary.textContent =
+        activeJavaCategory === "all"
+            ? `Đang hiển thị ${filteredWords.length} từ của tất cả chủ đề Java/CNTT.`
+            : `Đang hiển thị ${filteredWords.length} từ của nhóm ${categoryLabel}.`;
+}
+
+function renderJavaCategoryChips() {
+    javaCategoryChips.innerHTML = "";
+    const categories = ["all", ...javaCategories];
+
+    categories.forEach((category) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "chip-btn";
+        button.textContent = category === "all" ? "Tất cả" : category;
+        button.classList.toggle("active", category === activeJavaCategory);
+        button.addEventListener("click", () => {
+            activeJavaCategory = category;
+            renderJavaCategoryChips();
+            refreshJavaView();
+        });
+        javaCategoryChips.appendChild(button);
+    });
+}
+
+function showRandomJavaWords() {
+    const filteredWords = getFilteredJavaWords();
+    const selectedWords = shuffle(filteredWords).slice(0, 10);
+    const categoryLabel = getJavaCategoryLabel();
+
+    javaDisplayMode = "random";
+    javaTitle.textContent =
+        activeJavaCategory === "all" ? "Ngẫu nhiên 10 từ Java/CNTT" : `Ngẫu nhiên 10 từ nhóm ${categoryLabel}`;
+    javaDescription.textContent = "Bấm vào từng thẻ để hiện pinyin và nghĩa tiếng Việt của thuật ngữ.";
+    javaHint.textContent =
+        activeJavaCategory === "all"
+            ? "Mỗi lần bấm nút sẽ chọn lại 10 từ khác nhau từ toàn bộ bộ Java/CNTT."
+            : `Mỗi lần bấm nút sẽ chọn lại 10 từ khác nhau trong nhóm ${categoryLabel}.`;
+    renderJavaWords(selectedWords);
+}
+
+function showAllJavaWords() {
+    const filteredWords = getFilteredJavaWords();
+    const categoryLabel = getJavaCategoryLabel();
+
+    javaDisplayMode = "all";
+    javaTitle.textContent =
+        activeJavaCategory === "all"
+            ? `Tất cả ${filteredWords.length} từ Java/CNTT`
+            : `${filteredWords.length} từ nhóm ${categoryLabel}`;
+    javaDescription.textContent = "Danh sách đầy đủ thuật ngữ Java và CNTT. Bấm vào từng thẻ để hiện pinyin và nghĩa.";
+    javaHint.textContent =
+        activeJavaCategory === "all"
+            ? "Bạn có thể lọc theo từng nhóm để ôn tập hẹp hơn."
+            : `Bạn đang xem toàn bộ từ của nhóm ${categoryLabel}.`;
+    renderJavaWords(filteredWords);
+}
+
+function refreshJavaView() {
+    updateJavaSummary();
+
+    if (javaDisplayMode === "all") {
+        showAllJavaWords();
+        return;
+    }
+
+    showRandomJavaWords();
+}
+
+function updateJavaPageSummary() {
+    const count = javaPageWords.length;
+    const label = javaPageMeta?.label || "Page 1";
+    const date = javaPageMeta?.date ? ` (${javaPageMeta.date})` : "";
+
+    javaPageSummary.textContent = `Đang có ${count} từ trong bộ ${label}${date}.`;
+}
+
+function showRandomJavaPageWords() {
+    const selectedWords = shuffle(javaPageWords).slice(0, 10);
+    const label = javaPageMeta?.label || "Java Page 1";
+
+    javaPageDisplayMode = "random";
+    javaPageTitle.textContent = `${label} - ngẫu nhiên 10 từ`;
+    javaPageDescription.textContent = "Bấm vào từng thẻ để hiện pinyin và nghĩa tiếng Việt.";
+    javaPageHint.textContent = "Mỗi lần bấm nút sẽ chọn lại 10 từ khác nhau trong bộ page 1.";
+    renderJavaPageWords(selectedWords);
+}
+
+function showAllJavaPageWords() {
+    const label = javaPageMeta?.label || "Java Page 1";
+
+    javaPageDisplayMode = "all";
+    javaPageTitle.textContent = `${label} - toàn bộ ${javaPageWords.length} từ`;
+    javaPageDescription.textContent = "Danh sách đầy đủ từ vựng của page 1. Bấm vào từng thẻ để hiện pinyin và nghĩa.";
+    javaPageHint.textContent = "Bạn có thể quay lại chế độ ngẫu nhiên bất cứ lúc nào.";
+    renderJavaPageWords(javaPageWords);
+}
+
+function refreshJavaPageView() {
+    updateJavaPageSummary();
+
+    if (javaPageDisplayMode === "all") {
+        showAllJavaPageWords();
+        return;
+    }
+
+    showRandomJavaPageWords();
+}
+
 function refreshWordViews() {
     updateDateSummary();
 
@@ -543,10 +771,62 @@ async function loadSentences() {
     renderListenPanel();
 }
 
+async function loadJavaWords() {
+    try {
+        const response = await fetch("words_java.json");
+
+        if (!response.ok) {
+            throw new Error("Cannot load words_java.json");
+        }
+
+        const payload = await response.json();
+        javaCategories = (payload.categories || []).map((entry) => entry.category);
+        javaWords = flattenJavaCategories(payload.categories || []);
+    } catch {
+        javaCategories = [];
+        javaWords = [];
+        javaTitle.textContent = "Chưa tải được bộ Java/CNTT";
+        javaDescription.textContent = "Không đọc được file words_java.json.";
+        javaHint.textContent = "Kiểm tra lại file dữ liệu rồi tải lại trang.";
+    }
+
+    renderJavaCategoryChips();
+    refreshJavaView();
+}
+
+async function loadJavaPageWords() {
+    try {
+        const response = await fetch("words_java_page_1.json");
+
+        if (!response.ok) {
+            throw new Error("Cannot load words_java_page_1.json");
+        }
+
+        const payload = await response.json();
+        javaPageMeta = {
+            date: payload.date || "",
+            label: payload.label || "Java Page 1"
+        };
+        javaPageWords = payload.words || [];
+    } catch {
+        javaPageMeta = null;
+        javaPageWords = [];
+        javaPageTitle.textContent = "Chưa tải được bộ Java Page 1";
+        javaPageDescription.textContent = "Không đọc được file words_java_page_1.json.";
+        javaPageHint.textContent = "Kiểm tra lại file dữ liệu rồi tải lại trang.";
+    }
+
+    refreshJavaPageView();
+}
+
 randomBtn.addEventListener("click", showRandomWords);
 allBtn.addEventListener("click", showAllWords);
 meaningRandomBtn.addEventListener("click", showRandomMeanings);
 meaningAllBtn.addEventListener("click", showAllMeanings);
+javaRandomBtn.addEventListener("click", showRandomJavaWords);
+javaAllBtn.addEventListener("click", showAllJavaWords);
+javaPageRandomBtn.addEventListener("click", showRandomJavaPageWords);
+javaPageAllBtn.addEventListener("click", showAllJavaPageWords);
 dateFilter.addEventListener("change", (event) => {
     activeDate = event.target.value;
     refreshWordViews();
@@ -554,6 +834,8 @@ dateFilter.addEventListener("change", (event) => {
 wordsTab.addEventListener("click", () => activateTab("words"));
 meaningTab.addEventListener("click", () => activateTab("meaning"));
 sentencesTab.addEventListener("click", () => activateTab("sentences"));
+javaTab.addEventListener("click", () => activateTab("java"));
+javaPageTab.addEventListener("click", () => activateTab("java-page"));
 listenTab.addEventListener("click", () => activateTab("listen"));
 
 loadVoices();
@@ -565,3 +847,5 @@ if ("speechSynthesis" in window) {
 
 loadWords();
 loadSentences();
+loadJavaWords();
+loadJavaPageWords();

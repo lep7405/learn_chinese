@@ -103,6 +103,46 @@
             opacity: 0.8;
         }
 
+        .sub-filter-bar {
+            display: grid;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: #fffdfb;
+        }
+
+        .category-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .chip-btn {
+            padding: 9px 14px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: transparent;
+            color: var(--text);
+        }
+
+        .chip-btn:hover {
+            background: rgba(184, 92, 56, 0.12);
+            color: var(--text);
+        }
+
+        .chip-btn.active {
+            background: var(--accent-dark);
+            color: #fffaf5;
+            border-color: transparent;
+        }
+
+        .meta-note {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
         .tab-btn.active {
             background: var(--accent-dark);
         }
@@ -217,6 +257,8 @@
             <button id="words-tab" class="tab-btn active" type="button">Từ</button>
             <button id="meaning-tab" class="tab-btn" type="button">Việt -> Trung</button>
             <button id="sentences-tab" class="tab-btn" type="button">Câu</button>
+            <button id="java-tab" class="tab-btn" type="button">Java</button>
+            <button id="java-page-tab" class="tab-btn" type="button">Java P1</button>
             <button id="listen-tab" class="tab-btn" type="button">Nghe</button>
         </div>
 
@@ -247,6 +289,41 @@
             <p>Mặc định chỉ hiện nghĩa tiếng Việt. Bấm vào từng câu để hiện tiếng Trung và pinyin.</p>
             <ul id="sentence-list" class="word-list"></ul>
             <div class="hint">Tab này hiển thị toàn bộ các câu bạn đã thêm.</div>
+        </section>
+
+        <section id="java-panel" class="panel" hidden>
+            <h1 id="java-title">Từ vựng Java và CNTT</h1>
+            <p id="java-description">Bộ này lấy từ `words_java.json`. Bấm vào từng thẻ để hiện pinyin và nghĩa tiếng Việt.</p>
+
+            <div class="sub-filter-bar">
+                <div>
+                    <div class="filter-label">Lọc theo nhóm chủ đề</div>
+                    <div id="java-category-chips" class="category-chips"></div>
+                </div>
+                <div id="java-summary" class="meta-note">Đang hiển thị toàn bộ nhóm Java.</div>
+            </div>
+
+            <div class="actions">
+                <button id="java-random-btn" type="button">Lấy 10 từ ngẫu nhiên</button>
+                <button id="java-all-btn" type="button">Hiển thị tất cả từ</button>
+            </div>
+
+            <ul id="java-list" class="word-list"></ul>
+            <div id="java-hint" class="hint">Mỗi lần bấm nút sẽ chọn lại từ trong nhóm đang lọc.</div>
+        </section>
+
+        <section id="java-page-panel" class="panel" hidden>
+            <h1 id="java-page-title">Java Page 1</h1>
+            <p id="java-page-description">Bộ này lấy từ `words_java_page_1.json`. Bấm vào từng thẻ để hiện pinyin và nghĩa tiếng Việt.</p>
+            <div class="sub-filter-bar">
+                <div id="java-page-summary" class="meta-note">Đang chuẩn bị dữ liệu page 1.</div>
+            </div>
+            <div class="actions">
+                <button id="java-page-random-btn" type="button">Lấy 10 từ ngẫu nhiên</button>
+                <button id="java-page-all-btn" type="button">Hiển thị tất cả từ</button>
+            </div>
+            <ul id="java-page-list" class="word-list"></ul>
+            <div id="java-page-hint" class="hint">Mỗi lần bấm nút sẽ chọn lại 10 từ khác nhau của page 1.</div>
         </section>
 
         <section id="listen-panel" class="panel" hidden>
