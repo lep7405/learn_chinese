@@ -98,6 +98,16 @@
             color: var(--text);
         }
 
+        .text-input {
+            width: min(320px, 100%);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 12px 14px;
+            font: inherit;
+            background: #fffdfb;
+            color: var(--text);
+        }
+
         .filter-note {
             font-size: 0.95rem;
             opacity: 0.8;
@@ -239,6 +249,133 @@
             padding: 10px 16px;
             white-space: nowrap;
         }
+
+        .en-card {
+            cursor: pointer;
+        }
+
+        .en-card-header {
+            display: grid;
+            gap: 8px;
+        }
+
+        .en-vietnamese {
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .en-chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .en-toolbar {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0 0;
+            padding: 16px 18px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: #fffdfb;
+        }
+
+        .en-toolbar-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .en-summary {
+            font-size: 0.95rem;
+            opacity: 0.82;
+        }
+
+        .en-chip {
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(184, 92, 56, 0.12);
+            color: var(--accent-dark);
+            font-size: 0.92rem;
+        }
+
+        .en-details {
+            display: grid;
+            gap: 14px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .en-details[hidden] {
+            display: none;
+        }
+
+        .en-english {
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .en-block {
+            display: grid;
+            gap: 8px;
+        }
+
+        .en-block-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--accent-dark);
+        }
+
+        .en-assembled,
+        .en-pattern {
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: #fdf4ec;
+            line-height: 1.5;
+        }
+
+        .en-notes,
+        .en-scenarios {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        .en-steps {
+            display: grid;
+            gap: 10px;
+        }
+
+        .en-step {
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: #fdf4ec;
+            line-height: 1.55;
+        }
+
+        .en-step-source {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .en-step-line {
+            opacity: 0.9;
+        }
+
+        .en-empty {
+            padding: 18px;
+            border: 1px dashed var(--border);
+            border-radius: 16px;
+            background: #fffdfb;
+            text-align: center;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -257,6 +394,7 @@
             <button id="words-tab" class="tab-btn active" type="button">Từ</button>
             <button id="meaning-tab" class="tab-btn" type="button">Việt -> Trung</button>
             <button id="sentences-tab" class="tab-btn" type="button">Câu</button>
+            <button id="en-tab" class="tab-btn" type="button">EN</button>
             <button id="java-tab" class="tab-btn" type="button">Java</button>
             <button id="java-page-tab" class="tab-btn" type="button">Java P1</button>
             <button id="listen-tab" class="tab-btn" type="button">Nghe</button>
@@ -289,6 +427,23 @@
             <p>Mặc định chỉ hiện nghĩa tiếng Việt. Bấm vào từng câu để hiện tiếng Trung và pinyin.</p>
             <ul id="sentence-list" class="word-list"></ul>
             <div class="hint">Tab này hiển thị toàn bộ các câu bạn đã thêm.</div>
+        </section>
+
+        <section id="en-panel" class="panel" hidden>
+            <h1>Phân tích câu tiếng Anh</h1>
+            <p>Mặc định chỉ hiện tiếng Việt. Bấm vào từng thẻ để hiện câu tiếng Anh và phần phân tích.</p>
+            <div class="en-toolbar">
+                <div class="en-toolbar-row">
+                    <input id="en-search" class="text-input" type="search" placeholder="Tìm theo tiếng Việt, tiếng Anh, pattern..." />
+                </div>
+                <div id="en-summary" class="en-summary">Đang chuẩn bị dữ liệu từ en.json.</div>
+            </div>
+            <div class="actions">
+                <button id="en-all-btn" type="button">Hiển thị toàn bộ</button>
+                <button id="en-random-btn" type="button">Đảo thứ tự ngẫu nhiên</button>
+            </div>
+            <ul id="en-list" class="word-list"></ul>
+            <div id="en-hint" class="hint">Phần này đọc toàn bộ dữ liệu từ file `en.json`.</div>
         </section>
 
         <section id="java-panel" class="panel" hidden>

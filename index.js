@@ -13,18 +13,26 @@ const sentenceList = document.getElementById("sentence-list");
 const wordsTab = document.getElementById("words-tab");
 const meaningTab = document.getElementById("meaning-tab");
 const sentencesTab = document.getElementById("sentences-tab");
+const enTab = document.getElementById("en-tab");
 const javaTab = document.getElementById("java-tab");
 const javaPageTab = document.getElementById("java-page-tab");
 const listenTab = document.getElementById("listen-tab");
 const wordsPanel = document.getElementById("words-panel");
 const meaningPanel = document.getElementById("meaning-panel");
 const sentencesPanel = document.getElementById("sentences-panel");
+const enPanel = document.getElementById("en-panel");
 const javaPanel = document.getElementById("java-panel");
 const javaPagePanel = document.getElementById("java-page-panel");
 const listenPanel = document.getElementById("listen-panel");
 const meaningList = document.getElementById("meaning-list");
+const enList = document.getElementById("en-list");
 const meaningRandomBtn = document.getElementById("meaning-random-btn");
 const meaningAllBtn = document.getElementById("meaning-all-btn");
+const enAllBtn = document.getElementById("en-all-btn");
+const enRandomBtn = document.getElementById("en-random-btn");
+const enHint = document.getElementById("en-hint");
+const enSearch = document.getElementById("en-search");
+const enSummary = document.getElementById("en-summary");
 const listenWordList = document.getElementById("listen-word-list");
 const listenSentenceList = document.getElementById("listen-sentence-list");
 const listenHint = document.getElementById("listen-hint");
@@ -47,6 +55,7 @@ const javaPageHint = document.getElementById("java-page-hint");
 let words = [];
 let groups = [];
 let sentences = [];
+let englishEntries = [];
 let javaWords = [];
 let javaCategories = [];
 let javaPageWords = [];
@@ -55,6 +64,8 @@ let availableVoices = [];
 let activeDate = "all";
 let wordsDisplayMode = "random";
 let meaningDisplayMode = "random";
+let englishDisplayMode = "all";
+let englishSearchQuery = "";
 let javaDisplayMode = "random";
 let javaPageDisplayMode = "random";
 let activeJavaCategory = "all";
@@ -356,6 +367,214 @@ function renderSentences(selectedSentences) {
     });
 }
 
+function escapeHtml(value) {
+    return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+}
+
+function normalizeEnglishEntry(entry, index) {
+    const thinkingSteps = Array.isArray(entry.word_by_word_simulation?.thinking_steps)
+        ? entry.word_by_word_simulation.thinking_steps
+              .map((step) => ({
+                  source_phrase: String(step?.source_phrase ?? "").trim(),
+                  hard_word_by_vietnamese: String(step?.hard_word_by_vietnamese ?? "").trim(),
+                  native_expression: String(step?.native_expression ?? "").trim()
+              }))
+              .filter((step) => step.source_phrase || step.hard_word_by_vietnamese || step.native_expression)
+        : [];
+    const notes = Array.isArray(entry.correction?.notes)
+        ? entry.correction.notes.map((note) => String(note ?? "").trim()).filter(Boolean)
+        : [];
+    const scenarios = Array.isArray(entry.practice_scenarios)
+        ? entry.practice_scenarios
+              .map((scenario) => ({
+                  vietnamese: String(scenario?.vietnamese ?? "").trim(),
+                  english: String(scenario?.english ?? "").trim(),
+                  naive_output: String(scenario?.naive_output ?? "").trim()
+              }))
+              .filter((scenario) => scenario.vietnamese || scenario.english || scenario.naive_output)
+        : [];
+    const searchableText = [
+        entry.vietnamese,
+        entry.english,
+        entry.core_pattern,
+        entry.correction?.correct_sentence,
+        entry.word_by_word_simulation?.assembled_wrong_sentence,
+        ...notes,
+        ...thinkingSteps.flatMap((step) => [step.source_phrase, step.hard_word_by_vietnamese, step.native_expression]),
+        ...scenarios.flatMap((scenario) => [scenario.vietnamese, scenario.english, scenario.naive_output])
+    ]
+        .map((value) => String(value ?? "").toLowerCase().trim())
+        .filter(Boolean)
+        .join(" ");
+
+    return {
+        id: `en-${index + 1}`,
+        vietnamese: String(entry.vietnamese ?? "").trim(),
+        english: String(entry.english ?? "").trim(),
+        core_pattern: String(entry.core_pattern ?? "").trim(),
+        word_by_word_simulation: {
+            assembled_wrong_sentence: String(entry.word_by_word_simulation?.assembled_wrong_sentence ?? "").trim(),
+            thinking_steps: thinkingSteps
+        },
+        correction: {
+            correct_sentence: String(entry.correction?.correct_sentence ?? "").trim(),
+            notes
+        },
+        practice_scenarios: scenarios,
+        searchableText
+    };
+}
+
+function getFilteredEnglishEntries() {
+    const normalizedQuery = englishSearchQuery.trim().toLowerCase();
+
+    if (!normalizedQuery) {
+        return englishEntries;
+    }
+
+    return englishEntries.filter((entry) => entry.searchableText.includes(normalizedQuery));
+}
+
+function updateEnglishMeta(entries) {
+    const total = englishEntries.length;
+    const visible = entries.length;
+    const modeLabel = englishDisplayMode === "random" ? "ngẫu nhiên" : "đúng thứ tự";
+    const queryLabel = englishSearchQuery.trim() ? ` với từ khóa "${englishSearchQuery.trim()}"` : "";
+
+    enSummary.textContent = `Đang hiển thị ${visible}/${total} câu${queryLabel}, chế độ ${modeLabel}.`;
+}
+
+function renderEnglishEntries(entries) {
+    enList.innerHTML = "";
+
+    if (!entries.length) {
+        enList.innerHTML = '<li class="en-empty">Không có câu nào khớp bộ lọc hiện tại.</li>';
+        updateEnglishMeta(entries);
+        return;
+    }
+
+    entries.forEach((entry) => {
+        const item = document.createElement("li");
+        item.className = "word-item en-card";
+        item.setAttribute("role", "button");
+        item.setAttribute("tabindex", "0");
+
+        const notes = Array.isArray(entry.correction?.notes)
+            ? entry.correction.notes.map((note) => `<li>${escapeHtml(note)}</li>`).join("")
+            : "<li>Chưa có ghi chú.</li>";
+        const scenarios = Array.isArray(entry.practice_scenarios)
+            ? entry.practice_scenarios
+                  .map(
+                      (scenario) =>
+                          `<li><strong>VN:</strong> ${escapeHtml(scenario.vietnamese)}<br><strong>EN:</strong> ${escapeHtml(
+                              scenario.english
+                          )}<br><strong>Naive:</strong> ${escapeHtml(scenario.naive_output)}</li>`
+                  )
+                  .join("")
+            : "<li>Chưa có ví dụ luyện tập.</li>";
+        const steps = Array.isArray(entry.word_by_word_simulation?.thinking_steps)
+            ? entry.word_by_word_simulation.thinking_steps
+                  .map(
+                      (step) => `
+                          <div class="en-step">
+                              <div class="en-step-source">${escapeHtml(step.source_phrase)}</div>
+                              <div class="en-step-line"><strong>Literal:</strong> ${escapeHtml(step.hard_word_by_vietnamese)}</div>
+                              <div class="en-step-line"><strong>Natural:</strong> ${escapeHtml(step.native_expression)}</div>
+                          </div>
+                      `
+                  )
+                  .join("")
+            : "";
+        const correctSentence = entry.correction?.correct_sentence
+            ? `
+                <div class="en-block">
+                    <div class="en-block-title">Câu tự nhiên</div>
+                    <div class="en-pattern">${escapeHtml(entry.correction.correct_sentence)}</div>
+                </div>
+            `
+            : "";
+        const stepsBlock = steps
+            ? `
+                <div class="en-block">
+                    <div class="en-block-title">Các bước nghĩ từng đoạn</div>
+                    <div class="en-steps">${steps}</div>
+                </div>
+            `
+            : "";
+
+        item.innerHTML = `
+            <div class="en-card-header">
+                <div class="en-vietnamese">${escapeHtml(entry.vietnamese)}</div>
+                <div class="en-chip-row">
+                    <span class="en-chip">Câu ${escapeHtml(entry.id.replace("en-", ""))}</span>
+                    ${entry.core_pattern ? `<span class="en-chip">${escapeHtml(entry.core_pattern)}</span>` : ""}
+                </div>
+            </div>
+            <div class="en-details" hidden>
+                <div class="en-english">${escapeHtml(entry.english)}</div>
+                ${correctSentence}
+                ${stepsBlock}
+                <div class="en-block">
+                    <div class="en-block-title">Câu ráp theo kiểu dịch thẳng</div>
+                    <div class="en-assembled">${escapeHtml(entry.word_by_word_simulation?.assembled_wrong_sentence || "")}</div>
+                </div>
+                <div class="en-block">
+                    <div class="en-block-title">Mẫu trọng tâm</div>
+                    <div class="en-pattern">${escapeHtml(entry.core_pattern || "")}</div>
+                </div>
+                <div class="en-block">
+                    <div class="en-block-title">Ghi chú sửa câu</div>
+                    <ul class="en-notes">${notes}</ul>
+                </div>
+                <div class="en-block">
+                    <div class="en-block-title">Ví dụ luyện thêm</div>
+                    <ul class="en-scenarios">${scenarios}</ul>
+                </div>
+            </div>
+        `;
+
+        const details = item.querySelector(".en-details");
+        const toggleDetails = () => {
+            details.hidden = !details.hidden;
+        };
+
+        item.addEventListener("click", toggleDetails);
+        item.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                toggleDetails();
+            }
+        });
+
+        enList.appendChild(item);
+    });
+
+    updateEnglishMeta(entries);
+}
+
+function refreshEnglishEntries() {
+    const filteredEntries = getFilteredEnglishEntries();
+    const entriesToRender = englishDisplayMode === "random" ? shuffle(filteredEntries) : filteredEntries;
+    renderEnglishEntries(entriesToRender);
+}
+
+function showAllEnglishEntries() {
+    englishDisplayMode = "all";
+    enHint.textContent = `Đang hiển thị dữ liệu từ en.json theo đúng thứ tự gốc.`;
+    refreshEnglishEntries();
+}
+
+function showRandomEnglishEntries() {
+    englishDisplayMode = "random";
+    enHint.textContent = `Đang hiển thị dữ liệu từ en.json nhưng đã đảo thứ tự ngẫu nhiên.`;
+    refreshEnglishEntries();
+}
+
 function renderJavaWords(selectedWords) {
     javaList.innerHTML = "";
 
@@ -525,6 +744,7 @@ function activateTab(tabName) {
     const showWords = tabName === "words";
     const showMeaning = tabName === "meaning";
     const showSentences = tabName === "sentences";
+    const showEn = tabName === "en";
     const showJava = tabName === "java";
     const showJavaPage = tabName === "java-page";
     const showListen = tabName === "listen";
@@ -532,12 +752,14 @@ function activateTab(tabName) {
     wordsPanel.hidden = !showWords;
     meaningPanel.hidden = !showMeaning;
     sentencesPanel.hidden = !showSentences;
+    enPanel.hidden = !showEn;
     javaPanel.hidden = !showJava;
     javaPagePanel.hidden = !showJavaPage;
     listenPanel.hidden = !showListen;
     wordsTab.classList.toggle("active", showWords);
     meaningTab.classList.toggle("active", showMeaning);
     sentencesTab.classList.toggle("active", showSentences);
+    enTab.classList.toggle("active", showEn);
     javaTab.classList.toggle("active", showJava);
     javaPageTab.classList.toggle("active", showJavaPage);
     listenTab.classList.toggle("active", showListen);
@@ -771,6 +993,23 @@ async function loadSentences() {
     renderListenPanel();
 }
 
+async function loadEnglishEntries() {
+    try {
+        const response = await fetch("en.json");
+
+        if (!response.ok) {
+            throw new Error("Cannot load en.json");
+        }
+
+        const payload = await response.json();
+        englishEntries = Array.isArray(payload) ? payload.map(normalizeEnglishEntry).filter((entry) => entry.vietnamese || entry.english) : [];
+    } catch {
+        englishEntries = [];
+    }
+
+    showAllEnglishEntries();
+}
+
 async function loadJavaWords() {
     try {
         const response = await fetch("words_java.json");
@@ -823,6 +1062,12 @@ randomBtn.addEventListener("click", showRandomWords);
 allBtn.addEventListener("click", showAllWords);
 meaningRandomBtn.addEventListener("click", showRandomMeanings);
 meaningAllBtn.addEventListener("click", showAllMeanings);
+enAllBtn.addEventListener("click", showAllEnglishEntries);
+enRandomBtn.addEventListener("click", showRandomEnglishEntries);
+enSearch.addEventListener("input", (event) => {
+    englishSearchQuery = event.target.value;
+    refreshEnglishEntries();
+});
 javaRandomBtn.addEventListener("click", showRandomJavaWords);
 javaAllBtn.addEventListener("click", showAllJavaWords);
 javaPageRandomBtn.addEventListener("click", showRandomJavaPageWords);
@@ -834,6 +1079,7 @@ dateFilter.addEventListener("change", (event) => {
 wordsTab.addEventListener("click", () => activateTab("words"));
 meaningTab.addEventListener("click", () => activateTab("meaning"));
 sentencesTab.addEventListener("click", () => activateTab("sentences"));
+enTab.addEventListener("click", () => activateTab("en"));
 javaTab.addEventListener("click", () => activateTab("java"));
 javaPageTab.addEventListener("click", () => activateTab("java-page"));
 listenTab.addEventListener("click", () => activateTab("listen"));
@@ -847,5 +1093,6 @@ if ("speechSynthesis" in window) {
 
 loadWords();
 loadSentences();
+loadEnglishEntries();
 loadJavaWords();
 loadJavaPageWords();

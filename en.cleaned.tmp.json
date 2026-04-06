@@ -1,0 +1,499 @@
+[{
+"english": "Brazil is hardly considered a major player in terms of politics.",
+"vietnamese": "Brazil hầu như không được xem là một thế lực lớn về mặt chính trị.",
+
+"vn_chunks": [
+"Brazil",
+"hầu như không được xem là",
+"một thế lực lớn",
+"về mặt chính trị"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "hầu như không được xem là",
+"hard_word_by_vietnamese": "hardly considered"
+},
+{
+"vn_chunk": "một thế lực lớn",
+"hard_word_by_vietnamese": "a major player"
+},
+{
+"vn_chunk": "về mặt chính trị",
+"hard_word_by_vietnamese": "in terms of politics"
+}
+],
+
+"assembled_wrong_sentence": "Brazil is hardly considered a major player about politics."
+
+},
+
+"correction": {
+"correct_sentence": "Brazil is hardly considered a major player in terms of politics.",
+"notes": [
+"'in terms of politics' tự nhiên hơn 'about politics'",
+"'major player' là cách nói cố định, không chỉ là 'big country' hay 'important country'"
+]
+},
+
+"core_pattern": "hardly_considered_major_player_in_terms_of",
+
+"practice_scenarios": [
+{
+"english": "The city is hardly considered a tech hub in terms of innovation.",
+"vietnamese": "Thành phố này hầu như không được xem là một trung tâm công nghệ về mặt đổi mới.",
+"naive_output": "The city is hardly considered a tech hub about innovation."
+},
+{
+"english": "That company is hardly considered a serious competitor in terms of pricing.",
+"vietnamese": "Công ty đó hầu như không được xem là một đối thủ đáng gờm về mặt giá cả.",
+"naive_output": "That company is hardly considered a serious competitor about pricing."
+}
+]
+},
+{
+"english": "If you ask people for their opinion on the country, you'd be more likely to get critiques of nightlife and cachaça than an evaluation of the local economy.",
+"vietnamese": "Nếu bạn hỏi mọi người ý kiến của họ về đất nước này, khả năng cao là bạn sẽ nhận được những lời chê về cuộc sống về đêm và rượu cachaça hơn là một đánh giá về nền kinh tế địa phương.",
+
+"vn_chunks": [
+"ý kiến của họ về đất nước này",
+"khả năng cao là",
+"nhận được những lời chê",
+"hơn là một đánh giá",
+"nền kinh tế địa phương"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "ý kiến của họ về đất nước này",
+"hard_word_by_vietnamese": "their opinion on the country"
+},
+{
+"vn_chunk": "khả năng cao là",
+"hard_word_by_vietnamese": "more likely"
+},
+{
+"vn_chunk": "nhận được những lời chê",
+"hard_word_by_vietnamese": "get critiques"
+},
+{
+"vn_chunk": "hơn là một đánh giá",
+"hard_word_by_vietnamese": "than an evaluation"
+},
+{
+"vn_chunk": "nền kinh tế địa phương",
+"hard_word_by_vietnamese": "the local economy"
+}
+],
+
+"assembled_wrong_sentence": "If you ask people their opinion about this country, you will more likely get critiques about nightlife and cachaça than a review about the local economy."
+
+},
+
+"correction": {
+"correct_sentence": "If you ask people for their opinion on the country, you'd be more likely to get critiques of nightlife and cachaça than an evaluation of the local economy.",
+"notes": [
+"'ask people for their opinion' đúng hơn 'ask people their opinion'",
+"'be more likely to' tự nhiên hơn 'will more likely'",
+"'critiques of' và 'evaluation of' tự nhiên hơn 'about'"
+]
+},
+
+"core_pattern": "be_more_likely_to_get_x_than_y",
+
+"practice_scenarios": [
+{
+"english": "If you ask viewers for their opinion on the film, you're more likely to get complaints about the pacing than praise for the acting.",
+"vietnamese": "Nếu bạn hỏi khán giả ý kiến của họ về bộ phim, khả năng cao là bạn sẽ nhận được phàn nàn về nhịp phim hơn là lời khen cho diễn xuất.",
+"naive_output": "If you ask viewers their opinion about the film, you will more likely get complaints about the pacing than praise about the acting."
+},
+{
+"english": "If you ask customers for their opinion on the app, you're more likely to get criticism of the design than feedback on the payment system.",
+"vietnamese": "Nếu bạn hỏi khách hàng ý kiến của họ về ứng dụng, khả năng cao là bạn sẽ nhận được lời chê về thiết kế hơn là phản hồi về hệ thống thanh toán.",
+"naive_output": "If you ask customers their opinion about the app, you are more likely get criticism about the design than feedback about the payment system."
+}
+]
+},
+{
+"english": "Yet Brazil is more than just another Latin American playground for tourists.",
+"vietnamese": "Tuy vậy, Brazil không chỉ đơn thuần là một sân chơi của khách du lịch khác ở Mỹ Latinh.",
+
+"vn_chunks": [
+"không chỉ đơn thuần là",
+"một sân chơi của khách du lịch",
+"ở Mỹ Latinh"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "không chỉ đơn thuần là",
+"hard_word_by_vietnamese": "more than just"
+},
+{
+"vn_chunk": "một sân chơi của khách du lịch",
+"hard_word_by_vietnamese": "a playground for tourists"
+},
+{
+"vn_chunk": "ở Mỹ Latinh",
+"hard_word_by_vietnamese": "Latin American"
+}
+],
+
+"assembled_wrong_sentence": "Yet Brazil is more than just another Latin America playground for tourists."
+
+},
+
+"correction": {
+"correct_sentence": "Yet Brazil is more than just another Latin American playground for tourists.",
+"notes": [
+"'Latin American' là tính từ đúng, không dùng 'Latin America' đứng trước danh từ",
+"'playground for tourists' là cách nói hình ảnh, không nên ép sang nghĩa quá literal"
+]
+},
+
+"core_pattern": "more_than_just_another",
+
+"practice_scenarios": [
+{
+"english": "This island is more than just another beach destination for backpackers.",
+"vietnamese": "Hòn đảo này không chỉ đơn thuần là một điểm đến biển khác dành cho dân phượt.",
+"naive_output": "This island is more than just another beach place for backpackers."
+},
+{
+"english": "The festival is more than just another marketing event for brands.",
+"vietnamese": "Lễ hội này không chỉ đơn thuần là một sự kiện quảng bá khác cho các thương hiệu.",
+"naive_output": "The festival is more than just another marketing event for the brands."
+}
+]
+},
+{
+"english": "It's the world's agricultural heartland.",
+"vietnamese": "Đây là trung tâm nông nghiệp của thế giới.",
+
+"vn_chunks": [
+"trung tâm nông nghiệp của thế giới"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "trung tâm nông nghiệp của thế giới",
+"hard_word_by_vietnamese": "the world's agricultural heartland"
+}
+],
+
+"assembled_wrong_sentence": "It is the agriculture heart of the world."
+
+},
+
+"correction": {
+"correct_sentence": "It's the world's agricultural heartland.",
+"notes": [
+"'heartland' đúng và tự nhiên hơn 'heart of the world' trong ngữ cảnh này",
+"'agricultural' đúng collocation hơn 'agriculture' đứng trước danh từ"
+]
+},
+
+"core_pattern": "worlds_agricultural_heartland",
+
+"practice_scenarios": [
+{
+"english": "The region is the country's industrial heartland.",
+"vietnamese": "Khu vực này là trung tâm công nghiệp của cả nước.",
+"naive_output": "The region is the industrial heart of the country."
+},
+{
+"english": "That valley is the nation's wine-producing heartland.",
+"vietnamese": "Thung lũng đó là trung tâm sản xuất rượu vang của quốc gia.",
+"naive_output": "That valley is the wine producing heart of the nation."
+}
+]
+},
+{
+"english": "Indeed, Brazil produces around 300 million tons of crops a year, more than twice as much as Russia and more than Mexico, Thailand and France combined.",
+"vietnamese": "Thật vậy, Brazil sản xuất khoảng 300 triệu tấn nông sản mỗi năm, nhiều hơn gấp đôi Nga và còn nhiều hơn cả Mexico, Thái Lan và Pháp cộng lại.",
+
+"vn_chunks": [
+"sản xuất khoảng 300 triệu tấn nông sản mỗi năm",
+"nhiều hơn gấp đôi",
+"cộng lại"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "sản xuất khoảng 300 triệu tấn nông sản mỗi năm",
+"hard_word_by_vietnamese": "produces around 300 million tons of crops a year"
+},
+{
+"vn_chunk": "nhiều hơn gấp đôi",
+"hard_word_by_vietnamese": "more than twice as much"
+},
+{
+"vn_chunk": "cộng lại",
+"hard_word_by_vietnamese": "combined"
+}
+],
+
+"assembled_wrong_sentence": "Brazil produces around 300 million tons of plants each year, more than two times as much as Russia and more than Mexico, Thailand and France together."
+
+},
+
+"correction": {
+"correct_sentence": "Indeed, Brazil produces around 300 million tons of crops a year, more than twice as much as Russia and more than Mexico, Thailand and France combined.",
+"notes": [
+"'crops' đúng hơn 'plants'",
+"'more than twice as much as' tự nhiên hơn 'more than two times as much as'",
+"'combined' tự nhiên hơn 'together' ở phép so sánh số liệu"
+]
+},
+
+"core_pattern": "quantity_comparison_more_than_twice_as_much_as_combined",
+
+"practice_scenarios": [
+{
+"english": "The factory produces 5 million units a year, more than twice as many as its closest rival.",
+"vietnamese": "Nhà máy đó sản xuất 5 triệu đơn vị mỗi năm, nhiều hơn gấp đôi đối thủ gần nhất của nó.",
+"naive_output": "The factory produces 5 million units each year, more than two times as many as its closest rival."
+},
+{
+"english": "The company sells more devices than its three main competitors combined.",
+"vietnamese": "Công ty đó bán nhiều thiết bị hơn ba đối thủ chính của nó cộng lại.",
+"naive_output": "The company sells more devices than its three main competitors together."
+}
+]
+},
+{
+"english": "But despite being a foodstuff superpower, Brazil's massive contribution to the consumable economy is actually at risk from a number of threats.",
+"vietnamese": "Nhưng dù là một cường quốc lương thực, đóng góp khổng lồ của Brazil cho nền kinh tế hàng tiêu dùng thực ra đang bị đe dọa bởi nhiều nguy cơ.",
+
+"vn_chunks": [
+"dù là một cường quốc lương thực",
+"đóng góp khổng lồ",
+"nền kinh tế hàng tiêu dùng",
+"đang bị đe dọa bởi nhiều nguy cơ"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "dù là một cường quốc lương thực",
+"hard_word_by_vietnamese": "despite being a foodstuff superpower"
+},
+{
+"vn_chunk": "đóng góp khổng lồ",
+"hard_word_by_vietnamese": "massive contribution"
+},
+{
+"vn_chunk": "nền kinh tế hàng tiêu dùng",
+"hard_word_by_vietnamese": "the consumable economy"
+},
+{
+"vn_chunk": "đang bị đe dọa bởi nhiều nguy cơ",
+"hard_word_by_vietnamese": "is at risk from a number of threats"
+}
+],
+
+"assembled_wrong_sentence": "But although being a food superpower, Brazil's huge contribution to the consumable economy is in risk by many threats."
+
+},
+
+"correction": {
+"correct_sentence": "But despite being a foodstuff superpower, Brazil's massive contribution to the consumable economy is actually at risk from a number of threats.",
+"notes": [
+"'despite being' đúng hơn 'although being'",
+"'at risk from' đúng collocation hơn 'in risk by'",
+"'a number of threats' tự nhiên hơn 'many threats' trong văn phong phân tích"
+]
+},
+
+"core_pattern": "despite_being_at_risk_from_a_number_of_threats",
+
+"practice_scenarios": [
+{
+"english": "Despite being a market leader, the company's supply chain is at risk from several disruptions.",
+"vietnamese": "Dù là công ty dẫn đầu thị trường, chuỗi cung ứng của công ty vẫn đang bị đe dọa bởi một số gián đoạn.",
+"naive_output": "Although being a market leader, the company's supply chain is in risk by several disruptions."
+},
+{
+"english": "Despite being a wealthy nation, its energy system is at risk from multiple external shocks.",
+"vietnamese": "Dù là một quốc gia giàu có, hệ thống năng lượng của nước này vẫn đang bị đe dọa bởi nhiều cú sốc bên ngoài.",
+"naive_output": "Although being a rich nation, its energy system is in risk by many external shocks."
+}
+]
+},
+{
+"english": "If not properly dealt with, even one of these factors could derail food security worldwide.",
+"vietnamese": "Nếu không được xử lý đúng cách, chỉ một trong những yếu tố này thôi cũng có thể làm chệch hướng an ninh lương thực toàn cầu.",
+
+"vn_chunks": [
+"nếu không được xử lý đúng cách",
+"chỉ một trong những yếu tố này thôi",
+"có thể làm chệch hướng",
+"an ninh lương thực toàn cầu"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "nếu không được xử lý đúng cách",
+"hard_word_by_vietnamese": "if not properly dealt with"
+},
+{
+"vn_chunk": "chỉ một trong những yếu tố này thôi",
+"hard_word_by_vietnamese": "even one of these factors"
+},
+{
+"vn_chunk": "có thể làm chệch hướng",
+"hard_word_by_vietnamese": "could derail"
+},
+{
+"vn_chunk": "an ninh lương thực toàn cầu",
+"hard_word_by_vietnamese": "food security worldwide"
+}
+],
+
+"assembled_wrong_sentence": "If not solved properly, even one of these factors could make global food security go off."
+
+},
+
+"correction": {
+"correct_sentence": "If not properly dealt with, even one of these factors could derail food security worldwide.",
+"notes": [
+"'dealt with' tự nhiên hơn 'solved' khi nói về vấn đề/nguy cơ",
+"'derail' mạnh và đúng sắc thái hơn 'make ... go off'",
+"'food security worldwide' tự nhiên hơn 'global food security' trong câu này"
+]
+},
+
+"core_pattern": "if_not_properly_dealt_with_could_derail",
+
+"practice_scenarios": [
+{
+"english": "If not properly dealt with, a single cyberattack could derail the entire payment system.",
+"vietnamese": "Nếu không được xử lý đúng cách, chỉ một cuộc tấn công mạng thôi cũng có thể làm trật bánh toàn bộ hệ thống thanh toán.",
+"naive_output": "If not solved properly, a single cyberattack could make the whole payment system go off."
+},
+{
+"english": "If not properly dealt with, one legal dispute could derail the merger process.",
+"vietnamese": "Nếu không được xử lý đúng cách, chỉ một tranh chấp pháp lý thôi cũng có thể làm chệch hướng quá trình sáp nhập.",
+"naive_output": "If not solved properly, one legal dispute could derail the process of merger."
+}
+]
+},
+{
+"english": "In this video, we'll take a closer look at how Brazil became so powerful and what might happen if it's knocked off its pedestal.",
+"vietnamese": "Trong video này, chúng ta sẽ xem kỹ hơn việc Brazil đã trở nên hùng mạnh như thế nào và điều gì có thể xảy ra nếu nước này bị kéo khỏi vị thế hàng đầu.",
+
+"vn_chunks": [
+"xem kỹ hơn",
+"trở nên hùng mạnh như thế nào",
+"điều gì có thể xảy ra nếu",
+"bị kéo khỏi vị thế hàng đầu"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "xem kỹ hơn",
+"hard_word_by_vietnamese": "take a closer look"
+},
+{
+"vn_chunk": "trở nên hùng mạnh như thế nào",
+"hard_word_by_vietnamese": "became so powerful"
+},
+{
+"vn_chunk": "điều gì có thể xảy ra nếu",
+"hard_word_by_vietnamese": "what might happen if"
+},
+{
+"vn_chunk": "bị kéo khỏi vị thế hàng đầu",
+"hard_word_by_vietnamese": "knocked off its pedestal"
+}
+],
+
+"assembled_wrong_sentence": "In this video, we will look more closely at how Brazil became so strong and what can happen if it is pulled down from its high position."
+
+},
+
+"correction": {
+"correct_sentence": "In this video, we'll take a closer look at how Brazil became so powerful and what might happen if it's knocked off its pedestal.",
+"notes": [
+"'take a closer look at' tự nhiên hơn 'look more closely at'",
+"'powerful' đúng sắc thái hơn 'strong' trong ngữ cảnh quốc gia",
+"'knocked off its pedestal' là cụm mang tính ẩn dụ, tự nhiên hơn 'pulled down from its high position'"
+]
+},
+
+"core_pattern": "take_a_closer_look_at_and_knocked_off_its_pedestal",
+
+"practice_scenarios": [
+{
+"english": "Let's take a closer look at why the brand became so influential and what might happen if it loses public trust.",
+"vietnamese": "Hãy xem kỹ hơn vì sao thương hiệu đó đã trở nên có ảnh hưởng như vậy và điều gì có thể xảy ra nếu nó mất niềm tin từ công chúng.",
+"naive_output": "Let's look more closely at why the brand became so strong and what can happen if it loses public trust."
+},
+{
+"english": "We'll take a closer look at how the team rose to the top and what might happen if it's knocked off its pedestal next season.",
+"vietnamese": "Chúng ta sẽ xem kỹ hơn đội đó đã vươn lên đỉnh cao như thế nào và điều gì có thể xảy ra nếu mùa sau họ bị kéo khỏi vị thế số một.",
+"naive_output": "We will look more closely at how the team went to the top and what can happen if it is pulled down from that top place next season."
+}
+]
+},
+{
+"english": "Please hit the subscribe button to make sure you don't miss out on our next video.",
+"vietnamese": "Hãy bấm nút đăng ký để đảm bảo bạn không bỏ lỡ video tiếp theo của chúng tôi.",
+
+"vn_chunks": [
+"bấm nút đăng ký",
+"để đảm bảo",
+"không bỏ lỡ"
+],
+
+"word_by_word_simulation": {
+"thinking_steps": [
+{
+"vn_chunk": "bấm nút đăng ký",
+"hard_word_by_vietnamese": "hit the subscribe button"
+},
+{
+"vn_chunk": "để đảm bảo",
+"hard_word_by_vietnamese": "to make sure"
+},
+{
+"vn_chunk": "không bỏ lỡ",
+"hard_word_by_vietnamese": "don't miss out on"
+}
+],
+
+"assembled_wrong_sentence": "Please press the subscribe button to be sure you don't miss our next video."
+
+},
+
+"correction": {
+"correct_sentence": "Please hit the subscribe button to make sure you don't miss out on our next video.",
+"notes": [
+"'hit the subscribe button' là cách nói quen thuộc trong ngữ cảnh YouTube",
+"'miss out on' tự nhiên hơn 'miss' khi nhấn mạnh việc bỏ lỡ nội dung/cơ hội"
+]
+},
+
+"core_pattern": "hit_the_subscribe_button_to_make_sure_you_dont_miss_out_on",
+
+"practice_scenarios": [
+{
+"english": "Turn on notifications to make sure you don't miss out on our live sessions.",
+"vietnamese": "Hãy bật thông báo để đảm bảo bạn không bỏ lỡ các buổi phát trực tiếp của chúng tôi.",
+"naive_output": "Turn on notifications to be sure you don't miss our live sessions."
+},
+{
+"english": "Join our mailing list to make sure you don't miss out on future updates.",
+"vietnamese": "Hãy tham gia danh sách email của chúng tôi để đảm bảo bạn không bỏ lỡ các cập nhật sau này.",
+"naive_output": "Join our mailing list to be sure you don't miss future updates."
+}
+]
+}
+]
