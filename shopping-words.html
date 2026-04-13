@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Từ vựng mua sắm - 购物词汇</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.4rem;
+      color: #a0c4ff;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 14px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #16213e;
+      border: 1px solid #0f3460;
+      border-radius: 14px;
+      padding: 18px 10px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: transform 0.15s, border-color 0.15s, background 0.15s;
+      user-select: none;
+    }
+
+    .card:hover { transform: scale(1.04); border-color: #a0c4ff; }
+    .card:active { transform: scale(0.97); }
+
+    .card.revealed {
+      background: #0f3460;
+      border-color: #4cc9f0;
+    }
+
+    .hanzi {
+      font-size: 2.4rem;
+      line-height: 1;
+      color: #f0f0f0;
+      display: none;
+    }
+
+    .card.revealed .hanzi { display: block; }
+
+    .info {
+      text-align: center;
+      display: none;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .card.revealed .info { display: block; }
+
+    .pinyin {
+      font-size: 0.85rem;
+      color: #4cc9f0;
+      margin-bottom: 3px;
+    }
+
+    .viet {
+      font-size: 0.8rem;
+      color: #a0c4ff;
+    }
+
+    .speaker-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: background 0.15s;
+      line-height: 1;
+    }
+
+    .speaker-btn:hover { background: rgba(76,201,240,0.15); }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: background 0.15s;
+      line-height: 1;
+      display: none;
+    }
+
+    .card.revealed .copy-btn { display: inline-block; }
+    .copy-btn:hover { background: rgba(160,196,255,0.15); }
+    .copy-btn.copied { filter: grayscale(0); }
+
+    .example-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 4px 8px;
+      border-radius: 8px;
+      transition: background 0.15s;
+      line-height: 1;
+      display: none;
+    }
+    .card.revealed .example-btn { display: inline-block; }
+    .example-btn:hover { background: rgba(160,255,180,0.15); }
+
+    .example-box {
+      display: none;
+      background: rgba(255,255,255,0.05);
+      border-left: 3px solid #4cc9f0;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-top: 4px;
+      text-align: left;
+      width: 100%;
+      animation: fadeIn 0.2s ease;
+    }
+    .example-box.show { display: block; }
+    .ex-zh { font-size: 1rem; color: #f0f0f0; margin-bottom: 4px; }
+    .ex-pinyin { font-size: 0.78rem; color: #4cc9f0; margin-bottom: 3px; }
+    .ex-viet { font-size: 0.78rem; color: #a0c4ff; margin-bottom: 6px; }
+
+    .word-table {
+      display: none;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 0.78rem;
+    }
+    .word-table.show { display: table; }
+    .word-table th {
+      color: #888;
+      font-weight: normal;
+      padding: 3px 6px;
+      border-bottom: 1px solid #0f3460;
+      text-align: left;
+    }
+    .word-table td {
+      padding: 4px 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .word-table td:first-child { color: #f0f0f0; font-size: 1rem; }
+    .word-table td:nth-child(2) { color: #4cc9f0; }
+    .word-table td:nth-child(3) { color: #a0c4ff; }
+
+    .analyze-btn {
+      background: none;
+      border: 1px solid #0f3460;
+      color: #888;
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 6px;
+      display: none;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .analyze-btn:hover { border-color: #4cc9f0; color: #4cc9f0; }
+    body.sentence-mode .card.revealed .analyze-btn { display: inline-block; }
+
+    .add-word-btn {
+      background: none;
+      border: 1px solid #2a4a2a;
+      color: #6adb6a;
+      font-size: 0.72rem;
+      padding: 1px 7px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .add-word-btn:hover { background: rgba(106,219,106,0.15); border-color: #6adb6a; }
+    .add-word-btn.added { color: #888; border-color: #333; cursor: default; }
+
+    .added-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      background: rgba(106,219,106,0.15);
+      color: #6adb6a;
+      border-radius: 6px;
+      padding: 1px 6px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    /* mode: viet-only */
+    body.viet-mode .hanzi { display: none !important; }
+    body.viet-mode .btn-row { display: none !important; }
+    body.viet-mode .info { display: block !important; }
+    body.viet-mode .info .pinyin { display: none; }
+    body.viet-mode .card.revealed .hanzi { display: block !important; }
+    body.viet-mode .card.revealed .btn-row { display: flex !important; }
+    body.viet-mode .card.revealed .info .pinyin { display: block; }
+
+    /* mode: hanzi-only */
+    body.hanzi-mode .hanzi { display: block !important; }
+    body.hanzi-mode .btn-row { display: none !important; }
+    body.hanzi-mode .info { display: none !important; }
+    body.hanzi-mode .card.revealed .info { display: block !important; }
+    body.hanzi-mode .card.revealed .btn-row { display: flex !important; }
+
+    /* mode: sentence */
+    body.sentence-mode .grid {
+      grid-template-columns: 1fr !important;
+      max-width: 760px !important;
+    }
+    body.sentence-mode .card {
+      align-items: flex-start !important;
+      padding: 16px 18px !important;
+      transform: none !important;
+    }
+    body.sentence-mode .card:hover { transform: none !important; border-color: #a0c4ff; }
+    body.sentence-mode .hanzi { display: none !important; }
+    body.sentence-mode .btn-row { display: none !important; }
+    body.sentence-mode .info { display: none !important; }
+    body.sentence-mode .example-box {
+      display: block !important;
+      border-left: none !important;
+      background: none !important;
+      padding: 0 !important;
+      margin-top: 0 !important;
+      width: 100% !important;
+    }
+    body.sentence-mode .ex-zh {
+      font-size: 1.15rem !important;
+      line-height: 1.6 !important;
+      word-break: keep-all !important;
+    }
+    body.sentence-mode .ex-pinyin { display: none; font-size: 0.85rem !important; line-height: 1.6 !important; }
+    body.sentence-mode .ex-viet { display: none; font-size: 0.85rem !important; line-height: 1.6 !important; }
+    body.sentence-mode .card.revealed { background: #0f3460 !important; border-color: #4cc9f0; }
+    body.sentence-mode .card.revealed .ex-pinyin { display: block !important; }
+    body.sentence-mode .card.revealed .ex-viet { display: block !important; }
+    body.sentence-mode .analyze-btn { margin-top: 10px; }
+    body.sentence-mode .word-table th,
+    body.sentence-mode .word-table td { font-size: 0.85rem; }
+    body.sentence-mode .word-table td:first-child { font-size: 1rem; }
+
+    .top-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .mode-btn {
+      background: #0f3460;
+      border: 1px solid #4cc9f0;
+      color: #4cc9f0;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .mode-btn:hover { background: #4cc9f0; color: #1a1a2e; }
+    .mode-btn.active { background: #4cc9f0; color: #1a1a2e; font-weight: bold; }
+
+    .part-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .part-btn {
+      background: #0a0a1a;
+      border: 1px solid #333;
+      color: #888;
+      padding: 5px 14px;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      text-decoration: none;
+    }
+    .part-btn:hover { border-color: #a0c4ff; color: #a0c4ff; }
+    .part-btn.current { background: #16213e; border-color: #a0c4ff; color: #a0c4ff; font-weight: bold; cursor: default; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Part 1 · Từ vựng tiếng Trung</h1>
+
+<div class="part-nav">
+  <span class="part-btn current">Part 1</span>
+  <a class="part-btn" href="part2.html">Part 2</a>
+  <a class="part-btn" href="part3.html">Part 3</a>
+  <a class="part-btn" href="part4.html">Part 4</a>
+  <a class="part-btn" href="sentences.html">Câu</a>
+</div>
+
+<div class="top-bar">
+  <button class="mode-btn active" id="btn-normal" onclick="setMode('normal')">🔊 Chế độ thường</button>
+  <button class="mode-btn" id="btn-hanzi" onclick="setMode('hanzi')">汉 Chỉ chữ Hán</button>
+  <button class="mode-btn" id="btn-viet" onclick="setMode('viet')">🇻🇳 Chỉ tiếng Việt</button>
+  <button class="mode-btn" id="btn-sentence" onclick="setMode('sentence')">📖 Câu ví dụ</button>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<script src="words-data.js"></script>
+<script>
+const words = [
+  // Nhà cửa
+  { zh: '家', pinyin: 'jiā', viet: 'nhà', ex: { zh: '我每天下班以后都回家吃饭。', pinyin: 'Wǒ měitiān xiàbān yǐhòu dōu huí jiā chīfàn.', viet: 'Mỗi ngày sau khi tan làm tôi đều về nhà ăn cơm.' } },
+  { zh: '房子', pinyin: 'fángzi', viet: 'căn nhà', ex: { zh: '他们家的房子很大，有三个房间。', pinyin: 'Tāmen jiā de fángzi hěn dà, yǒu sān gè fángjiān.', viet: 'Căn nhà của họ rất lớn, có ba phòng ngủ.' } },
+  { zh: '桌子', pinyin: 'zhuōzi', viet: 'cái bàn', ex: { zh: '请把那本书放在桌子上面。', pinyin: 'Qǐng bǎ nà běn shū fàng zài zhuōzi shàngmiàn.', viet: 'Vui lòng đặt quyển sách đó lên trên bàn.' } },
+  { zh: '椅子', pinyin: 'yǐzi', viet: 'cái ghế', ex: { zh: '教室里有很多椅子，学生们都坐下了。', pinyin: 'Jiàoshì lǐ yǒu hěn duō yǐzi, xuéshengmen dōu zuò xià le.', viet: 'Trong lớp học có rất nhiều ghế, các học sinh đều đã ngồi xuống.' } },
+  { zh: '床', pinyin: 'chuáng', viet: 'giường', ex: { zh: '我昨晚太累了，一躺到床上就睡着了。', pinyin: 'Wǒ zuówǎn tài lèi le, yī tǎng dào chuáng shàng jiù shuìzháo le.', viet: 'Tối qua tôi mệt quá, vừa nằm xuống giường là ngủ luôn.' } },
+  { zh: '门', pinyin: 'mén', viet: 'cửa', ex: { zh: '请关好门再走，外面风很大。', pinyin: 'Qǐng guān hǎo mén zài zǒu, wàimiàn fēng hěn dà.', viet: 'Vui lòng đóng cửa lại rồi hãy đi, bên ngoài gió rất to.' } },
+  { zh: '窗户', pinyin: 'chuānghu', viet: 'cửa sổ', ex: { zh: '天气很好，我打开窗户让新鲜空气进来。', pinyin: 'Tiānqì hěn hǎo, wǒ dǎkāi chuānghu ràng xīnxiān kōngqì jìnlái.', viet: 'Thời tiết rất tốt, tôi mở cửa sổ để không khí trong lành vào.' } },
+  { zh: '电视', pinyin: 'diànshì', viet: 'tivi', ex: { zh: '爸爸每天晚上都喜欢看电视新闻。', pinyin: 'Bàba měitiān wǎnshàng dōu xǐhuān kàn diànshì xīnwén.', viet: 'Buổi tối nào bố cũng thích xem tin tức trên tivi.' } },
+  { zh: '手机', pinyin: 'shǒujī', viet: 'điện thoại', ex: { zh: '我的手机没电了，需要找地方充电。', pinyin: 'Wǒ de shǒujī méidiàn le, xūyào zhǎo dìfang chōngdiàn.', viet: 'Điện thoại của tôi hết pin rồi, cần tìm chỗ để sạc.' } },
+  // Con người
+  { zh: '人', pinyin: 'rén', viet: 'người', ex: { zh: '这个城市的人非常多，到处都很热闹。', pinyin: 'Zhège chéngshì de rén fēicháng duō, dàochù dōu hěn rènao.', viet: 'Thành phố này có rất nhiều người, chỗ nào cũng rất náo nhiệt.' } },
+  { zh: '学生', pinyin: 'xuéshēng', viet: 'học sinh', ex: { zh: '这个班有三十个学生，大家学习都很认真。', pinyin: 'Zhège bān yǒu sānshí gè xuésheng, dàjiā xuéxí dōu hěn rènzhēn.', viet: 'Lớp này có ba mươi học sinh, mọi người đều học rất chăm chỉ.' } },
+  { zh: '老师', pinyin: 'lǎoshī', viet: 'giáo viên', ex: { zh: '我们的老师对学生很有耐心，讲课也很有意思。', pinyin: 'Wǒmen de lǎoshī duì xuésheng hěn yǒu nàixīn, jiǎngkè yě hěn yǒuyìsi.', viet: 'Giáo viên của chúng tôi rất kiên nhẫn với học sinh, dạy học cũng rất thú vị.' } },
+  { zh: '医生', pinyin: 'yīshēng', viet: 'bác sĩ', ex: { zh: '医生说我需要多休息，不能工作太多。', pinyin: 'Yīshēng shuō wǒ xūyào duō xiūxi, bù néng gōngzuò tài duō.', viet: 'Bác sĩ nói tôi cần nghỉ ngơi nhiều hơn, không thể làm việc quá nhiều.' } },
+  { zh: '朋友', pinyin: 'péngyou', viet: 'bạn bè', ex: { zh: '周末我和朋友们一起去吃火锅，聊得很开心。', pinyin: 'Zhōumò wǒ hé péngyoumen yīqǐ qù chī huǒguō, liáo de hěn kāixīn.', viet: 'Cuối tuần tôi cùng bạn bè đi ăn lẩu, trò chuyện rất vui.' } },
+  { zh: '同学', pinyin: 'tóngxué', viet: 'bạn học', ex: { zh: '我的同学帮我复习了考试内容，真的很感谢他。', pinyin: 'Wǒ de tóngxué bāng wǒ fùxí le kǎoshì nèiróng, zhēnde hěn gǎnxiè tā.', viet: 'Bạn học của tôi đã giúp tôi ôn tập nội dung kỳ thi, thật sự rất cảm ơn bạn ấy.' } },
+  { zh: '工人', pinyin: 'gōngrén', viet: 'công nhân', ex: { zh: '工厂里的工人每天早上八点开始上班。', pinyin: 'Gōngchǎng lǐ de gōngrén měitiān zǎoshang bā diǎn kāishǐ shàngbān.', viet: 'Công nhân trong nhà máy mỗi ngày bắt đầu đi làm lúc tám giờ sáng.' } },
+  { zh: '老板', pinyin: 'lǎobǎn', viet: 'ông chủ', ex: { zh: '老板今天给我们开会，说下个月要增加工资。', pinyin: 'Lǎobǎn jīntiān gěi wǒmen kāihuì, shuō xià gè yuè yào zēngjiā gōngzī.', viet: 'Hôm nay ông chủ họp với chúng tôi, nói tháng tới sẽ tăng lương.' } },
+  // Trường học
+  { zh: '学校', pinyin: 'xuéxiào', viet: 'trường học', ex: { zh: '我们的学校离地铁站很近，走路只要五分钟。', pinyin: 'Wǒmen de xuéxiào lí dìtiě zhàn hěn jìn, zǒulù zhǐyào wǔ fēnzhōng.', viet: 'Trường học của chúng tôi gần ga tàu điện ngầm, đi bộ chỉ mất năm phút.' } },
+  { zh: '书', pinyin: 'shū', viet: 'sách', ex: { zh: '我喜欢在睡觉前读一会儿书，感觉很放松。', pinyin: 'Wǒ xǐhuān zài shuìjiào qián dú yīhuìr shū, gǎnjué hěn fàngsōng.', viet: 'Tôi thích đọc sách một lúc trước khi ngủ, cảm thấy rất thư giãn.' } },
+  { zh: '本子', pinyin: 'běnzi', viet: 'vở', ex: { zh: '老师让我们把答案写在本子上交给他。', pinyin: 'Lǎoshī ràng wǒmen bǎ dáàn xiě zài běnzi shàng jiāo gěi tā.', viet: 'Giáo viên yêu cầu chúng tôi viết đáp án vào vở rồi nộp cho thầy.' } },
+  { zh: '笔', pinyin: 'bǐ', viet: 'bút', ex: { zh: '你能借我一支笔吗？我需要签一个名字。', pinyin: 'Nǐ néng jiè wǒ yī zhī bǐ ma? Wǒ xūyào qiān yī gè míngzi.', viet: 'Bạn có thể cho tôi mượn một cái bút không? Tôi cần ký một cái tên.' } },
+  { zh: '黑板', pinyin: 'hēibǎn', viet: 'bảng', ex: { zh: '老师在黑板上写了很多生词让我们抄下来。', pinyin: 'Lǎoshī zài hēibǎn shàng xiě le hěn duō shēngcí ràng wǒmen chāo xiàlái.', viet: 'Giáo viên viết rất nhiều từ mới lên bảng và bảo chúng tôi chép lại.' } },
+  { zh: '教室', pinyin: 'jiàoshì', viet: 'lớp học', ex: { zh: '上课铃响了，同学们都跑进教室坐好了。', pinyin: 'Shàngkè líng xiǎng le, tóngxuémen dōu pǎo jìn jiàoshì zuò hǎo le.', viet: 'Chuông vào lớp vang lên, các bạn học đều chạy vào lớp và ngồi vào chỗ.' } },
+  { zh: '作业', pinyin: 'zuòyè', viet: 'bài tập', ex: { zh: '今天的作业很多，我做了两个小时才做完。', pinyin: 'Jīntiān de zuòyè hěn duō, wǒ zuò le liǎng gè xiǎoshí cái zuò wán.', viet: 'Bài tập hôm nay rất nhiều, tôi làm mất hai tiếng đồng hồ mới xong.' } },
+  { zh: '考试', pinyin: 'kǎoshì', viet: 'kỳ thi', ex: { zh: '下周有考试，我每天晚上都在认真复习。', pinyin: 'Xià zhōu yǒu kǎoshì, wǒ měitiān wǎnshàng dōu zài rènzhēn fùxí.', viet: 'Tuần tới có kỳ thi, mỗi tối tôi đều ôn bài rất chăm chỉ.' } },
+  // Đồ ăn
+  { zh: '水', pinyin: 'shuǐ', viet: 'nước', ex: { zh: '医生说每天要喝八杯水，对身体很好。', pinyin: 'Yīshēng shuō měitiān yào hē bā bēi shuǐ, duì shēntǐ hěn hǎo.', viet: 'Bác sĩ nói mỗi ngày phải uống tám ly nước, rất tốt cho cơ thể.' } },
+  { zh: '米饭', pinyin: 'mǐfàn', viet: 'cơm', ex: { zh: '我们家每天中午都吃米饭配菜，很简单但很好吃。', pinyin: 'Wǒmen jiā měitiān zhōngwǔ dōu chī mǐfàn pèi cài, hěn jiǎndān dàn hěn hǎochī.', viet: 'Nhà tôi mỗi trưa đều ăn cơm với thức ăn, đơn giản nhưng rất ngon.' } },
+  { zh: '面条', pinyin: 'miàntiáo', viet: 'mì', ex: { zh: '天冷的时候，我最喜欢吃一碗热腾腾的面条。', pinyin: 'Tiān lěng de shíhou, wǒ zuì xǐhuān chī yī wǎn rètēngténg de miàntiáo.', viet: 'Khi trời lạnh, tôi thích nhất là ăn một bát mì nóng hổi.' } },
+  { zh: '苹果', pinyin: 'píngguǒ', viet: 'táo', ex: { zh: '妈妈每天都给我带一个苹果当零食吃。', pinyin: 'Māma měitiān dōu gěi wǒ dài yī gè píngguǒ dāng língshí chī.', viet: 'Mỗi ngày mẹ đều mang cho tôi một quả táo để ăn vặt.' } },
+  { zh: '香蕉', pinyin: 'xiāngjiāo', viet: 'chuối', ex: { zh: '这串香蕉又甜又软，是今天早上刚买的。', pinyin: 'Zhè chuàn xiāngjiāo yòu tián yòu ruǎn, shì jīntiān zǎoshang gāng mǎi de.', viet: 'Nải chuối này vừa ngọt vừa mềm, vừa mới mua sáng nay.' } },
+  { zh: '蔬菜', pinyin: 'shūcài', viet: 'rau', ex: { zh: '多吃蔬菜对健康有好处，每天要吃足够的量。', pinyin: 'Duō chī shūcài duì jiànkāng yǒu hǎochù, měitiān yào chī zúgòu de liàng.', viet: 'Ăn nhiều rau có lợi cho sức khỏe, mỗi ngày cần ăn đủ lượng cần thiết.' } },
+  { zh: '鸡蛋', pinyin: 'jīdàn', viet: 'trứng', ex: { zh: '早餐我喜欢吃两个煮鸡蛋和一杯牛奶。', pinyin: 'Zǎocān wǒ xǐhuān chī liǎng gè zhǔ jīdàn hé yī bēi niúnǎi.', viet: 'Bữa sáng tôi thích ăn hai quả trứng luộc và một ly sữa.' } },
+  { zh: '茶', pinyin: 'chá', viet: 'trà', ex: { zh: '爷爷每天早上都会泡一壶茶慢慢喝。', pinyin: 'Yéye měitiān zǎoshang dōu huì pào yī hú chá mànmàn hē.', viet: 'Mỗi sáng ông nội đều pha một ấm trà và uống từ từ.' } },
+  // Địa điểm
+  { zh: '中国', pinyin: 'Zhōngguó', viet: 'Trung Quốc', ex: { zh: '中国是世界上人口最多的国家之一。', pinyin: 'Zhōngguó shì shìjiè shàng rénkǒu zuì duō de guójiā zhī yī.', viet: 'Trung Quốc là một trong những quốc gia đông dân nhất thế giới.' } },
+  { zh: '城市', pinyin: 'chéngshì', viet: 'thành phố', ex: { zh: '上海是中国最繁华的城市之一，到处都是高楼大厦。', pinyin: 'Shànghǎi shì Zhōngguó zuì fánhuá de chéngshì zhī yī, dàochù dōu shì gāolóu dàshà.', viet: 'Thượng Hải là một trong những thành phố phồn hoa nhất Trung Quốc, đâu đâu cũng có nhà cao tầng.' } },
+  { zh: '商店', pinyin: 'shāngdiàn', viet: 'cửa hàng', ex: { zh: '街上有很多商店，我找了很久才找到卖鞋的那家。', pinyin: 'Jiē shàng yǒu hěn duō shāngdiàn, wǒ zhǎo le hěn jiǔ cái zhǎodào mài xié de nà jiā.', viet: 'Trên phố có rất nhiều cửa hàng, tôi tìm mãi mới thấy cửa hàng bán giày.' } },
+  { zh: '公园', pinyin: 'gōngyuán', viet: 'công viên', ex: { zh: '周末早上很多人去公园散步或者打太极拳。', pinyin: 'Zhōumò zǎoshang hěn duō rén qù gōngyuán sànbù huòzhě dǎ tàijíquán.', viet: 'Sáng cuối tuần nhiều người ra công viên đi dạo hoặc tập thái cực quyền.' } },
+  { zh: '山', pinyin: 'shān', viet: 'núi', ex: { zh: '这座山很高，爬到山顶需要三个多小时。', pinyin: 'Zhè zuò shān hěn gāo, pá dào shāndǐng xūyào sān gè duō xiǎoshí.', viet: 'Ngọn núi này rất cao, leo lên đến đỉnh cần hơn ba tiếng đồng hồ.' } },
+  { zh: '河', pinyin: 'hé', viet: 'sông', ex: { zh: '这条河的水很清澈，两边种了很多树。', pinyin: 'Zhè tiáo hé de shuǐ hěn qīngchè, liǎng biān zhòng le hěn duō shù.', viet: 'Nước con sông này rất trong, hai bên trồng rất nhiều cây.' } },
+  { zh: '海', pinyin: 'hǎi', viet: 'biển', ex: { zh: '夏天我最喜欢去海边游泳，感觉非常舒服。', pinyin: 'Xiàtiān wǒ zuì xǐhuān qù hǎibiān yóuyǒng, gǎnjué fēicháng shūfu.', viet: 'Mùa hè tôi thích nhất là ra biển bơi lội, cảm giác rất dễ chịu.' } },
+  { zh: '天空', pinyin: 'tiānkōng', viet: 'bầu trời', ex: { zh: '今天天空很蓝，一朵云也没有，天气非常好。', pinyin: 'Jīntiān tiānkōng hěn lán, yī duǒ yún yě méiyǒu, tiānqì fēicháng hǎo.', viet: 'Hôm nay bầu trời rất xanh, không có một đám mây nào, thời tiết rất đẹp.' } },
+  // Thời gian
+  { zh: '时间', pinyin: 'shíjiān', viet: 'thời gian', ex: { zh: '时间过得很快，不知不觉已经到了年底。', pinyin: 'Shíjiān guò de hěn kuài, bùzhī bùjué yǐjīng dào le niándǐ.', viet: 'Thời gian trôi rất nhanh, không hay biết mà đã đến cuối năm rồi.' } },
+  { zh: '今天', pinyin: 'jīntiān', viet: 'hôm nay', ex: { zh: '今天是我的生日，朋友们给我买了一个大蛋糕。', pinyin: 'Jīntiān shì wǒ de shēngrì, péngyoumen gěi wǒ mǎi le yī gè dà dàngāo.', viet: 'Hôm nay là sinh nhật của tôi, các bạn đã mua cho tôi một chiếc bánh kem to.' } },
+  { zh: '明天', pinyin: 'míngtiān', viet: 'ngày mai', ex: { zh: '明天我要去面试，今晚需要好好准备一下。', pinyin: 'Míngtiān wǒ yào qù miànshì, jīn wǎn xūyào hǎohǎo zhǔnbèi yīxià.', viet: 'Ngày mai tôi đi phỏng vấn, tối nay cần chuẩn bị thật kỹ.' } },
+  { zh: '昨天', pinyin: 'zuótiān', viet: 'hôm qua', ex: { zh: '昨天下了一天的雨，我没有出门。', pinyin: 'Zuótiān xià le yī tiān de yǔ, wǒ méiyǒu chūmén.', viet: 'Hôm qua mưa cả ngày, tôi không ra ngoài.' } },
+  { zh: '上午', pinyin: 'shàngwǔ', viet: 'buổi sáng', ex: { zh: '我每天上午九点到公司，先喝杯咖啡再开始工作。', pinyin: 'Wǒ měitiān shàngwǔ jiǔ diǎn dào gōngsī, xiān hē bēi kāfēi zài kāishǐ gōngzuò.', viet: 'Mỗi ngày tôi đến công ty lúc chín giờ sáng, uống cà phê trước rồi mới bắt đầu làm việc.' } },
+  { zh: '下午', pinyin: 'xiàwǔ', viet: 'buổi chiều', ex: { zh: '下午三点我们有一个重要的会议，请准时参加。', pinyin: 'Xiàwǔ sān diǎn wǒmen yǒu yī gè zhòngyào de huìyì, qǐng zhǔnshí cānjiā.', viet: 'Ba giờ chiều chúng ta có một cuộc họp quan trọng, xin hãy tham dự đúng giờ.' } },
+  { zh: '晚上', pinyin: 'wǎnshàng', viet: 'buổi tối', ex: { zh: '晚上我喜欢在公园散步，呼吸新鲜空气。', pinyin: 'Wǎnshàng wǒ xǐhuān zài gōngyuán sànbù, hūxī xīnxiān kōngqì.', viet: 'Buổi tối tôi thích đi dạo trong công viên, hít thở không khí trong lành.' } },
+  { zh: '星期', pinyin: 'xīngqī', viet: 'tuần', ex: { zh: '这个星期我很忙，每天都要加班到很晚。', pinyin: 'Zhège xīngqī wǒ hěn máng, měitiān dōu yào jiābān dào hěn wǎn.', viet: 'Tuần này tôi rất bận, ngày nào cũng phải làm thêm đến rất khuya.' } },
+  // Công nghệ & quần áo
+  { zh: '电脑', pinyin: 'diànnǎo', viet: 'máy tính', ex: { zh: '我的电脑坏了，需要拿去修，现在只能用手机工作。', pinyin: 'Wǒ de diànnǎo huài le, xūyào ná qù xiū, xiànzài zhǐ néng yòng shǒujī gōngzuò.', viet: 'Máy tính của tôi hỏng rồi, cần mang đi sửa, giờ chỉ có thể dùng điện thoại làm việc.' } },
+  { zh: '鼠标', pinyin: 'shǔbiāo', viet: 'chuột', ex: { zh: '我的鼠标没有反应了，可能需要换新电池。', pinyin: 'Wǒ de shǔbiāo méiyǒu fǎnyìng le, kěnéng xūyào huàn xīn diànchí.', viet: 'Chuột của tôi không phản hồi nữa, có thể cần thay pin mới.' } },
+  { zh: '键盘', pinyin: 'jiànpán', viet: 'bàn phím', ex: { zh: '这个机械键盘打字的声音很大，但用起来很舒服。', pinyin: 'Zhège jīxiè jiànpán dǎzì de shēngyīn hěn dà, dàn yòng qǐlái hěn shūfu.', viet: 'Bàn phím cơ này gõ phím rất to, nhưng dùng rất thoải mái.' } },
+  { zh: '屏幕', pinyin: 'píngmù', viet: 'màn hình', ex: { zh: '这台电视的屏幕很大，看电影的效果非常好。', pinyin: 'Zhè tái diànshì de píngmù hěn dà, kàn diànyǐng de xiàoguǒ fēicháng hǎo.', viet: 'Màn hình chiếc tivi này rất lớn, xem phim cho hiệu ứng rất tốt.' } },
+  { zh: '耳机', pinyin: 'ěrjī', viet: 'tai nghe', ex: { zh: '我每天上班路上都戴着耳机听音乐或者播客。', pinyin: 'Wǒ měitiān shàngbān lùshàng dōu dài zhe ěrjī tīng yīnyuè huòzhě bōkè.', viet: 'Mỗi ngày trên đường đi làm tôi đều đeo tai nghe nghe nhạc hoặc podcast.' } },
+  { zh: '衣服', pinyin: 'yīfu', viet: 'quần áo', ex: { zh: '我买了一些新衣服，准备过年的时候穿。', pinyin: 'Wǒ mǎi le yīxiē xīn yīfu, zhǔnbèi guònián de shíhou chuān.', viet: 'Tôi đã mua một ít quần áo mới, chuẩn bị để mặc dịp Tết.' } },
+  { zh: '裤子', pinyin: 'kùzi', viet: 'quần', ex: { zh: '这条裤子太长了，需要拿去改短一点。', pinyin: 'Zhè tiáo kùzi tài cháng le, xūyào ná qù gǎi duǎn yīdiǎn.', viet: 'Chiếc quần này dài quá, cần mang đi sửa cho ngắn lại một chút.' } },
+  { zh: '鞋', pinyin: 'xié', viet: 'giày', ex: { zh: '我在网上买了一双运动鞋，穿起来非常轻便。', pinyin: 'Wǒ zài wǎng shàng mǎi le yī shuāng yùndòngxié, chuān qǐlái fēicháng qīngbiàn.', viet: 'Tôi mua một đôi giày thể thao trên mạng, mang vào rất nhẹ nhàng thoải mái.' } },
+  { zh: '帽子', pinyin: 'màozi', viet: 'mũ', ex: { zh: '夏天出门记得戴帽子，不然太阳会晒伤皮肤。', pinyin: 'Xiàtiān chūmén jìde dài màozi, bùrán tàiyáng huì shài shāng pífū.', viet: 'Mùa hè ra ngoài nhớ đội mũ, không thì nắng sẽ làm cháy da.' } },
+  { zh: '包', pinyin: 'bāo', viet: 'túi', ex: { zh: '我的包里装着钱包、手机和一些重要文件。', pinyin: 'Wǒ de bāo lǐ zhuāng zhe qiánbāo, shǒujī hé yīxiē zhòngyào wénjiàn.', viet: 'Trong túi của tôi có ví tiền, điện thoại và một số giấy tờ quan trọng.' } },
+  // Phương tiện & giao thông
+  { zh: '汽车', pinyin: 'qìchē', viet: 'ô tô', ex: { zh: '爸爸买了一辆新汽车，周末带我们去郊区玩。', pinyin: 'Bàba mǎi le yī liàng xīn qìchē, zhōumò dài wǒmen qù jiāoqū wán.', viet: 'Bố mua một chiếc ô tô mới, cuối tuần chở chúng tôi ra ngoại ô chơi.' } },
+  { zh: '自行车', pinyin: 'zìxíngchē', viet: 'xe đạp', ex: { zh: '我每天骑自行车上班，既环保又锻炼身体。', pinyin: 'Wǒ měitiān qí zìxíngchē shàngbān, jì huánbǎo yòu duànliàn shēntǐ.', viet: 'Mỗi ngày tôi đạp xe đạp đi làm, vừa bảo vệ môi trường vừa rèn luyện sức khỏe.' } },
+  { zh: '公交车', pinyin: 'gōngjiāochē', viet: 'xe buýt', ex: { zh: '坐公交车去市中心需要大约四十分钟。', pinyin: 'Zuò gōngjiāochē qù shì zhōngxīn xūyào dàyuē sìshí fēnzhōng.', viet: 'Đi xe buýt vào trung tâm thành phố mất khoảng bốn mươi phút.' } },
+  { zh: '火车', pinyin: 'huǒchē', viet: 'tàu hỏa', ex: { zh: '我们订了高铁票，坐火车去北京只需要两小时。', pinyin: 'Wǒmen dìng le gāotiě piào, zuò huǒchē qù Běijīng zhǐ xūyào liǎng xiǎoshí.', viet: 'Chúng tôi đặt vé tàu cao tốc, đi tàu hỏa lên Bắc Kinh chỉ cần hai tiếng.' } },
+  { zh: '飞机', pinyin: 'fēijī', viet: 'máy bay', ex: { zh: '这是我第一次坐飞机，飞行时间大概三个小时。', pinyin: 'Zhè shì wǒ dì yī cì zuò fēijī, fēixíng shíjiān dàgài sān gè xiǎoshí.', viet: 'Đây là lần đầu tiên tôi đi máy bay, thời gian bay khoảng ba tiếng.' } },
+  { zh: '路', pinyin: 'lù', viet: 'đường', ex: { zh: '这条路正在修，所有车辆都要绕道通行。', pinyin: 'Zhè tiáo lù zhèngzài xiū, suǒyǒu chēliàng dōu yào ràodào tōngxíng.', viet: 'Con đường này đang được sửa chữa, tất cả các xe đều phải đi đường vòng.' } },
+  { zh: '桥', pinyin: 'qiáo', viet: 'cầu', ex: { zh: '过了这座桥就到了村子，里面有很多古老的建筑。', pinyin: 'Guò le zhè zuò qiáo jiù dào le cūnzi, lǐmiàn yǒu hěn duō gǔlǎo de jiànzhù.', viet: 'Qua cây cầu này là đến làng, bên trong có rất nhiều công trình cổ xưa.' } },
+  { zh: '地铁', pinyin: 'dìtiě', viet: 'tàu điện ngầm', ex: { zh: '坐地铁上班不堵车，比开车快多了。', pinyin: 'Zuò dìtiě shàngbān bù dǔchē, bǐ kāichē kuài duō le.', viet: 'Đi tàu điện ngầm đi làm không bị kẹt xe, nhanh hơn lái xe nhiều.' } },
+  { zh: '站', pinyin: 'zhàn', viet: 'trạm', ex: { zh: '请在下一站下车，出口在左边。', pinyin: 'Qǐng zài xià yī zhàn xià chē, chūkǒu zài zuǒbiān.', viet: 'Vui lòng xuống ở trạm tiếp theo, lối ra ở bên trái.' } },
+  { zh: '机场', pinyin: 'jīchǎng', viet: 'sân bay', ex: { zh: '我们需要提前两小时到机场办理登机手续。', pinyin: 'Wǒmen xūyào tíqián liǎng xiǎoshí dào jīchǎng bànlǐ dēngjī shǒuxù.', viet: 'Chúng ta cần đến sân bay trước hai tiếng để làm thủ tục lên máy bay.' } },
+  // Chợ & thực phẩm
+  { zh: '市场', pinyin: 'shìchǎng', viet: 'chợ', ex: { zh: '妈妈每天早上都去市场买新鲜的蔬菜和水果。', pinyin: 'Māma měitiān zǎoshang dōu qù shìchǎng mǎi xīnxiān de shūcài hé shuǐguǒ.', viet: 'Mỗi sáng mẹ đều ra chợ mua rau và trái cây tươi.' } },
+  { zh: '超市', pinyin: 'chāoshì', viet: 'siêu thị', ex: { zh: '周末我去超市买了一周需要的食材和生活用品。', pinyin: 'Zhōumò wǒ qù chāoshì mǎi le yī zhōu xūyào de shícái hé shēnghuó yòngpǐn.', viet: 'Cuối tuần tôi đi siêu thị mua nguyên liệu nấu ăn và đồ dùng sinh hoạt cho cả tuần.' } },
+  { zh: '商场', pinyin: 'shāngchǎng', viet: 'trung tâm thương mại', ex: { zh: '这家商场有五层，里面有餐厅、电影院和很多名牌店。', pinyin: 'Zhè jiā shāngchǎng yǒu wǔ céng, lǐmiàn yǒu cāntīng, diànyǐngyuàn hé hěn duō míngpái diàn.', viet: 'Trung tâm thương mại này có năm tầng, bên trong có nhà hàng, rạp chiếu phim và nhiều cửa hàng thương hiệu nổi tiếng.' } },
+  { zh: '菜市场', pinyin: 'cài shìchǎng', viet: 'chợ rau', ex: { zh: '菜市场的蔬菜比超市新鲜，价格也便宜一些。', pinyin: 'Cài shìchǎng de shūcài bǐ chāoshì xīnxiān, jiàgé yě piányí yīxiē.', viet: 'Rau ở chợ tươi hơn siêu thị, giá cũng rẻ hơn một chút.' } },
+  { zh: '水果', pinyin: 'shuǐguǒ', viet: 'trái cây', ex: { zh: '这家店的水果很新鲜，而且种类非常多。', pinyin: 'Zhè jiā diàn de shuǐguǒ hěn xīnxiān, érqiě zhǒnglèi fēicháng duō.', viet: 'Trái cây của cửa hàng này rất tươi, hơn nữa chủng loại rất phong phú.' } },
+  { zh: '肉', pinyin: 'ròu', viet: 'thịt', ex: { zh: '今天妈妈买了一斤猪肉，准备做红烧肉。', pinyin: 'Jīntiān māma mǎi le yī jīn zhūròu, zhǔnbèi zuò hóngshāo ròu.', viet: 'Hôm nay mẹ mua nửa kilogram thịt lợn, chuẩn bị làm thịt kho.' } },
+  { zh: '鱼', pinyin: 'yú', viet: 'cá', ex: { zh: '爸爸很喜欢吃鱼，妈妈每周都会做一次清蒸鱼。', pinyin: 'Bàba hěn xǐhuān chī yú, māma měi zhōu dōu huì zuò yī cì qīngzhēng yú.', viet: 'Bố rất thích ăn cá, mỗi tuần mẹ đều làm một lần cá hấp.' } },
+  { zh: '牛奶', pinyin: 'niúnǎi', viet: 'sữa', ex: { zh: '我每天早上都喝一杯牛奶，对骨骼很有好处。', pinyin: 'Wǒ měitiān zǎoshang dōu hē yī bēi niúnǎi, duì gǔgé hěn yǒu hǎochù.', viet: 'Mỗi sáng tôi đều uống một ly sữa, rất tốt cho xương.' } },
+  // Mua sắm online
+  { zh: '网店', pinyin: 'wǎngdiàn', viet: 'cửa hàng online', ex: { zh: '她开了一家专卖手工饰品的网店，生意越来越好。', pinyin: 'Tā kāi le yī jiā zhuān mài shǒugōng shìpǐn de wǎngdiàn, shēngyi yuè lái yuè hǎo.', viet: 'Cô ấy mở một cửa hàng online chuyên bán đồ trang sức thủ công, việc kinh doanh ngày càng tốt hơn.' } },
+  { zh: '平台', pinyin: 'píngtái', viet: 'nền tảng', ex: { zh: '这个电商平台有很多优惠活动，很多人都在上面购物。', pinyin: 'Zhège diànshāng píngtái yǒu hěn duō yōuhuì huódòng, hěn duō rén dōu zài shàngmiàn gòuwù.', viet: 'Nền tảng thương mại điện tử này có rất nhiều chương trình khuyến mãi, nhiều người mua sắm trên đó.' } },
+  { zh: '卖家', pinyin: 'màijiā', viet: 'người bán', ex: { zh: '这个卖家的服务态度很好，发货也很快。', pinyin: 'Zhège màijiā de fúwù tàidu hěn hǎo, fāhuò yě hěn kuài.', viet: 'Người bán này có thái độ phục vụ rất tốt, giao hàng cũng rất nhanh.' } },
+  { zh: '买家', pinyin: 'mǎijiā', viet: 'người mua', ex: { zh: '买家收到商品后对质量非常满意，给了五星好评。', pinyin: 'Mǎijiā shōudào shāngpǐn hòu duì zhìliàng fēicháng mǎnyì, gěi le wǔxīng hǎopíng.', viet: 'Người mua sau khi nhận được hàng rất hài lòng về chất lượng, đã đánh giá năm sao.' } },
+  { zh: '快递', pinyin: 'kuàidì', viet: 'giao hàng nhanh', ex: { zh: '我昨天下单，今天快递就到了，速度真的很快。', pinyin: 'Wǒ zuótiān xià dān, jīntiān kuàidì jiù dào le, sùdù zhēnde hěn kuài.', viet: 'Tôi đặt hàng hôm qua, hôm nay đã nhận được hàng giao nhanh rồi, tốc độ thật sự rất nhanh.' } },
+  { zh: '包裹', pinyin: 'bāoguǒ', viet: 'bưu kiện', ex: { zh: '我的包裹已经到了快递站，下午可以去取。', pinyin: 'Wǒ de bāoguǒ yǐjīng dào le kuàidì zhàn, xiàwǔ kěyǐ qù qǔ.', viet: 'Bưu kiện của tôi đã đến điểm giao hàng rồi, chiều có thể đi lấy.' } },
+  { zh: '订单', pinyin: 'dìngdān', viet: 'đơn hàng', ex: { zh: '我刚刚查了一下，我的订单已经发货了，明天能到。', pinyin: 'Wǒ gānggāng chá le yīxià, wǒ de dìngdān yǐjīng fāhuò le, míngtiān néng dào.', viet: 'Tôi vừa kiểm tra, đơn hàng của tôi đã được giao đi rồi, ngày mai có thể nhận.' } },
+  { zh: '购物车', pinyin: 'gòuwùchē', viet: 'giỏ hàng', ex: { zh: '我把喜欢的商品加入购物车，等打折的时候再付款。', pinyin: 'Wǒ bǎ xǐhuān de shāngpǐn jiārù gòuwùchē, děng dǎzhé de shíhou zài fùkuǎn.', viet: 'Tôi cho những món hàng mình thích vào giỏ hàng, đợi khi giảm giá rồi mới thanh toán.' } },
+  { zh: '商品', pinyin: 'shāngpǐn', viet: 'sản phẩm', ex: { zh: '这家店的商品质量很好，价格也合理，我经常在这里买东西。', pinyin: 'Zhè jiā diàn de shāngpǐn zhìliàng hěn hǎo, jiàgé yě hélǐ, wǒ jīngcháng zài zhèlǐ mǎi dōngxi.', viet: 'Sản phẩm của cửa hàng này chất lượng tốt, giá cũng hợp lý, tôi thường xuyên mua đồ ở đây.' } },
+  { zh: '价格', pinyin: 'jiàgé', viet: 'giá cả', ex: { zh: '这件衣服的价格有点贵，我想再比较一下其他店。', pinyin: 'Zhè jiàn yīfu de jiàgé yǒudiǎn guì, wǒ xiǎng zài bǐjiào yīxià qítā diàn.', viet: 'Giá của chiếc áo này hơi đắt, tôi muốn so sánh thêm với các cửa hàng khác.' } },
+  // Nhà máy
+  { zh: '工厂', pinyin: 'gōngchǎng', viet: 'nhà máy', ex: { zh: '这个工厂专门生产电子产品，每年出口到很多国家。', pinyin: 'Zhège gōngchǎng zhuānmén shēngchǎn diànzǐ chǎnpǐn, měi nián chūkǒu dào hěn duō guójiā.', viet: 'Nhà máy này chuyên sản xuất các sản phẩm điện tử, mỗi năm xuất khẩu sang nhiều quốc gia.' } },
+  { zh: '车间', pinyin: 'chējiān', viet: 'xưởng', ex: { zh: '车间里的工人都戴着安全帽和手套进行操作。', pinyin: 'Chējiān lǐ de gōngrén dōu dài zhe ānquánmào hé shǒutào jìnxíng cāozuò.', viet: 'Công nhân trong xưởng đều đội mũ bảo hiểm và đeo găng tay khi vận hành.' } },
+  { zh: '仓库', pinyin: 'cāngkù', viet: 'kho', ex: { zh: '仓库里存放着大量的原材料，够用三个月左右。', pinyin: 'Cāngkù lǐ cúnfàng zhe dàliàng de yuáncáiliào, gòu yòng sān gè yuè zuǒyòu.', viet: 'Trong kho có dự trữ lượng lớn nguyên liệu thô, đủ dùng khoảng ba tháng.' } },
+  { zh: '生产线', pinyin: 'shēngchǎnxiàn', viet: 'dây chuyền sản xuất', ex: { zh: '工厂新增了一条自动化生产线，大大提高了生产效率。', pinyin: 'Gōngchǎng xīn zēng le yī tiáo zìdònghuà shēngchǎnxiàn, dàdà tígāo le shēngchǎn xiàolǜ.', viet: 'Nhà máy bổ sung thêm một dây chuyền sản xuất tự động, nâng cao đáng kể hiệu suất sản xuất.' } },
+  { zh: '设备', pinyin: 'shèbèi', viet: 'thiết bị', ex: { zh: '这台设备出了故障，需要马上联系技术员来检修。', pinyin: 'Zhè tái shèbèi chū le gùzhàng, xūyào mǎshàng liánxì jìshùyuán lái jiǎnxiū.', viet: 'Thiết bị này bị sự cố rồi, cần liên hệ ngay kỹ thuật viên đến kiểm tra sửa chữa.' } },
+  { zh: '技术员', pinyin: 'jìshùyuán', viet: 'kỹ thuật viên', ex: { zh: '技术员花了一个小时修好了生产线上的故障设备。', pinyin: 'Jìshùyuán huā le yī gè xiǎoshí xiū hǎo le shēngchǎnxiàn shàng de gùzhàng shèbèi.', viet: 'Kỹ thuật viên mất một tiếng đồng hồ để sửa xong thiết bị bị sự cố trên dây chuyền sản xuất.' } },
+  { zh: '工程师', pinyin: 'gōngchéngshī', viet: 'kỹ sư', ex: { zh: '这位工程师设计了一套全新的生产流程，节省了很多成本。', pinyin: 'Zhè wèi gōngchéngshī shèjì le yī tào quánxīn de shēngchǎn liúchéng, jiéshěng le hěn duō chéngběn.', viet: 'Vị kỹ sư này thiết kế một quy trình sản xuất hoàn toàn mới, tiết kiệm được rất nhiều chi phí.' } },
+  { zh: '管理员', pinyin: 'guǎnlǐyuán', viet: 'quản lý', ex: { zh: '仓库管理员每天都要核对货物的数量和状态。', pinyin: 'Cāngkù guǎnlǐyuán měitiān dōu yào héduì huòwù de shùliàng hé zhuàngtài.', viet: 'Quản lý kho mỗi ngày đều phải kiểm tra số lượng và tình trạng hàng hóa.' } },
+  { zh: '经理', pinyin: 'jīnglǐ', viet: 'giám đốc', ex: { zh: '经理今天开会宣布了公司新的发展计划。', pinyin: 'Jīnglǐ jīntiān kāihuì xuānbù le gōngsī xīn de fāzhǎn jìhuà.', viet: 'Hôm nay giám đốc họp và công bố kế hoạch phát triển mới của công ty.' } },
+  // Mua bán
+  { zh: '买', pinyin: 'mǎi', viet: 'mua', ex: { zh: '我想买一台新手机，但还没决定买哪个牌子。', pinyin: 'Wǒ xiǎng mǎi yī tái xīn shǒujī, dàn hái méi juédìng mǎi nǎge páizi.', viet: 'Tôi muốn mua một chiếc điện thoại mới, nhưng chưa quyết định mua thương hiệu nào.' } },
+  { zh: '卖', pinyin: 'mài', viet: 'bán', ex: { zh: '他把旧电脑卖掉了，换了一台更好的新机器。', pinyin: 'Tā bǎ jiù diànnǎo mài diào le, huàn le yī tái gèng hǎo de xīn jīqì.', viet: 'Anh ấy bán chiếc máy tính cũ đi, đổi một chiếc máy mới tốt hơn.' } },
+  { zh: '付钱', pinyin: 'fùqián', viet: 'trả tiền', ex: { zh: '我在收银台付钱的时候发现钱包忘在家里了。', pinyin: 'Wǒ zài shōuyíntái fùqián de shíhou fāxiàn qiánbāo wàng zài jiā lǐ le.', viet: 'Khi tôi trả tiền ở quầy thu ngân thì phát hiện bỏ quên ví ở nhà rồi.' } },
+  { zh: '付款', pinyin: 'fùkuǎn', viet: 'thanh toán', ex: { zh: '这家店支持微信和支付宝付款，非常方便。', pinyin: 'Zhè jiā diàn zhīchí Wēixìn hé Zhīfùbǎo fùkuǎn, fēicháng fāngbiàn.', viet: 'Cửa hàng này hỗ trợ thanh toán qua WeChat và Alipay, rất tiện lợi.' } },
+  { zh: '收钱', pinyin: 'shōuqián', viet: 'nhận tiền', ex: { zh: '老板让我帮他在门口收钱，今天客人很多。', pinyin: 'Lǎobǎn ràng wǒ bāng tā zài ménkǒu shōuqián, jīntiān kèrén hěn duō.', viet: 'Ông chủ nhờ tôi giúp nhận tiền ở cửa, hôm nay khách rất đông.' } },
+  { zh: '找钱', pinyin: 'zhǎoqián', viet: 'trả lại tiền', ex: { zh: '我付了一百块，老板找钱给我找了三十五块。', pinyin: 'Wǒ fù le yī bǎi kuài, lǎobǎn zhǎoqián gěi wǒ zhǎo le sānshíwǔ kuài.', viet: 'Tôi trả một trăm tệ, ông chủ trả lại cho tôi ba mươi lăm tệ.' } },
+  { zh: '选', pinyin: 'xuǎn', viet: 'chọn', ex: { zh: '这里颜色太多了，我选了半天还是不知道选哪个好。', pinyin: 'Zhèlǐ yánsè tài duō le, wǒ xuǎn le bàntiān háishi bù zhīdào xuǎn nǎge hǎo.', viet: 'Ở đây có quá nhiều màu sắc, tôi chọn mãi vẫn không biết nên chọn cái nào.' } },
+  { zh: '看', pinyin: 'kàn', viet: 'xem', ex: { zh: '我先看了一下商品的评价，觉得质量不错才下单。', pinyin: 'Wǒ xiān kàn le yīxià shāngpǐn de píngjià, juéde zhìliàng bùcuò cái xià dān.', viet: 'Tôi xem qua đánh giá của sản phẩm trước, thấy chất lượng ổn rồi mới đặt hàng.' } },
+  { zh: '比较', pinyin: 'bǐjiào', viet: 'so sánh', ex: { zh: '买东西之前最好多比较几家店，选最划算的那个。', pinyin: 'Mǎi dōngxi zhīqián zuì hǎo duō bǐjiào jǐ jiā diàn, xuǎn zuì huásuàn de nàge.', viet: 'Trước khi mua đồ tốt nhất nên so sánh nhiều cửa hàng, chọn cái nào có lợi nhất.' } },
+  { zh: '下单', pinyin: 'xiàdān', viet: 'đặt hàng', ex: { zh: '我刚刚在网上下单了，选择了最快的配送方式。', pinyin: 'Wǒ gānggāng zài wǎng shàng xià dān le, xuǎnzé le zuì kuài de pèisòng fāngshì.', viet: 'Tôi vừa đặt hàng online xong, đã chọn phương thức giao hàng nhanh nhất.' } },
+  { zh: '加入', pinyin: 'jiārù', viet: 'thêm vào', ex: { zh: '我把这双鞋加入购物车，等发工资了再买。', pinyin: 'Wǒ bǎ zhè shuāng xié jiārù gòuwùchē, děng fā gōngzī le zài mǎi.', viet: 'Tôi thêm đôi giày này vào giỏ hàng, đợi đến khi lĩnh lương rồi mới mua.' } },
+  { zh: '取消', pinyin: 'qǔxiāo', viet: 'hủy', ex: { zh: '我发现买错了，赶紧联系客服取消了订单。', pinyin: 'Wǒ fāxiàn mǎi cuò le, gǎnjǐn liánxì kèfú qǔxiāo le dìngdān.', viet: 'Tôi phát hiện mua nhầm rồi, vội liên hệ bộ phận chăm sóc khách hàng để hủy đơn hàng.' } },
+];
+
+// shuffle
+const grid = document.getElementById('grid');
+words.sort(() => Math.random() - 0.5);
+
+function speak(text, e) {
+  e.stopPropagation();
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'zh-CN';
+  utt.rate = 0.85;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(utt);
+}
+
+words.forEach(w => {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  const analysis = wordAnalysis[w.zh] || [];
+  const tableRows = analysis.map(wd =>
+    `<tr>
+      <td>${wd.zh}</td>
+      <td>${wd.pinyin}</td>
+      <td>${wd.viet}</td>
+      <td><button class="add-word-btn" data-zh="${wd.zh}" data-pinyin="${wd.pinyin}" data-viet="${wd.viet}">+ Add</button></td>
+    </tr>`
+  ).join('');
+
+  card.innerHTML = `
+    <div class="hanzi">${w.zh}</div>
+    <div class="btn-row">
+      <button class="speaker-btn" title="Phát âm">🔊</button>
+      <button class="copy-btn" title="Copy">📋</button>
+      <button class="example-btn" title="Câu ví dụ">📖</button>
+    </div>
+    <div class="info">
+      <div class="pinyin">${w.pinyin}</div>
+      <div class="viet">${w.viet}</div>
+    </div>
+    <div class="example-box">
+      <div class="ex-zh">${w.ex.zh}</div>
+      <div class="ex-pinyin">${w.ex.pinyin}</div>
+      <div class="ex-viet">${w.ex.viet}</div>
+      <button class="analyze-btn">▼ Phân tích từng từ</button>
+      <table class="word-table">
+        <thead><tr><th>Chữ</th><th>Pinyin</th><th>Nghĩa</th><th></th></tr></thead>
+        <tbody>${tableRows}</tbody>
+      </table>
+    </div>
+  `;
+
+  // click card → toggle reveal
+  card.addEventListener('click', () => {
+    card.classList.toggle('revealed');
+  });
+
+  // speaker button → speak only
+  card.querySelector('.speaker-btn').addEventListener('click', (e) => {
+    speak(w.zh, e);
+  });
+
+  // copy button → copy hanzi
+  card.querySelector('.copy-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(w.zh).then(() => {
+      const btn = e.currentTarget;
+      btn.textContent = '✅';
+      setTimeout(() => btn.textContent = '📋', 1200);
+    });
+  });
+
+  // example button → toggle example box
+  card.querySelector('.example-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const box = card.querySelector('.example-box');
+    const btn = e.currentTarget;
+    const showing = box.classList.toggle('show');
+    btn.textContent = showing ? '✖' : '📖';
+  });
+
+  // analyze button → toggle word table
+  card.querySelector('.analyze-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const table = card.querySelector('.word-table');
+    const btn = e.currentTarget;
+    const showing = table.classList.toggle('show');
+    btn.textContent = showing ? '▲ Ẩn phân tích' : '▼ Phân tích từng từ';
+  });
+
+  // add-word buttons inside table
+  card.querySelectorAll('.add-word-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const zh = btn.dataset.zh;
+      const pinyin = btn.dataset.pinyin;
+      const viet = btn.dataset.viet;
+      if (btn.classList.contains('added')) return;
+      addWordToGrid({ zh, pinyin, viet });
+      btn.textContent = '✓ Added';
+      btn.classList.add('added');
+    });
+  });
+
+  grid.appendChild(card);
+});
+
+const addedWords = new Set();
+
+function addWordToGrid(w) {
+  if (addedWords.has(w.zh)) return;
+  addedWords.add(w.zh);
+
+  const card = document.createElement('div');
+  card.className = 'card added-card';
+
+  card.innerHTML = `
+    <div class="hanzi" style="display:none">${w.zh}</div>
+    <div class="btn-row">
+      <button class="speaker-btn" title="Phát âm">🔊</button>
+      <button class="copy-btn" title="Copy">📋</button>
+    </div>
+    <div class="info" style="display:none">
+      <div class="pinyin">${w.pinyin}</div>
+      <div class="viet">${w.viet}</div>
+    </div>
+    <div style="font-size:0.65rem;color:#6adb6a;margin-top:2px">✦ added</div>
+  `;
+
+  card.addEventListener('click', () => card.classList.toggle('revealed'));
+
+  card.querySelector('.speaker-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const utt = new SpeechSynthesisUtterance(w.zh);
+    utt.lang = 'zh-CN'; utt.rate = 0.85;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utt);
+  });
+
+  card.querySelector('.copy-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(w.zh).then(() => {
+      const btn = e.currentTarget;
+      btn.textContent = '✅';
+      setTimeout(() => btn.textContent = '📋', 1200);
+    });
+  });
+
+  // flash highlight khi thêm vào
+  card.style.borderColor = '#6adb6a';
+  setTimeout(() => { if (!card.classList.contains('revealed')) card.style.borderColor = ''; }, 2000);
+
+  grid.appendChild(card);
+
+  // scroll xuống để thấy thẻ mới
+  card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function setMode(mode) {
+  document.body.classList.remove('hanzi-mode', 'viet-mode', 'sentence-mode');
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('revealed'));
+  // ẩn tất cả example-box khi đổi mode
+  document.querySelectorAll('.example-box').forEach(b => b.classList.remove('show'));
+  document.querySelectorAll('.example-btn').forEach(b => b.textContent = '📖');
+
+  if (mode === 'hanzi') {
+    document.body.classList.add('hanzi-mode');
+    document.getElementById('btn-hanzi').classList.add('active');
+  } else if (mode === 'viet') {
+    document.body.classList.add('viet-mode');
+    document.getElementById('btn-viet').classList.add('active');
+  } else if (mode === 'sentence') {
+    document.body.classList.add('sentence-mode');
+    document.getElementById('btn-sentence').classList.add('active');
+  } else {
+    document.getElementById('btn-normal').classList.add('active');
+  }
+}
+</script>
+</body>
+</html>

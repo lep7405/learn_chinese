@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học từ vựng tiếng Trung</title>
+    <title>Luyện tiếng Anh</title>
     <style>
         :root {
             --bg: linear-gradient(135deg, #f7efe4 0%, #f4d8c1 100%);
@@ -14,9 +14,7 @@
             --border: rgba(86, 43, 28, 0.12);
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -38,141 +36,30 @@
             box-shadow: 0 24px 60px rgba(91, 48, 31, 0.18);
         }
 
-        h1 {
-            margin: 0 0 12px;
-            font-size: clamp(2rem, 5vw, 3rem);
-        }
-
-        p {
-            margin: 0 0 20px;
-            line-height: 1.5;
-        }
+        h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 4vw, 2.4rem); }
+        p  { margin: 0 0 20px; line-height: 1.5; }
 
         button {
             border: 0;
             border-radius: 999px;
-            padding: 12px 18px;
+            padding: 10px 18px;
             font: inherit;
             color: #fffaf5;
             background: var(--accent);
             cursor: pointer;
-            transition: transform 0.15s ease, background 0.15s ease;
+            transition: transform 0.15s, background 0.15s;
         }
+        button:hover { transform: translateY(-1px); background: var(--accent-dark); }
+        button:disabled { opacity: 0.45; cursor: default; transform: none; }
 
-        button:hover {
-            transform: translateY(-1px);
-            background: var(--accent-dark);
-        }
-
-        .tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .filter-bar {
-            display: grid;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .filter-label {
-            font-weight: 700;
-        }
-
-        .filter-controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .date-select {
-            min-width: min(260px, 100%);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 12px 14px;
-            font: inherit;
-            background: #fffdfb;
-            color: var(--text);
-        }
-
-        .text-input {
-            width: min(320px, 100%);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 12px 14px;
-            font: inherit;
-            background: #fffdfb;
-            color: var(--text);
-        }
-
-        .filter-note {
-            font-size: 0.95rem;
-            opacity: 0.8;
-        }
-
-        .sub-filter-bar {
-            display: grid;
-            gap: 10px;
-            margin: 20px 0;
-            padding: 16px 18px;
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            background: #fffdfb;
-        }
-
-        .category-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .chip-btn {
-            padding: 9px 14px;
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            background: transparent;
-            color: var(--text);
-        }
-
-        .chip-btn:hover {
-            background: rgba(184, 92, 56, 0.12);
-            color: var(--text);
-        }
-
-        .chip-btn.active {
-            background: var(--accent-dark);
-            color: #fffaf5;
-            border-color: transparent;
-        }
-
-        .meta-note {
-            font-size: 0.95rem;
-            opacity: 0.8;
-        }
-
-        .tab-btn.active {
-            background: var(--accent-dark);
-        }
-
-        .panel[hidden] {
-            display: none;
-        }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
         .word-list {
             list-style: none;
             padding: 0;
-            margin: 24px 0 0;
+            margin: 20px 0 0;
             display: grid;
             gap: 14px;
-        }
-
-        .actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
         }
 
         .word-item {
@@ -181,126 +68,87 @@
             padding: 16px 18px;
             background: #fffdfb;
             cursor: pointer;
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            transition: transform 0.15s, box-shadow 0.15s;
         }
+        .word-item:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(91,48,31,0.12); }
 
-        .word-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 28px rgba(91, 48, 31, 0.12);
-        }
+        .hint { margin-top: 16px; font-size: 0.95rem; opacity: 0.8; }
 
-        .meaning-primary {
-            display: block;
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .hanzi {
-            display: block;
-            font-size: 2rem;
-            margin-bottom: 6px;
-        }
-
-        .pinyin {
-            color: var(--accent-dark);
-            min-height: 1.5em;
-        }
-
-        .meaning {
-            min-height: 1.5em;
-            margin-top: 4px;
-            opacity: 0.85;
-        }
-
-        .hint {
-            margin-top: 16px;
-            font-size: 0.95rem;
-            opacity: 0.8;
-        }
-
-        .listen-section + .listen-section {
-            margin-top: 24px;
-        }
-
-        .section-title {
-            margin: 0 0 12px;
-            font-size: 1.25rem;
-        }
-
-        .listen-card {
-            display: grid;
-            gap: 10px;
-        }
-
-        .listen-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-        }
-
-        .listen-meta {
-            display: grid;
-            gap: 4px;
-        }
-
-        .listen-btn {
-            padding: 10px 16px;
-            white-space: nowrap;
-        }
-
-        .en-card {
-            cursor: pointer;
-        }
-
-        .en-card-header {
-            display: grid;
-            gap: 8px;
-        }
-
-        .en-vietnamese {
-            font-size: 1.2rem;
-            font-weight: 700;
-            line-height: 1.5;
-        }
-
-        .en-chip-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
+        /* ── Toolbar ── */
         .en-toolbar {
             display: grid;
             gap: 12px;
-            margin: 20px 0 0;
+            margin: 0 0 20px;
             padding: 16px 18px;
             border: 1px solid var(--border);
             border-radius: 18px;
             background: #fffdfb;
         }
+        .en-toolbar-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+        .en-summary { font-size: 0.95rem; opacity: 0.82; }
 
-        .en-toolbar-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
+        .text-input {
+            width: min(320px, 100%);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 10px 14px;
+            font: inherit;
+            background: #fffdfb;
+            color: var(--text);
         }
 
-        .en-summary {
-            font-size: 0.95rem;
-            opacity: 0.82;
+        /* ── Status chips filter ── */
+        .en-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .en-status-chip {
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text);
+            font: inherit;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
         }
+        .en-status-chip:hover { background: rgba(184,92,56,0.1); }
+        .en-status-chip[data-status="all"].active    { background: var(--accent-dark); color: #fffaf5; border-color: transparent; }
+        .en-status-chip[data-status="new"].active    { background: #757575; color: #fff; border-color: transparent; }
+        .en-status-chip[data-status="learning"].active { background: #e6820a; color: #fff; border-color: transparent; }
+        .en-status-chip[data-status="mastered"].active { background: #2e7d32; color: #fff; border-color: transparent; }
+
+        /* ── Card header ── */
+        .en-card { cursor: pointer; }
+        .en-card-header { display: grid; gap: 8px; }
+        .en-vietnamese { font-size: 1.2rem; font-weight: 700; line-height: 1.5; }
+
+        .en-meta-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 
         .en-chip {
-            padding: 6px 10px;
+            padding: 4px 10px;
             border-radius: 999px;
-            background: rgba(184, 92, 56, 0.12);
+            background: rgba(184,92,56,0.12);
             color: var(--accent-dark);
-            font-size: 0.92rem;
+            font-size: 0.85rem;
         }
 
+        /* ── Status badge ── */
+        .en-status-badge {
+            display: inline-block;
+            padding: 3px 9px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 0.15s;
+        }
+        .en-status-badge:hover { opacity: 0.72; }
+        .en-status-badge[data-s="new"]      { background: #e0e0e0; color: #424242; }
+        .en-status-badge[data-s="learning"] { background: #fff3e0; color: #e65100; }
+        .en-status-badge[data-s="mastered"] { background: #e8f5e9; color: #1b5e20; }
+
+        /* ── Card details ── */
         .en-details {
             display: grid;
             gap: 14px;
@@ -308,31 +156,36 @@
             padding-top: 16px;
             border-top: 1px solid var(--border);
         }
+        .en-details[hidden] { display: none; }
 
-        .en-details[hidden] {
-            display: none;
-        }
-
-        .en-english {
-            font-size: 1.15rem;
-            font-weight: 700;
-            line-height: 1.5;
-        }
-
-        .en-block {
-            display: grid;
-            gap: 8px;
-        }
-
+        .en-block { display: grid; gap: 8px; }
         .en-block-title {
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
             color: var(--accent-dark);
+            opacity: 0.85;
         }
 
-        .en-assembled,
+        .en-correct {
+            padding: 12px 16px;
+            border-radius: 14px;
+            background: #edf7ed;
+            border-left: 3px solid #4caf50;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.55;
+            color: #1b5e20;
+        }
+        .en-wrong {
+            padding: 12px 16px;
+            border-radius: 14px;
+            background: #fdf0ee;
+            border-left: 3px solid #e57373;
+            line-height: 1.5;
+            color: #7f1d1d;
+        }
         .en-pattern {
             padding: 12px 14px;
             border-radius: 14px;
@@ -340,33 +193,38 @@
             line-height: 1.5;
         }
 
-        .en-notes,
-        .en-scenarios {
-            margin: 0;
-            padding-left: 20px;
-            line-height: 1.6;
+        .en-notes, .en-scenarios { margin: 0; padding-left: 20px; line-height: 1.7; }
+        .en-notes > li, .en-scenarios > li { margin-bottom: 6px; }
+        .en-scenarios > li {
+            padding: 8px 14px;
+            border-radius: 10px;
+            background: #fdf4ec;
+            list-style: none;
+            margin-left: -20px;
         }
+        .en-scenario-correct { color: #2e7d32; font-weight: 700; }
+        .en-scenario-wrong   { color: #b71c1c; opacity: 0.85; }
 
-        .en-steps {
-            display: grid;
-            gap: 10px;
-        }
-
+        .en-steps { display: grid; gap: 10px; }
         .en-step {
+            display: grid;
+            gap: 6px;
             padding: 12px 14px;
             border-radius: 14px;
             background: #fdf4ec;
             line-height: 1.55;
         }
-
-        .en-step-source {
+        .en-step-num {
+            font-size: 0.78rem;
             font-weight: 700;
-            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--accent-dark);
+            opacity: 0.7;
         }
-
-        .en-step-line {
-            opacity: 0.9;
-        }
+        .en-step-source { font-weight: 700; }
+        .en-step-line   { opacity: 0.9; }
+        .en-step-arrow  { color: var(--accent); }
 
         .en-empty {
             padding: 18px;
@@ -376,203 +234,99 @@
             text-align: center;
             opacity: 0.8;
         }
+
+        /* ── Quiz ── */
+        .en-quiz-progress { display: grid; gap: 6px; margin-bottom: 16px; font-size: 0.92rem; opacity: 0.85; }
+        .en-quiz-bar-wrap { height: 6px; border-radius: 999px; background: var(--border); overflow: hidden; }
+        .en-quiz-bar { height: 100%; border-radius: 999px; background: var(--accent); transition: width 0.3s; width: 0%; }
+
+        .en-quiz-card {
+            display: grid;
+            gap: 14px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: #fffdfb;
+        }
+        .en-quiz-vn { font-size: 1.25rem; font-weight: 700; line-height: 1.5; }
+        .en-quiz-input-wrap { display: grid; gap: 10px; }
+        .en-quiz-input {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 12px 14px;
+            font: inherit;
+            font-size: 1rem;
+            background: #fffaf5;
+            color: var(--text);
+            resize: vertical;
+            line-height: 1.5;
+        }
+        .en-quiz-input:focus { outline: 2px solid var(--accent); }
+
+        .en-quiz-result { display: grid; gap: 10px; padding: 14px 16px; border-radius: 14px; }
+        .en-quiz-result[hidden] { display: none; }
+        .en-quiz-result.correct { background: #edf7ed; border-left: 3px solid #4caf50; }
+        .en-quiz-result.wrong   { background: #fdf0ee; border-left: 3px solid #e57373; }
+        .en-quiz-result-answer  { font-size: 1.05rem; font-weight: 700; }
+        .en-quiz-diff           { font-size: 0.95rem; line-height: 1.7; }
+        .en-quiz-diff del { color: #c62828; text-decoration: line-through; opacity: 0.8; }
+        .en-quiz-diff ins { color: #2e7d32; text-decoration: none; font-weight: 700; }
+
+        .en-quiz-actions { display: flex; gap: 12px; }
+        .en-quiz-actions[hidden] { display: none; }
+        .en-quiz-status-row { display: flex; gap: 10px; align-items: center; font-size: 0.9rem; }
+        .en-quiz-done { padding: 32px; text-align: center; display: grid; gap: 12px; }
     </style>
 </head>
 <body>
     <main class="app">
-        <div class="filter-bar">
-            <label class="filter-label" for="date-filter">Hiển thị từ theo ngày</label>
-            <div class="filter-controls">
-                <select id="date-filter" class="date-select">
-                    <option value="all">Tất cả các ngày</option>
-                </select>
-                <div id="date-summary" class="filter-note">Đang hiển thị toàn bộ từ vựng.</div>
+        <h1>Luyện tiếng Anh</h1>
+        <p>Mặc định chỉ hiện tiếng Việt. Bấm vào từng thẻ để hiện câu tiếng Anh và phần phân tích.</p>
+
+        <div class="en-toolbar">
+            <div class="en-toolbar-row">
+                <input id="en-search" class="text-input" type="search" placeholder="Tìm theo tiếng Việt, tiếng Anh, pattern..." />
+            </div>
+            <div class="en-toolbar-row">
+                <div id="en-status-chips" class="en-chip-row"></div>
+            </div>
+            <div id="en-summary" class="en-summary">Đang chuẩn bị dữ liệu từ en.json.</div>
+        </div>
+
+        <div class="actions">
+            <button id="en-all-btn" type="button">Toàn bộ</button>
+            <button id="en-random-btn" type="button">Ngẫu nhiên</button>
+            <button id="en-quiz-btn" type="button">Quiz</button>
+        </div>
+
+        <!-- Browse mode -->
+        <ul id="en-list" class="word-list"></ul>
+
+        <!-- Quiz mode -->
+        <div id="en-quiz" hidden>
+            <div class="en-quiz-progress">
+                <span id="en-quiz-count"></span>
+                <div class="en-quiz-bar-wrap"><div id="en-quiz-bar" class="en-quiz-bar"></div></div>
+            </div>
+            <div id="en-quiz-card" class="en-quiz-card">
+                <div id="en-quiz-vn" class="en-quiz-vn"></div>
+                <div class="en-quiz-input-wrap">
+                    <textarea id="en-quiz-input" class="en-quiz-input" rows="3" placeholder="Gõ câu tiếng Anh của bạn..."></textarea>
+                    <button id="en-quiz-check-btn" type="button">Kiểm tra</button>
+                </div>
+                <div id="en-quiz-result" class="en-quiz-result" hidden></div>
+                <div id="en-quiz-actions" class="en-quiz-actions" hidden>
+                    <button id="en-quiz-next-btn" type="button">Câu tiếp →</button>
+                </div>
+            </div>
+            <div class="actions" style="margin-top:16px">
+                <button id="en-quiz-exit-btn" type="button">Thoát quiz</button>
             </div>
         </div>
 
-        <div class="tabs">
-            <button id="words-tab" class="tab-btn active" type="button">Từ</button>
-            <button id="meaning-tab" class="tab-btn" type="button">Việt -> Trung</button>
-            <button id="sentences-tab" class="tab-btn" type="button">Câu</button>
-            <button id="en-tab" class="tab-btn" type="button">EN</button>
-            <button id="java-tab" class="tab-btn" type="button">Java</button>
-            <button id="java-page-tab" class="tab-btn" type="button">Java P1</button>
-            <button id="listen-tab" class="tab-btn" type="button">Nghe</button>
-        </div>
-
-        <section id="words-panel" class="panel">
-            <h1 id="page-title">Hôm nay học 5 từ</h1>
-            <p id="page-description">Bấm nút để lấy ngẫu nhiên 5 từ tiếng Hán. Bấm vào từng từ để hiện pinyin và nghĩa.</p>
-            <div class="actions">
-                <button id="random-btn" type="button">Lấy 5 từ ngẫu nhiên</button>
-                <button id="all-btn" type="button">Hiển thị tất cả từ</button>
-            </div>
-            <ul id="word-list" class="word-list"></ul>
-            <div id="page-hint" class="hint">Mỗi lần bấm nút sẽ chọn lại 5 từ khác nhau.</div>
-        </section>
-
-        <section id="meaning-panel" class="panel" hidden>
-            <h1 id="meaning-title">Luyện từ theo nghĩa tiếng Việt</h1>
-            <p id="meaning-description">Mặc định chỉ hiện tiếng Việt. Bấm vào từng thẻ để hiện tiếng Trung và pinyin.</p>
-            <div class="actions">
-                <button id="meaning-random-btn" type="button">Lấy 5 nghĩa ngẫu nhiên</button>
-                <button id="meaning-all-btn" type="button">Hiển thị tất cả nghĩa</button>
-            </div>
-            <ul id="meaning-list" class="word-list"></ul>
-            <div id="meaning-hint" class="hint">Tab này giúp bạn nhớ từ theo chiều Việt sang Trung.</div>
-        </section>
-
-        <section id="sentences-panel" class="panel" hidden>
-            <h1>Học câu</h1>
-            <p>Mặc định chỉ hiện nghĩa tiếng Việt. Bấm vào từng câu để hiện tiếng Trung và pinyin.</p>
-            <ul id="sentence-list" class="word-list"></ul>
-            <div class="hint">Tab này hiển thị toàn bộ các câu bạn đã thêm.</div>
-        </section>
-
-        <section id="en-panel" class="panel" hidden>
-            <h1>Phân tích câu tiếng Anh</h1>
-            <p>Mặc định chỉ hiện tiếng Việt. Bấm vào từng thẻ để hiện câu tiếng Anh và phần phân tích.</p>
-            <div class="en-toolbar">
-                <div class="en-toolbar-row">
-                    <input id="en-search" class="text-input" type="search" placeholder="Tìm theo tiếng Việt, tiếng Anh, pattern..." />
-                </div>
-                <div id="en-summary" class="en-summary">Đang chuẩn bị dữ liệu từ en.json.</div>
-            </div>
-            <div class="actions">
-                <button id="en-all-btn" type="button">Hiển thị toàn bộ</button>
-                <button id="en-random-btn" type="button">Đảo thứ tự ngẫu nhiên</button>
-            </div>
-            <ul id="en-list" class="word-list"></ul>
-            <div id="en-hint" class="hint">Phần này đọc toàn bộ dữ liệu từ file `en.json`.</div>
-        </section>
-
-        <section id="java-panel" class="panel" hidden>
-            <h1 id="java-title">Từ vựng Java và CNTT</h1>
-            <p id="java-description">Bộ này lấy từ `words_java.json`. Bấm vào từng thẻ để hiện pinyin và nghĩa tiếng Việt.</p>
-
-            <div class="sub-filter-bar">
-                <div>
-                    <div class="filter-label">Lọc theo nhóm chủ đề</div>
-                    <div id="java-category-chips" class="category-chips"></div>
-                </div>
-                <div id="java-summary" class="meta-note">Đang hiển thị toàn bộ nhóm Java.</div>
-            </div>
-
-            <div class="actions">
-                <button id="java-random-btn" type="button">Lấy 10 từ ngẫu nhiên</button>
-                <button id="java-all-btn" type="button">Hiển thị tất cả từ</button>
-            </div>
-
-            <ul id="java-list" class="word-list"></ul>
-            <div id="java-hint" class="hint">Mỗi lần bấm nút sẽ chọn lại từ trong nhóm đang lọc.</div>
-        </section>
-
-        <section id="java-page-panel" class="panel" hidden>
-            <h1 id="java-page-title">Java Page 1</h1>
-            <p id="java-page-description">Bộ này lấy từ `words_java_page_1.json`. Bấm vào từng thẻ để hiện pinyin và nghĩa tiếng Việt.</p>
-            <div class="sub-filter-bar">
-                <div id="java-page-summary" class="meta-note">Đang chuẩn bị dữ liệu page 1.</div>
-            </div>
-            <div class="actions">
-                <button id="java-page-random-btn" type="button">Lấy 10 từ ngẫu nhiên</button>
-                <button id="java-page-all-btn" type="button">Hiển thị tất cả từ</button>
-            </div>
-            <ul id="java-page-list" class="word-list"></ul>
-            <div id="java-page-hint" class="hint">Mỗi lần bấm nút sẽ chọn lại 10 từ khác nhau của page 1.</div>
-        </section>
-
-        <section id="listen-panel" class="panel" hidden>
-            <h1>Luyện nghe tiếng Trung</h1>
-            <p>Bấm nút nghe để trình duyệt đọc tiếng Trung. Nếu máy bạn có nhiều giọng, trang sẽ ưu tiên giọng `zh-CN`.</p>
-
-            <div class="listen-section">
-                <h2 class="section-title">Từ vựng</h2>
-                <ul id="listen-word-list" class="word-list"></ul>
-            </div>
-
-            <div class="listen-section">
-                <h2 class="section-title">Câu</h2>
-                <ul id="listen-sentence-list" class="word-list"></ul>
-            </div>
-
-            <div id="listen-hint" class="hint">Nếu chưa nghe được, hãy thử mở trang bằng Chrome hoặc Edge mới.</div>
-        </section>
+        <div id="en-hint" class="hint">Đọc toàn bộ dữ liệu từ file en.json.</div>
     </main>
     <script src="index.js"></script>
 </body>
 </html>
-<!--
-{ "hanzi": "这还用问", "pinyin": "zhè hái yòng wèn", "meaning": "còn phải hỏi à" },
-{ "hanzi": "取出来", "pinyin": "qǔ chūlái", "meaning": "lấy ra" },
-{ "hanzi": "逃命", "pinyin": "táomìng", "meaning": "chạy trốn giữ mạng" },
-
-{ "hanzi": "一旦", "pinyin": "yídàn", "meaning": "một khi" },
-{ "hanzi": "冲突", "pinyin": "chōngtū", "meaning": "xung đột" },
-{ "hanzi": "发生", "pinyin": "fāshēng", "meaning": "xảy ra" },
-
-{ "hanzi": "最先", "pinyin": "zuìxiān", "meaning": "đầu tiên" },
-{ "hanzi": "受到", "pinyin": "shòudào", "meaning": "chịu, bị" },
-{ "hanzi": "冲击", "pinyin": "chōngjī", "meaning": "tác động, cú sốc" },
-{ "hanzi": "金融系统", "pinyin": "jīnróng xìtǒng", "meaning": "hệ thống tài chính" },
-
-{ "hanzi": "可能", "pinyin": "kěnéng", "meaning": "có thể" },
-{ "hanzi": "取不出来", "pinyin": "qǔ bù chūlái", "meaning": "không rút ra được" },
-{ "hanzi": "用不了", "pinyin": "yòng bù liǎo", "meaning": "không dùng được" },
-
-{ "hanzi": "总不能", "pinyin": "zǒng bù néng", "meaning": "không thể nào lại" },
-{ "hanzi": "眼睁睁", "pinyin": "yǎnzhēngzhēng", "meaning": "trơ mắt nhìn" },
-{ "hanzi": "没了", "pinyin": "méi le", "meaning": "mất rồi" },
-
-{ "hanzi": "但凡", "pinyin": "dànfán", "meaning": "chỉ cần, hễ" },
-{ "hanzi": "感觉到", "pinyin": "gǎnjué dào", "meaning": "cảm nhận được" },
-{ "hanzi": "危险", "pinyin": "wēixiǎn", "meaning": "nguy hiểm" },
-{ "hanzi": "苗头", "pinyin": "miáotou", "meaning": "dấu hiệu" },
-
-{ "hanzi": "提前", "pinyin": "tíqián", "meaning": "trước" },
-{ "hanzi": "做好", "pinyin": "zuò hǎo", "meaning": "chuẩn bị tốt" },
-{ "hanzi": "这几步", "pinyin": "zhè jǐ bù", "meaning": "mấy bước này" },
-{ "hanzi": "保钱保命", "pinyin": "bǎo qián bǎo mìng", "meaning": "giữ tiền giữ mạng" },
-
-{ "hanzi": "首先", "pinyin": "shǒuxiān", "meaning": "trước hết" },
-{ "hanzi": "应急现金", "pinyin": "yìngjí xiànjīn", "meaning": "tiền mặt khẩn cấp" },
-{ "hanzi": "换黄金", "pinyin": "huàn huángjīn", "meaning": "đổi sang vàng" },
-{ "hanzi": "够", "pinyin": "gòu", "meaning": "đủ" },
-{ "hanzi": "家里", "pinyin": "jiālǐ", "meaning": "gia đình" },
-{ "hanzi": "基本生活费", "pinyin": "jīběn shēnghuófèi", "meaning": "chi phí sinh hoạt cơ bản" },
-{ "hanzi": "就行", "pinyin": "jiù xíng", "meaning": "là được" },
-{ "hanzi": "找", "pinyin": "zhǎo", "meaning": "tìm" },
-{ "hanzi": "安全", "pinyin": "ānquán", "meaning": "an toàn" },
-{ "hanzi": "地方", "pinyin": "dìfang", "meaning": "nơi" },
-{ "hanzi": "藏好", "pinyin": "cáng hǎo", "meaning": "giấu kỹ" },
-
-{ "hanzi": "从", "pinyin": "cóng", "meaning": "từ" },
-{ "hanzi": "闲钱", "pinyin": "xiánqián", "meaning": "tiền nhàn rỗi" },
-{ "hanzi": "抽", "pinyin": "chōu", "meaning": "rút ra" },
-{ "hanzi": "10-15%", "pinyin": "shí dào shíwǔ bǎifēnzhī", "meaning": "10-15%" },
-{ "hanzi": "配", "pinyin": "pèi", "meaning": "phân bổ" },
-{ "hanzi": "黄金", "pinyin": "huángjīn", "meaning": "vàng" },
-{ "hanzi": "之类的", "pinyin": "zhī lèi de", "meaning": "các loại như" },
-{ "hanzi": "硬通货", "pinyin": "yìng tōnghuò", "meaning": "tài sản cứng" },
-{ "hanzi": "体积", "pinyin": "tǐjī", "meaning": "kích thước" },
-{ "hanzi": "小", "pinyin": "xiǎo", "meaning": "nhỏ" },
-{ "hanzi": "好带", "pinyin": "hǎo dài", "meaning": "dễ mang" },
-{ "hanzi": "既能", "pinyin": "jì néng", "meaning": "vừa có thể" },
-{ "hanzi": "避险", "pinyin": "bìxiǎn", "meaning": "tránh rủi ro" },
-{ "hanzi": "还能", "pinyin": "hái néng", "meaning": "lại còn có thể" },
-{ "hanzi": "换物资", "pinyin": "huàn wùzī", "meaning": "đổi vật tư" },
-
-{ "hanzi": "剩下", "pinyin": "shèngxià", "meaning": "còn lại" },
-{ "hanzi": "别", "pinyin": "bié", "meaning": "đừng" },
-{ "hanzi": "扎堆", "pinyin": "zhā duī", "meaning": "tụ lại một chỗ" },
-{ "hanzi": "存", "pinyin": "cún", "meaning": "gửi" },
-{ "hanzi": "一块", "pinyin": "yí kuài", "meaning": "một chỗ" },
-{ "hanzi": "分散", "pinyin": "fēnsàn", "meaning": "phân tán" },
-{ "hanzi": "存到", "pinyin": "cún dào", "meaning": "gửi vào" },
-{ "hanzi": "2-3家", "pinyin": "liǎng dào sān jiā", "meaning": "2-3 (ngân hàng)" },
-{ "hanzi": "不同", "pinyin": "bùtóng", "meaning": "khác nhau" },
-{ "hanzi": "每家", "pinyin": "měi jiā", "meaning": "mỗi (ngân hàng)" },
-{ "hanzi": "金额", "pinyin": "jīn'é", "meaning": "số tiền" },
-{ "hanzi": "都别", "pinyin": "dōu bié", "meaning": "đều đừng" },
-{ "hanzi": "超过", "pinyin": "chāoguò", "meaning": "vượt quá" },
-{ "hanzi": "50万", "pinyin": "wǔshí wàn", "meaning": "500.000" }
--->

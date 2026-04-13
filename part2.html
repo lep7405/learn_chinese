@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part 2 · Từ vựng tiếng Trung</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #1a1a2e;
+        color: #eee;
+        min-height: 100vh;
+        padding: 24px 16px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 1.4rem;
+        color: #a0c4ff;
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 14px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: #16213e;
+        border: 1px solid #0f3460;
+        border-radius: 14px;
+        padding: 18px 10px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        transition:
+          transform 0.15s,
+          border-color 0.15s,
+          background 0.15s;
+        user-select: none;
+      }
+
+      .card:hover {
+        transform: scale(1.04);
+        border-color: #a0c4ff;
+      }
+      .card:active {
+        transform: scale(0.97);
+      }
+
+      .card.revealed {
+        background: #0f3460;
+        border-color: #4cc9f0;
+      }
+
+      .hanzi {
+        font-size: 2.4rem;
+        line-height: 1;
+        color: #f0f0f0;
+        display: none;
+      }
+
+      .card.revealed .hanzi {
+        display: block;
+      }
+
+      .info {
+        text-align: center;
+        display: none;
+        animation: fadeIn 0.2s ease;
+      }
+
+      .card.revealed .info {
+        display: block;
+      }
+
+      .pinyin {
+        font-size: 0.85rem;
+        color: #4cc9f0;
+        margin-bottom: 3px;
+      }
+
+      .viet {
+        font-size: 0.8rem;
+        color: #a0c4ff;
+      }
+
+      .speaker-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 4px 8px;
+        border-radius: 8px;
+        transition: background 0.15s;
+        line-height: 1;
+      }
+
+      .speaker-btn:hover {
+        background: rgba(76, 201, 240, 0.15);
+      }
+
+      .copy-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 4px 8px;
+        border-radius: 8px;
+        transition: background 0.15s;
+        line-height: 1;
+        display: none;
+      }
+
+      .card.revealed .copy-btn {
+        display: inline-block;
+      }
+      .copy-btn:hover {
+        background: rgba(160, 196, 255, 0.15);
+      }
+
+      .btn-row {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+
+      /* mode: viet-only */
+      body.viet-mode .hanzi {
+        display: none !important;
+      }
+      body.viet-mode .btn-row {
+        display: none !important;
+      }
+      body.viet-mode .info {
+        display: block !important;
+      }
+      body.viet-mode .info .pinyin {
+        display: none;
+      }
+      body.viet-mode .card.revealed .hanzi {
+        display: block !important;
+      }
+      body.viet-mode .card.revealed .btn-row {
+        display: flex !important;
+      }
+      body.viet-mode .card.revealed .info .pinyin {
+        display: block;
+      }
+
+      /* mode: hanzi-only */
+      body.hanzi-mode .hanzi {
+        display: block !important;
+      }
+      body.hanzi-mode .btn-row {
+        display: none !important;
+      }
+      body.hanzi-mode .info {
+        display: none !important;
+      }
+      body.hanzi-mode .card.revealed .info {
+        display: block !important;
+      }
+      body.hanzi-mode .card.revealed .btn-row {
+        display: flex !important;
+      }
+
+      .top-bar {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .mode-btn {
+        background: #0f3460;
+        border: 1px solid #4cc9f0;
+        color: #4cc9f0;
+        padding: 8px 18px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition:
+          background 0.15s,
+          color 0.15s;
+      }
+
+      .mode-btn:hover {
+        background: #4cc9f0;
+        color: #1a1a2e;
+      }
+      .mode-btn.active {
+        background: #4cc9f0;
+        color: #1a1a2e;
+        font-weight: bold;
+      }
+
+      .part-nav {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+      }
+      .part-btn {
+        background: #0a0a1a;
+        border: 1px solid #333;
+        color: #888;
+        padding: 5px 14px;
+        border-radius: 14px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition:
+          background 0.15s,
+          color 0.15s,
+          border-color 0.15s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .part-btn:hover {
+        border-color: #a0c4ff;
+        color: #a0c4ff;
+      }
+      .part-btn.current {
+        background: #16213e;
+        border-color: #a0c4ff;
+        color: #a0c4ff;
+        font-weight: bold;
+        cursor: default;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(4px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Part 2 · Từ vựng tiếng Trung</h1>
+
+    <div class="part-nav">
+      <a class="part-btn" href="shopping-words.html">Part 1</a>
+      <span class="part-btn current">Part 2</span>
+      <a class="part-btn" href="part3.html">Part 3</a>
+      <a class="part-btn" href="part4.html">Part 4</a>
+      <a class="part-btn" href="sentences.html">Câu</a>
+    </div>
+
+    <div class="top-bar">
+      <button class="mode-btn active" id="btn-normal" onclick="setMode('normal')">🔊 Chế độ thường</button>
+      <button class="mode-btn" id="btn-hanzi" onclick="setMode('hanzi')">汉 Chỉ chữ Hán</button>
+      <button class="mode-btn" id="btn-viet" onclick="setMode('viet')">🇻🇳 Chỉ tiếng Việt</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <script>
+      const words = [
+        { zh: "递增", pinyin: "dìzēng", viet: "tăng dần" },
+        { zh: "得", pinyin: "de/děi", viet: "được/phải" },
+        { zh: "干", pinyin: "gàn", viet: "làm/khô" },
+        { zh: "等", pinyin: "děng", viet: "đợi/v.v." },
+        { zh: "当", pinyin: "dāng", viet: "khi/làm" },
+        { zh: "所有", pinyin: "suǒyǒu", viet: "tất cả" },
+        { zh: "也许", pinyin: "yěxǔ", viet: "có lẽ" },
+        { zh: "行", pinyin: "xíng", viet: "được/đi" },
+        { zh: "不过", pinyin: "búguò", viet: "nhưng/tuy nhiên" },
+        { zh: "发生", pinyin: "fāshēng", viet: "xảy ra" },
+        { zh: "一切", pinyin: "yīqiè", viet: "tất cả mọi thứ" },
+        { zh: "抱歉", pinyin: "bàoqiàn", viet: "xin lỗi" },
+        { zh: "感觉", pinyin: "gǎnjué", viet: "cảm giác" },
+        { zh: "肯定", pinyin: "kěndìng", viet: "chắc chắn" },
+        { zh: "棒", pinyin: "bàng", viet: "tuyệt/giỏi" },
+        { zh: "以为", pinyin: "yǐwéi", viet: "tưởng rằng" },
+        { zh: "掉", pinyin: "diào", viet: "rơi/mất" },
+        { zh: "生活", pinyin: "shēnghuó", viet: "cuộc sống" },
+        { zh: "之", pinyin: "zhī", viet: "của/trợ từ" },
+        { zh: "任何", pinyin: "rènhé", viet: "bất kỳ" },
+        { zh: "与", pinyin: "yǔ", viet: "với/và" },
+        { zh: "弄", pinyin: "nòng", viet: "làm/nghịch" },
+        { zh: "却", pinyin: "què", viet: "nhưng/lại" },
+        { zh: "继续", pinyin: "jìxù", viet: "tiếp tục" },
+        { zh: "以", pinyin: "yǐ", viet: "dùng/bằng" },
+        { zh: "够", pinyin: "gòu", viet: "đủ" },
+        { zh: "父亲", pinyin: "fùqīn", viet: "cha" },
+        { zh: "完全", pinyin: "wánquán", viet: "hoàn toàn" },
+        { zh: "可是", pinyin: "kěshì", viet: "nhưng mà" },
+        { zh: "谈", pinyin: "tán", viet: "nói chuyện" },
+        { zh: "好像", pinyin: "hǎoxiàng", viet: "có vẻ" },
+        { zh: "警察", pinyin: "jǐngchá", viet: "cảnh sát" },
+        { zh: "场", pinyin: "chǎng", viet: "buổi/sân" },
+        { zh: "刚", pinyin: "gāng", viet: "vừa mới" },
+        { zh: "呀", pinyin: "ya", viet: "à/ơi" },
+        { zh: "情况", pinyin: "qíngkuàng", viet: "tình huống" },
+        { zh: "只要", pinyin: "zhǐyào", viet: "chỉ cần" },
+        { zh: "份", pinyin: "fèn", viet: "phần/suất" },
+        { zh: "到底", pinyin: "dàodǐ", viet: "rốt cuộc" },
+        { zh: "永远", pinyin: "yǒngyuǎn", viet: "mãi mãi" },
+        { zh: "安全", pinyin: "ānquán", viet: "an toàn" },
+        { zh: "留", pinyin: "liú", viet: "ở lại/để lại" },
+        { zh: "计划", pinyin: "jìhuà", viet: "kế hoạch" },
+        { zh: "停", pinyin: "tíng", viet: "dừng" },
+        { zh: "感谢", pinyin: "gǎnxiè", viet: "cảm ơn" },
+        { zh: "敢", pinyin: "gǎn", viet: "dám" },
+        { zh: "从来", pinyin: "cónglái", viet: "từ trước đến nay" },
+        { zh: "赢", pinyin: "yíng", viet: "thắng" },
+        { zh: "消息", pinyin: "xiāoxi", viet: "tin tức" },
+        { zh: "拉", pinyin: "lā", viet: "kéo" },
+        { zh: "原因", pinyin: "yuányīn", viet: "nguyên nhân" },
+        { zh: "连", pinyin: "lián", viet: "ngay cả" },
+        { zh: "确实", pinyin: "quèshí", viet: "quả thực" },
+        { zh: "挺", pinyin: "tǐng", viet: "khá/thẳng" },
+        { zh: "保证", pinyin: "bǎozhèng", viet: "đảm bảo" },
+        { zh: "接受", pinyin: "jiēshòu", viet: "chấp nhận" },
+        { zh: "改变", pinyin: "gǎibiàn", viet: "thay đổi" },
+        { zh: "麻烦", pinyin: "máfan", viet: "phiền phức" },
+        { zh: "出现", pinyin: "chūxiàn", viet: "xuất hiện" },
+        { zh: "不管", pinyin: "bùguǎn", viet: "dù cho" },
+        { zh: "甚至", pinyin: "shènzhì", viet: "thậm chí" },
+        { zh: "保护", pinyin: "bǎohù", viet: "bảo vệ" },
+        { zh: "真正", pinyin: "zhēnzhèng", viet: "thực sự" },
+        { zh: "结果", pinyin: "jiéguǒ", viet: "kết quả" },
+        { zh: "当时", pinyin: "dāngshí", viet: "lúc đó" },
+        { zh: "至少", pinyin: "zhìshǎo", viet: "ít nhất" },
+        { zh: "律师", pinyin: "lǜshī", viet: "luật sư" },
+        { zh: "无", pinyin: "wú", viet: "không có" },
+        { zh: "猜", pinyin: "cāi", viet: "đoán" },
+        { zh: "咱们", pinyin: "zánmen", viet: "chúng ta" },
+        { zh: "是否", pinyin: "shìfǒu", viet: "có hay không" },
+        { zh: "调查", pinyin: "diàochá", viet: "điều tra" },
+        { zh: "成功", pinyin: "chénggōng", viet: "thành công" },
+        { zh: "考虑", pinyin: "kǎolǜ", viet: "xem xét" },
+        { zh: "约会", pinyin: "yuēhuì", viet: "hẹn hò" },
+        { zh: "通过", pinyin: "tōngguò", viet: "thông qua" },
+        { zh: "开心", pinyin: "kāixīn", viet: "vui vẻ" },
+        { zh: "母亲", pinyin: "mǔqīn", viet: "mẹ" },
+        { zh: "主意", pinyin: "zhǔyi", viet: "ý kiến" },
+        { zh: "倒", pinyin: "dào", viet: "đổ/ngược lại" },
+        { zh: "解释", pinyin: "jiěshì", viet: "giải thích" },
+        { zh: "联系", pinyin: "liánxì", viet: "liên lạc" },
+        { zh: "证明", pinyin: "zhèngmíng", viet: "chứng minh" },
+        { zh: "生命", pinyin: "shēngmìng", viet: "sinh mệnh" },
+        { zh: "难道", pinyin: "nándào", viet: "lẽ nào" },
+        { zh: "由", pinyin: "yóu", viet: "do/bởi" },
+        { zh: "指", pinyin: "zhǐ", viet: "chỉ/ngón tay" },
+        { zh: "危险", pinyin: "wēixiǎn", viet: "nguy hiểm" },
+        { zh: "讨厌", pinyin: "tǎoyàn", viet: "ghét/khó chịu" },
+        { zh: "醒", pinyin: "xǐng", viet: "thức dậy" },
+        { zh: "样子", pinyin: "yàngzi", viet: "dáng vẻ" },
+        { zh: "提", pinyin: "tí", viet: "đề cập/nhấc" },
+        { zh: "部分", pinyin: "bùfen", viet: "phần/bộ phận" },
+        { zh: "理解", pinyin: "lǐjiě", viet: "hiểu" },
+        { zh: "重", pinyin: "zhòng", viet: "nặng" },
+        { zh: "任务", pinyin: "rènwù", viet: "nhiệm vụ" },
+        { zh: "使", pinyin: "shǐ", viet: "làm cho/sai khiến" },
+        { zh: "博士", pinyin: "bóshì", viet: "tiến sĩ" },
+        { zh: "紧张", pinyin: "jǐnzhāng", viet: "căng thẳng" },
+        { zh: "放弃", pinyin: "fàngqì", viet: "từ bỏ" },
+        { zh: "大概", pinyin: "dàgài", viet: "khoảng/đại khái" },
+        { zh: "重新", pinyin: "chóngxīn", viet: "làm lại" },
+        { zh: "其中", pinyin: "qízhōng", viet: "trong đó" },
+        { zh: "来自", pinyin: "láizì", viet: "đến từ" },
+        { zh: "本来", pinyin: "běnlái", viet: "vốn dĩ" },
+        { zh: "并且", pinyin: "bìngqiě", viet: "hơn nữa" },
+        { zh: "直接", pinyin: "zhíjiē", viet: "trực tiếp" },
+        { zh: "对于", pinyin: "duìyú", viet: "đối với" },
+        { zh: "正常", pinyin: "zhèngcháng", viet: "bình thường" },
+        { zh: "遍", pinyin: "biàn", viet: "lần/lượt" },
+        { zh: "冷静", pinyin: "lěngjìng", viet: "bình tĩnh" },
+        { zh: "方法", pinyin: "fāngfǎ", viet: "phương pháp" },
+        { zh: "扔", pinyin: "rēng", viet: "ném" },
+        { zh: "能力", pinyin: "nénglì", viet: "năng lực" },
+        { zh: "另外", pinyin: "lìngwài", viet: "ngoài ra" },
+        { zh: "放松", pinyin: "fàngsōng", viet: "thư giãn" },
+        { zh: "丢", pinyin: "diū", viet: "mất/bỏ" },
+        { zh: "负责", pinyin: "fùzé", viet: "chịu trách nhiệm" },
+        { zh: "梦", pinyin: "mèng", viet: "giấc mơ" },
+        { zh: "戴", pinyin: "dài", viet: "đeo/đội" },
+        { zh: "错误", pinyin: "cuòwù", viet: "sai lầm" },
+      ];
+
+      // Shuffle
+      for (let i = words.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [words[i], words[j]] = [words[j], words[i]];
+      }
+
+      function speak(text, e) {
+        if (e) e.stopPropagation();
+        const utt = new SpeechSynthesisUtterance(text);
+        utt.lang = "zh-CN";
+        utt.rate = 0.85;
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utt);
+      }
+
+      const grid = document.getElementById("grid");
+
+      words.forEach((w) => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+    <div class="hanzi">${w.zh}</div>
+    <div class="btn-row">
+      <button class="speaker-btn" title="Phát âm">🔊</button>
+      <button class="copy-btn" title="Copy">📋</button>
+    </div>
+    <div class="info">
+      <div class="pinyin">${w.pinyin}</div>
+      <div class="viet">${w.viet}</div>
+    </div>
+  `;
+
+        card.addEventListener("click", () => {
+          card.classList.toggle("revealed");
+        });
+
+        card.querySelector(".speaker-btn").addEventListener("click", (e) => {
+          speak(w.zh, e);
+        });
+
+        card.querySelector(".copy-btn").addEventListener("click", (e) => {
+          e.stopPropagation();
+          navigator.clipboard.writeText(w.zh).then(() => {
+            const btn = e.currentTarget;
+            btn.textContent = "✅";
+            setTimeout(() => (btn.textContent = "📋"), 1200);
+          });
+        });
+
+        grid.appendChild(card);
+      });
+
+      function setMode(mode) {
+        document.body.classList.remove("hanzi-mode", "viet-mode");
+        document.querySelectorAll(".mode-btn").forEach((b) => b.classList.remove("active"));
+        document.querySelectorAll(".card").forEach((c) => c.classList.remove("revealed"));
+
+        if (mode === "hanzi") {
+          document.body.classList.add("hanzi-mode");
+          document.getElementById("btn-hanzi").classList.add("active");
+        } else if (mode === "viet") {
+          document.body.classList.add("viet-mode");
+          document.getElementById("btn-viet").classList.add("active");
+        } else {
+          document.getElementById("btn-normal").classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
