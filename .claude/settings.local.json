@@ -5,7 +5,8 @@
       "Bash(python3 -c ':*)",
       "Bash(node:*)",
       "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(len\\(data\\), 'items'\\)\")",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(grep:*)"
     ]
   }
 }
