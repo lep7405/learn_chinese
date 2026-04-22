@@ -6,7 +6,11 @@
       "Bash(node:*)",
       "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(len\\(data\\), 'items'\\)\")",
       "Bash(python3:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(wc:*)",
+      "Bash(ls -lh /home/vphuoc/learnZh/*.json)",
+      "Bash(ls:*)",
+      "Bash(docker exec:*)"
     ]
   }
 }

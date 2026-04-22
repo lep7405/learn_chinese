@@ -315,13 +315,7 @@
 
 <h1>Part 1 · Từ vựng tiếng Trung</h1>
 
-<div class="part-nav">
-  <span class="part-btn current">Part 1</span>
-  <a class="part-btn" href="part2.html">Part 2</a>
-  <a class="part-btn" href="part3.html">Part 3</a>
-  <a class="part-btn" href="part4.html">Part 4</a>
-  <a class="part-btn" href="sentences.html">Câu</a>
-</div>
+<div class="part-nav" id="part-nav"></div>
 
 <div class="top-bar">
   <button class="mode-btn active" id="btn-normal" onclick="setMode('normal')">🔊 Chế độ thường</button>
@@ -332,8 +326,23 @@
 
 <div class="grid" id="grid"></div>
 
+<script src="word-data/words-data-part2.js"></script>
+<script src="word-data/words-data-part3.js"></script>
+<script src="word-data/words-data-part4.js"></script>
+<script src="word-data/words-data-part5.js"></script>
+<script src="parts.js"></script>
 <script src="words-data.js"></script>
 <script>
+const nav = document.getElementById('part-nav');
+PARTS.forEach((p) => {
+  const isCurrent = p.label === 'Part 1';
+  const el = document.createElement(isCurrent ? 'span' : 'a');
+  el.className = 'part-btn' + (isCurrent ? ' current' : '');
+  el.textContent = p.label;
+  if (!isCurrent) el.href = p.href;
+  nav.appendChild(el);
+});
+
 const words = [
   // Nhà cửa
   { zh: '家', pinyin: 'jiā', viet: 'nhà', ex: { zh: '我每天下班以后都回家吃饭。', pinyin: 'Wǒ měitiān xiàbān yǐhòu dōu huí jiā chīfàn.', viet: 'Mỗi ngày sau khi tan làm tôi đều về nhà ăn cơm.' } },

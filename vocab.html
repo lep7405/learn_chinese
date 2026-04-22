@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Từ vựng tiếng Trung</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(68, 116, 255, 0.14), transparent 32%),
+          radial-gradient(circle at bottom right, rgba(67, 211, 255, 0.1), transparent 28%), linear-gradient(180deg, #16172b 0%, #111320 100%);
+        color: #eee;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .app-shell {
+        max-width: 1480px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 20px;
+        align-self: start;
+        padding: 22px 18px;
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(20, 27, 52, 0.96), rgba(11, 15, 30, 0.96));
+        border: 1px solid rgba(120, 176, 255, 0.18);
+        box-shadow: 0 26px 70px rgba(0, 0, 0, 0.34);
+        backdrop-filter: blur(14px);
+      }
+
+      .sidebar-kicker {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #6ebeff;
+        margin-bottom: 10px;
+      }
+
+      .sidebar-title {
+        font-size: 1.45rem;
+        line-height: 1.2;
+        color: #f6fbff;
+        margin-bottom: 8px;
+      }
+
+      .sidebar-note {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: #93a9cc;
+        margin-bottom: 18px;
+      }
+
+      .sidebar-divider {
+        height: 1px;
+        background: linear-gradient(90deg, rgba(110, 190, 255, 0.3), transparent);
+        margin-bottom: 16px;
+      }
+
+      .main-panel {
+        min-width: 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        min-height: 240px;
+        background: linear-gradient(180deg, rgba(31, 58, 110, 0.92), rgba(21, 41, 82, 0.96));
+        border: 1px solid rgba(116, 205, 255, 0.85);
+        border-radius: 20px;
+        padding: 18px 12px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        cursor: pointer;
+        transition:
+          transform 0.18s,
+          border-color 0.18s,
+          background 0.18s,
+          box-shadow 0.18s;
+        user-select: none;
+        box-shadow: 0 18px 36px rgba(5, 11, 27, 0.22);
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: #b8ecff;
+        box-shadow: 0 26px 48px rgba(5, 11, 27, 0.34);
+      }
+      .card:active {
+        transform: translateY(-1px) scale(0.99);
+      }
+
+      .card.revealed {
+        background: linear-gradient(180deg, rgba(16, 44, 91, 0.98), rgba(13, 31, 63, 0.98));
+        border-color: #89e4ff;
+      }
+
+      .hanzi {
+        font-size: clamp(2rem, 3.1vw, 3.1rem);
+        line-height: 0.95;
+        color: #f0f0f0;
+        display: none;
+        text-align: center;
+        letter-spacing: 0.02em;
+        word-break: break-word;
+      }
+
+      .card.revealed .hanzi {
+        display: block;
+      }
+
+      .info {
+        text-align: center;
+        display: none;
+        animation: fadeIn 0.2s ease;
+      }
+
+      .card.revealed .info {
+        display: block;
+      }
+
+      .pinyin {
+        font-size: 0.82rem;
+        color: #66d5ff;
+        margin-bottom: 4px;
+      }
+
+      .viet {
+        font-size: 0.82rem;
+        color: #d4e4ff;
+        line-height: 1.4;
+      }
+
+      .speaker-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.55rem;
+        padding: 6px 10px;
+        border-radius: 8px;
+        transition: background 0.15s;
+        line-height: 1;
+      }
+
+      .speaker-btn:hover {
+        background: rgba(76, 201, 240, 0.15);
+      }
+
+      .copy-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 6px 10px;
+        border-radius: 8px;
+        transition: background 0.15s;
+        line-height: 1;
+        display: none;
+      }
+
+      .card.revealed .copy-btn {
+        display: inline-block;
+      }
+      .copy-btn:hover {
+        background: rgba(160, 196, 255, 0.15);
+      }
+
+      .btn-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      /* mode: viet-only */
+      body.viet-mode .hanzi {
+        display: none !important;
+      }
+      body.viet-mode .btn-row {
+        display: none !important;
+      }
+      body.viet-mode .info {
+        display: block !important;
+      }
+      body.viet-mode .info .pinyin {
+        display: none;
+      }
+      body.viet-mode .card.revealed .hanzi {
+        display: block !important;
+      }
+      body.viet-mode .card.revealed .btn-row {
+        display: flex !important;
+      }
+      body.viet-mode .card.revealed .info .pinyin {
+        display: block;
+      }
+
+      /* mode: hanzi-only */
+      body.hanzi-mode .hanzi {
+        display: block !important;
+      }
+      body.hanzi-mode .btn-row {
+        display: none !important;
+      }
+      body.hanzi-mode .info {
+        display: none !important;
+      }
+      body.hanzi-mode .card.revealed .info {
+        display: block !important;
+      }
+      body.hanzi-mode .card.revealed .btn-row {
+        display: flex !important;
+      }
+
+      .top-bar {
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+      }
+
+      .mode-btn {
+        background: rgba(15, 53, 107, 0.72);
+        border: 1px solid rgba(106, 203, 255, 0.8);
+        color: #71d6ff;
+        padding: 12px 20px;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition:
+          background 0.15s,
+          color 0.15s,
+          transform 0.15s,
+          box-shadow 0.15s;
+      }
+
+      .mode-btn:hover {
+        background: #58c9ff;
+        color: #0f1930;
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(88, 201, 255, 0.26);
+      }
+      .mode-btn.active {
+        background: linear-gradient(135deg, #7fd7ff, #56bdf4);
+        color: #0f1930;
+        font-weight: bold;
+      }
+
+      .part-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: calc(100vh - 240px);
+        overflow: auto;
+        padding-right: 6px;
+      }
+      .part-btn {
+        background: rgba(8, 11, 23, 0.72);
+        border: 1px solid rgba(123, 151, 198, 0.16);
+        color: #9fb0d3;
+        padding: 12px 14px;
+        border-radius: 18px;
+        cursor: pointer;
+        font-size: 0.98rem;
+        transition:
+          background 0.15s,
+          color 0.15s,
+          border-color 0.15s,
+          transform 0.15s,
+          box-shadow 0.15s;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .part-btn:hover {
+        border-color: rgba(110, 190, 255, 0.46);
+        color: #dceefe;
+        transform: translateX(4px);
+      }
+      .part-btn.current {
+        background: linear-gradient(135deg, rgba(101, 171, 255, 0.26), rgba(59, 100, 222, 0.2));
+        border-color: rgba(132, 196, 255, 0.8);
+        color: #f4fbff;
+        font-weight: bold;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+      }
+
+      .part-index {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: rgba(110, 190, 255, 0.1);
+        color: #6ebeff;
+        font-size: 0.84rem;
+        flex: 0 0 auto;
+      }
+
+      .part-btn.current .part-index {
+        background: rgba(175, 227, 255, 0.18);
+        color: #eaf8ff;
+      }
+
+      .part-btn-label {
+        flex: 1;
+      }
+
+      .part-nav::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      .part-nav::-webkit-scrollbar-thumb {
+        background: rgba(110, 190, 255, 0.18);
+        border-radius: 999px;
+      }
+
+      @media (max-width: 980px) {
+        body {
+          padding: 14px;
+        }
+
+        .app-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          position: static;
+          padding: 16px;
+          border-radius: 24px;
+        }
+
+        .part-nav {
+          flex-direction: row;
+          max-height: none;
+          overflow-x: auto;
+          overflow-y: hidden;
+          padding-bottom: 6px;
+        }
+
+        .part-btn {
+          min-width: 150px;
+        }
+
+        .part-btn:hover {
+          transform: translateY(-2px);
+        }
+
+      }
+
+      @media (max-width: 640px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          min-height: 210px;
+        }
+
+        .mode-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(4px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-kicker">Navigator</div>
+        <div class="sidebar-title">Chọn Part</div>
+        <p class="sidebar-note">Đi nhanh giữa các phần từ vựng. Mỗi part hiện được chia đều 10 từ để học gọn hơn.</p>
+        <div class="sidebar-divider"></div>
+        <div class="part-nav" id="part-nav"></div>
+      </aside>
+
+      <main class="main-panel">
+        <div class="top-bar">
+          <button class="mode-btn active" id="btn-normal" onclick="setMode('normal')">🔊 Chế độ thường</button>
+          <button class="mode-btn" id="btn-hanzi" onclick="setMode('hanzi')">汉 Chỉ chữ Hán</button>
+          <button class="mode-btn" id="btn-viet" onclick="setMode('viet')">VN Chỉ tiếng Việt</button>
+          <div id="audio-buttons"></div>
+        </div>
+
+        <audio id="audio-player"></audio>
+
+        <div class="grid" id="grid"></div>
+      </main>
+    </div>
+
+    <script src="words-data.js"></script>
+    <script src="audioFiles.js"></script>
+    <script src="parts.js"></script>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const requestedPart = Number.parseInt(params.get("part") || "1", 10);
+      const part = Number.isFinite(requestedPart) && requestedPart > 0 ? requestedPart : 1;
+
+      // Build nav
+      const nav = document.getElementById("part-nav");
+      PARTS.forEach((p) => {
+        const isCurrent = p.label === `Part ${part}`;
+        const el = document.createElement(isCurrent ? "span" : "a");
+        el.className = "part-btn" + (isCurrent ? " current" : "");
+        const match = p.label.match(/\d+/);
+        const indexText = match ? match[0].padStart(2, "0") : "•";
+        el.innerHTML = `<span class="part-index">${indexText}</span><span class="part-btn-label">${p.label}</span>`;
+        if (!isCurrent) el.href = p.href;
+        nav.appendChild(el);
+      });
+
+      document.title = `Part ${part} · Từ vựng tiếng Trung`;
+
+      // Load data
+      const partConfig = PARTS[part - 1] || PARTS[0];
+      const pageWords = partConfig && partConfig.data ? [...partConfig.data()] : [];
+
+      // Shuffle
+      for (let i = pageWords.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pageWords[i], pageWords[j]] = [pageWords[j], pageWords[i]];
+      }
+
+      function speak(text, e) {
+        if (e) e.stopPropagation();
+        const utt = new SpeechSynthesisUtterance(text);
+        utt.lang = "zh-CN";
+        utt.rate = 0.85;
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utt);
+      }
+
+      function shuffleWords(list) {
+        const cloned = [...list];
+        for (let i = cloned.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [cloned[i], cloned[j]] = [cloned[j], cloned[i]];
+        }
+        return cloned;
+      }
+
+      const grid = document.getElementById("grid");
+
+      pageWords.forEach((w) => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+      <div class="hanzi">${w.zh}</div>
+      <div class="btn-row">
+        <button class="speaker-btn" title="Phát âm">🔊</button>
+        <button class="copy-btn" title="Copy">📋</button>
+      </div>
+      <div class="info">
+        <div class="pinyin">${w.pinyin}</div>
+        <div class="viet">${w.viet}</div>
+      </div>
+    `;
+
+        card.addEventListener("click", () => {
+          card.classList.toggle("revealed");
+        });
+
+        card.querySelector(".speaker-btn").addEventListener("click", (e) => {
+          speak(w.zh, e);
+        });
+
+        card.querySelector(".copy-btn").addEventListener("click", (e) => {
+          e.stopPropagation();
+          navigator.clipboard.writeText(w.zh).then(() => {
+            const btn = e.currentTarget;
+            btn.textContent = "✅";
+            setTimeout(() => (btn.textContent = "📋"), 1200);
+          });
+        });
+
+        grid.appendChild(card);
+      });
+      const audioPlayer = document.getElementById("audio-player");
+      const audioButtonsContainer = document.getElementById("audio-buttons");
+      let currentBtn = null;
+      let listeningPracticeBtn = null;
+      let listeningPracticeActive = false;
+      let listeningPracticeUtterances = [];
+
+      function stopCurrentAudio() {
+        if (!currentBtn) return;
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+        currentBtn.textContent = currentBtn.dataset.label;
+        currentBtn.classList.remove("active");
+        currentBtn = null;
+      }
+
+      function stopListeningPractice() {
+        listeningPracticeActive = false;
+        listeningPracticeUtterances = [];
+        speechSynthesis.cancel();
+        if (listeningPracticeBtn) {
+          listeningPracticeBtn.textContent = listeningPracticeBtn.dataset.label;
+          listeningPracticeBtn.classList.remove("active");
+        }
+      }
+
+      function startListeningPractice() {
+        if (!pageWords.length) return;
+
+        if (listeningPracticeActive) {
+          stopListeningPractice();
+          return;
+        }
+
+        stopCurrentAudio();
+        speechSynthesis.cancel();
+
+        const randomizedWords = shuffleWords(pageWords);
+        const queue = [];
+
+        randomizedWords.forEach((word) => {
+          for (let i = 0; i < 5; i++) {
+            queue.push(word.zh);
+          }
+        });
+
+        listeningPracticeActive = true;
+        listeningPracticeUtterances = queue;
+        listeningPracticeBtn.textContent = "⏸ Dừng luyện nghe";
+        listeningPracticeBtn.classList.add("active");
+
+        queue.forEach((text, index) => {
+          const utt = new SpeechSynthesisUtterance(text);
+          utt.lang = "zh-CN";
+          utt.rate = 0.78;
+          if (index === queue.length - 1) {
+            utt.onend = () => {
+              if (listeningPracticeActive) {
+                stopListeningPractice();
+              }
+            };
+          }
+          speechSynthesis.speak(utt);
+        });
+      }
+
+      function createAudioButton(file, label) {
+        const btn = document.createElement("button");
+        btn.className = "mode-btn";
+        btn.dataset.label = label;
+        btn.textContent = label;
+        btn.addEventListener("click", () => {
+          const isPlaying = !audioPlayer.paused && audioPlayer.dataset.file === file;
+          stopCurrentAudio();
+          if (!isPlaying) {
+            audioPlayer.src = file;
+            audioPlayer.dataset.file = file;
+            audioPlayer.play();
+            btn.textContent = "⏸ Dừng";
+            btn.classList.add("active");
+            currentBtn = btn;
+          }
+        });
+        return btn;
+      }
+
+      audioPlayer.addEventListener("ended", stopCurrentAudio);
+
+      const partAudios = AUDIO_FILES[part] || [];
+      listeningPracticeBtn = document.createElement("button");
+      listeningPracticeBtn.className = "mode-btn";
+      listeningPracticeBtn.dataset.label = "🎧 Luyện nghe x5";
+      listeningPracticeBtn.textContent = listeningPracticeBtn.dataset.label;
+      listeningPracticeBtn.addEventListener("click", startListeningPractice);
+      audioButtonsContainer.appendChild(listeningPracticeBtn);
+
+      partAudios.forEach((file, idx) => {
+        audioButtonsContainer.appendChild(createAudioButton(file, `▶ Audio ${idx + 1}`));
+      });
+
+      audioPlayer.addEventListener("ended", () => {
+        if (currentBtn) {
+          currentBtn.textContent = currentBtn.dataset.label;
+          currentBtn.classList.remove("active");
+          currentBtn = null;
+        }
+      });
+
+      function setMode(mode) {
+        stopListeningPractice();
+        document.body.classList.remove("hanzi-mode", "viet-mode");
+        document.querySelectorAll(".mode-btn").forEach((b) => b.classList.remove("active"));
+        document.querySelectorAll(".card").forEach((c) => c.classList.remove("revealed"));
+
+        if (mode === "hanzi") {
+          document.body.classList.add("hanzi-mode");
+          document.getElementById("btn-hanzi").classList.add("active");
+        } else if (mode === "viet") {
+          document.body.classList.add("viet-mode");
+          document.getElementById("btn-viet").classList.add("active");
+        } else {
+          document.getElementById("btn-normal").classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
