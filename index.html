@@ -457,11 +457,18 @@
 
       function speak(text, e) {
         if (e) e.stopPropagation();
-        const utt = new SpeechSynthesisUtterance(text);
-        utt.lang = "zh-CN";
-        utt.rate = 0.85;
         speechSynthesis.cancel();
-        speechSynthesis.speak(utt);
+        let count = 0;
+        function next() {
+          if (count >= 10) return;
+          count++;
+          const utt = new SpeechSynthesisUtterance(text);
+          utt.lang = "zh-CN";
+          utt.rate = 0.85;
+          utt.onend = next;
+          speechSynthesis.speak(utt);
+        }
+        next();
       }
 
       function shuffleWords(list) {
